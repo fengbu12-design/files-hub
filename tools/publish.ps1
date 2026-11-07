@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Publish any file or folder into the files-hub repo: copy it in, rebuild the
   index page, commit and push. Works with sources located anywhere on disk.
@@ -23,6 +23,8 @@ param(
   [Parameter(ParameterSetName = 'Unpublish', Mandatory = $true)]
   [switch]$Remove,
 
+  [switch]$Force,
+  [switch]$SkipScan,
   [switch]$NoPdf,
   [switch]$NoPush
 )
@@ -61,6 +63,8 @@ function New-PdfPreviews {
             & $NodeExe $LoCli convert --input $f.FullName --output $pdfFull 2>$null
         } catch { }
         if ((Test-Path $pdfFull) -and ((Get-Item $pdfFull).Length -gt 1000)) {
+            # 转换会把文档作者写进 PDF 元数据，这里等长抹掉，保持 xref 偏移不变
+            & node (Join-Path $HubRoot 'tools\sanitize-pdf.mjs') $pdfFull 2>$null | Out-Null
             Write-Host "pdf: $pdfRel"
         } else {
             Write-Host "pdf FAILED: $rel"
@@ -90,6 +94,29 @@ function Set-GroupTitle {
     [System.IO.File]::WriteAllText($p, $json, (New-Object System.Text.UTF8Encoding($false)))
 }
 
+function Save-Map {
+    param([string]$Key, [string]$SourcePath, [string]$Title)
+
+    $dir = Join-Path $HubRoot '_private'
+    if (-not (Test-Path $dir)) { New-Item -ItemType Directory -Path $dir -Force | Out-Null }
+    $p = Join-Path $dir 'map.json'
+    $map = @{}
+    if (Test-Path $p) {
+        try {
+            $obj = (Get-Content $p -Raw -Encoding UTF8).TrimStart([char]0xFEFF) | ConvertFrom-Json
+            foreach ($prop in $obj.PSObject.Properties) { $map[$prop.Name] = $prop.Value }
+        } catch { $map = @{} }
+    }
+    $old = $map[$Key]
+    $entry = [ordered]@{
+        source = if ($SourcePath) { $SourcePath } elseif ($old) { [string]$old.source } else { '' }
+        title  = if ($Title) { $Title } elseif ($old) { [string]$old.title } else { '' }
+        at     = (Get-Date).ToString('yyyy-MM-dd HH:mm')
+    }
+    $map[$Key] = [pscustomobject]$entry
+    [System.IO.File]::WriteAllText($p, ($map | ConvertTo-Json -Depth 4), (New-Object System.Text.UTF8Encoding($false)))
+}
+
 function Escape-Segment([string]$s) { [uri]::EscapeDataString($s) }
 
 
@@ -100,6 +127,19 @@ if ($Remove) {
     if (-not (Test-Path $dest)) { throw "not published: $Name" }
     Remove-Item $dest -Recurse -Force
     Set-GroupTitle -Key $Name -Value $null
+    # 本地别名映射也一并删掉
+    $mp = Join-Path $HubRoot '_private\map.json'
+    if (Test-Path $mp) {
+        try {
+            $obj = (Get-Content $mp -Raw -Encoding UTF8).TrimStart([char]0xFEFF) | ConvertFrom-Json
+            $map = @{}
+            foreach ($prop in $obj.PSObject.Properties) { $map[$prop.Name] = $prop.Value }
+            if ($map.ContainsKey($Name)) {
+                [void]$map.Remove($Name)
+                [System.IO.File]::WriteAllText($mp, ($map | ConvertTo-Json -Depth 4), (New-Object System.Text.UTF8Encoding($false)))
+            }
+        } catch { }
+    }
     # 一并清掉该条目对应的 PDF 预览
     $prevDir = Join-Path $HubRoot ('_previews\' + $Name)
     if (Test-Path $prevDir) { Remove-Item $prevDir -Recurse -Force }
@@ -116,6 +156,27 @@ else {
     if (-not $Name) { $Name = $item.Name }
     $dest = Join-Path $HubRoot $Name
 
+    # 中文名字在公开仓库里太显眼，提醒换成中性别名
+    if ($Name -match '[\u4e00-\u9fa5]') {
+        Write-Warning "名称含中文「$Name」：别人一搜就到，建议用 -Name 换成 note-a1 这类别名"
+    }
+
+    # 隐私扫描：有发现就停下等人工判断；确认无碍后加 -Force 继续
+    if (-not $SkipScan) {
+        & node (Join-Path $HubRoot 'tools\scan-privacy.mjs') $item.FullName
+        if ($LASTEXITCODE -eq 2) {
+            if (-not $Force) {
+                Write-Host ''
+                Write-Host '已中止，没有上传任何文件。' -ForegroundColor Yellow
+                Write-Host '  确认这些内容可以公开  -> 重跑并加 -Force' -ForegroundColor Yellow
+                Write-Host '  确属误报 / 与该文件无关 -> 加 -SkipScan' -ForegroundColor Yellow
+                exit 1
+            }
+            Write-Warning '隐私扫描有发现，按 -Force 继续发布'
+        }
+        elseif ($LASTEXITCODE -ne 0) { throw '隐私扫描执行失败' }
+    }
+
     if ($item.PSIsContainer) {
         if (Test-Path $dest) { Remove-Item $dest -Recurse -Force }
         New-Item -ItemType Directory -Path $dest -Force | Out-Null
@@ -130,6 +191,7 @@ else {
     }
 
     if ($Title) { Set-GroupTitle -Key $Name -Value $Title }
+    Save-Map -Key $Name -SourcePath $item.FullName -Title $Title
     if (-not $NoPdf) { New-PdfPreviews }
     Rebuild-Site
     $msg = "add: $Name (from $($item.FullName))"

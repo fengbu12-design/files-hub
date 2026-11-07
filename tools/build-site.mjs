@@ -11,7 +11,7 @@ const SITE = `https://${OWNER}.github.io/${REPO}/`;
 const ROOT = path.resolve(process.argv[2] || '.');
 
 // 不参与索引的目录
-const SKIP_DIRS = new Set(['.git', '.github', '.preview', '_previews', 'node_modules',
+const SKIP_DIRS = new Set(['.git', '.github', '.preview', '_previews', '_private', 'node_modules',
                            'profile', 'state', 'failures', 'tools', '__pycache__']);
 const SKIP_FILES = new Set(['index.html', '.gitignore', '.gitattributes', '_groups.json',
                             'README.md', 'Thumbs.db', 'desktop.ini']);
@@ -130,6 +130,8 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f6feb'/%3E%3Cpath d='M9 12h14M9 16h14M9 20h9' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
 <title>文件库 · ${OWNER}</title>
 <style>

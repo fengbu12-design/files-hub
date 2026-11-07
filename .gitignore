@@ -7,3 +7,6 @@ desktop.ini
 # 依赖 / 缓存
 node_modules/
 __pycache__/
+
+# 本地私密：隐私词表、别名映射，永不提交
+_private/
