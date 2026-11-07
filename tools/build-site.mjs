@@ -14,7 +14,7 @@ const ROOT = path.resolve(process.argv[2] || '.');
 const SKIP_DIRS = new Set(['.git', '.github', '.preview', '_previews', 'node_modules',
                            'profile', 'state', 'failures', 'tools', '__pycache__']);
 const SKIP_FILES = new Set(['index.html', '.gitignore', '.gitattributes', '_groups.json',
-                            'Thumbs.db', 'desktop.ini']);
+                            'README.md', 'Thumbs.db', 'desktop.ini']);
 
 // 可选：目录到中文标题的映射，放在仓库根 _groups.json
 let TITLES = {};
