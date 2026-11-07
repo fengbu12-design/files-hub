@@ -58,7 +58,7 @@ function New-PdfPreviews {
         $pdfFull = Join-Path $HubRoot ($pdfRel.Replace('/', '\'))
         New-Item -ItemType Directory -Path (Split-Path $pdfFull) -Force | Out-Null
         try {
-            & $NodeExe $LoCli convert --input $f.FullName --output $pdfFull 2>&1 | Out-Null
+            & $NodeExe $LoCli convert --input $f.FullName --output $pdfFull 2>$null
         } catch { }
         if ((Test-Path $pdfFull) -and ((Get-Item $pdfFull).Length -gt 1000)) {
             Write-Host "pdf: $pdfRel"
@@ -100,6 +100,11 @@ if ($Remove) {
     if (-not (Test-Path $dest)) { throw "not published: $Name" }
     Remove-Item $dest -Recurse -Force
     Set-GroupTitle -Key $Name -Value $null
+    # 一并清掉该条目对应的 PDF 预览
+    $prevDir = Join-Path $HubRoot ('_previews\' + $Name)
+    if (Test-Path $prevDir) { Remove-Item $prevDir -Recurse -Force }
+    Get-ChildItem -LiteralPath (Join-Path $HubRoot '_previews') -Filter "$Name.pdf" -File -ErrorAction SilentlyContinue |
+        Remove-Item -Force
     Rebuild-Site
     $msg = "remove: $Name"
     Write-Host "unpublished: $Name"
@@ -132,14 +137,17 @@ else {
 }
 
 Push-Location $HubRoot
+$prevEap = $ErrorActionPreference
+# git 把进度和警告写到 stderr，在 EAP=Stop 下会被当成异常，这里降级后按退出码判断
+$ErrorActionPreference = 'Continue'
 try {
-    & $GitExe add -A 2>&1 | Out-Null
-    $dirty = & $GitExe status --porcelain
+    & $GitExe add -A 2>$null
+    $dirty = & $GitExe status --porcelain 2>$null
     if ($dirty) {
-        & $GitExe commit -q -m $msg 2>&1 | Out-Null
+        & $GitExe commit -q -m $msg 2>$null
         Write-Host "committed: $msg"
         if (-not $NoPush) {
-            & $GitExe push origin main 2>&1 | Out-Null
+            & $GitExe push origin main 2>$null
             if ($LASTEXITCODE -ne 0) { throw 'git push failed' }
             Write-Host 'pushed to GitHub'
         }
@@ -147,9 +155,14 @@ try {
     }
     else { Write-Host 'nothing changed' }
 }
-finally { Pop-Location }
+finally {
+    $ErrorActionPreference = $prevEap
+    Pop-Location
+}
 
-$seg = if ($isFile -and -not $Remove) { Escape-Segment $Name } else { (Escape-Segment $Name) + '/' }
-Write-Host ''
-Write-Host "Web: https://fengbu12-design.github.io/files-hub/$seg"
+if (-not $Remove) {
+    $seg = if ($isFile) { Escape-Segment $Name } else { (Escape-Segment $Name) + '/' }
+    Write-Host ''
+    Write-Host "Web: https://fengbu12-design.github.io/files-hub/$seg"
+}
 Write-Host "Repo: https://github.com/fengbu12-design/files-hub"
