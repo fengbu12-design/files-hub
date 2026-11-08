@@ -205,6 +205,13 @@ else {
     Write-Host "published: $Name  <-  $($item.FullName)"
 }
 
+if (-not $Remove) {
+    # Pages 默认跑 Jekyll，会吃掉以 _ 开头的文件/目录（_previews、_mathjax_*.js）
+    if (-not (Test-Path (Join-Path $HubRoot '.nojekyll'))) {
+        New-Item -ItemType File -Path (Join-Path $HubRoot '.nojekyll') -Force | Out-Null
+    }
+}
+
 Push-Location $HubRoot
 $prevEap = $ErrorActionPreference
 # git 把进度和警告写到 stderr，在 EAP=Stop 下会被当成异常，这里降级后按退出码判断
@@ -216,8 +223,11 @@ try {
         & $GitExe commit -q -m $msg 2>$null
         Write-Host "committed: $msg"
         if (-not $NoPush) {
-            & $GitExe push origin main 2>$null
-            if ($LASTEXITCODE -ne 0) { throw 'git push failed' }
+            $out = & $GitExe -c http.postBuffer=524288000 push origin main 2>&1
+            if ($LASTEXITCODE -ne 0) {
+                $out | ForEach-Object { Write-Host "  git: $_" }
+                throw 'git push failed'
+            }
             Write-Host 'pushed to GitHub'
         }
         else { Write-Host 'skipped push (-NoPush)' }
