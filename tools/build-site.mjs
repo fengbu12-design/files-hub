@@ -58,7 +58,7 @@ function walk(dir, rel, out) {
       if (SKIP_DIRS.has(e.name)) continue;
       walk(path.join(dir, e.name), r, out);
     } else if (e.isFile()) {
-      if (SKIP_FILES.has(e.name)) continue;
+      if (!rel && SKIP_FILES.has(e.name)) continue;
       if (/^~\$/.test(e.name) || e.name === '.DS_Store') continue;
       const st = fs.statSync(path.join(dir, e.name));
       out.push({ path: r, size: st.size, mtime: st.mtime, ext: path.extname(e.name).slice(1).toLowerCase() });
@@ -115,19 +115,25 @@ const sections = [];
 for (const key of keys) {
   const list = groups.get(key);
   if (!list || !list.length) continue;
-  list.sort((a, b) => a.path.localeCompare(b.path, 'zh'));
+  // 网页/说明类文件排前面，剩下的按路径
+  const RANK = { html: 0, htm: 0, md: 1, pdf: 2 };
+  list.sort((a, b) => (RANK[a.ext] ?? 3) - (RANK[b.ext] ?? 3) || a.path.localeCompare(b.path, 'zh'));
   const title = key === '' ? '根目录文件' : (TITLES[key] || key);
   // 该目录里有 index.html 就给一个整页入口
   const entry = key ? list.find((f) => f.path.toLowerCase() === (key + '/index.html').toLowerCase()) : null;
   const openAll = entry
-    ? ` <a href="${SITE}${enc(entry.path)}" target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#2f6feb;text-decoration:none;margin-left:10px">打开 ↗</a>`
+    ? `<a class="act act-main" href="${SITE}${enc(entry.path)}" target="_blank" rel="noopener">打开</a>`
+    : '';
+  const clamp = list.length > 12;
+  const more = clamp
+    ? `      <button class="more" type="button">显示全部 ${list.length} 个文件</button>\n`
     : '';
   sections.push(`    <section class="group">
-      <h2>${esc(title)} <span class="count">${list.length}</span>${openAll}</h2>
-      <ul class="files">
+      <h2>${esc(title)} <span class="count">${list.length}</span><span class="h2acts">${openAll}</span></h2>
+      <ul class="files${clamp ? ' clamp' : ''}">
 ${list.map(fileRow).join('\n')}
       </ul>
-    </section>`);
+${more}    </section>`);
 }
 
 const body = sections.length
@@ -168,6 +174,13 @@ const html = `<!doctype html>
   h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px;display:flex;align-items:center;gap:8px}
   h2 .count{background:var(--accent-soft);color:var(--accent);border-radius:999px;
             padding:1px 8px;font-size:12px;font-weight:600}
+  h2 .h2acts{margin-left:auto}
+  h2 .h2acts .act{font-size:12.5px;padding:5px 12px;border-radius:7px;text-decoration:none;
+                  color:#fff;background:var(--accent);border:1px solid var(--accent)}
+  ul.files.clamp li.file:nth-child(n+13){display:none}
+  .more{display:block;width:100%;margin-top:8px;padding:9px;border:1px dashed var(--line);
+        border-radius:10px;background:transparent;color:var(--muted);font:inherit;font-size:13px;cursor:pointer}
+  .more:hover{color:var(--accent);border-color:var(--accent)}
   ul.files{list-style:none;margin:0;padding:0;background:var(--card);border:1px solid var(--line);
            border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
   li.file{display:flex;align-items:center;gap:12px;padding:12px 16px;border-top:1px solid var(--line)}
@@ -223,6 +236,13 @@ ${body}
 <script>
   const q = document.getElementById('q');
   const empty = document.getElementById('empty');
+  document.querySelectorAll('button.more').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ul = btn.previousElementSibling;
+      const open = ul.classList.toggle('clamp') === false;
+      btn.textContent = open ? '收起' : '显示全部 ' + ul.querySelectorAll('li.file').length + ' 个文件';
+    });
+  });
   q.addEventListener('input', () => {
     const k = q.value.trim().toLowerCase();
     let visible = 0;
@@ -230,7 +250,7 @@ ${body}
       let shown = 0;
       g.querySelectorAll('li.file').forEach(li => {
         const hit = !k || li.dataset.name.includes(k);
-        li.style.display = hit ? '' : 'none';
+        li.style.display = k ? (hit ? 'flex' : 'none') : '';
         if (hit) shown++;
       });
       g.style.display = shown ? '' : 'none';
