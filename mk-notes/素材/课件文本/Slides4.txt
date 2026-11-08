@@ -1,0 +1,466 @@
+===== SLIDE PAGE 1 =====
+AF5638
+Topic 4: Two-Period Consumption-Saving
+Models
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 2 =====
+Microeconomics of Macro
+We now move from the long run (decades) to medium run (several
+years) and short run (months up to several years).
+In the long run, we did not explicitly model most economic
+decision-making – just assumed rules (e.g., consume a constant
+fraction of income).
+Building blocks of the remainder of the course are decision rules of
+optimizing agents and a concept of equilibrium.
+This is micro but, in an aggregate, dynamic context.
+1 / 36
+
+===== SLIDE PAGE 3 =====
+Plan for Today
+Objective: Derive optimal decision rules in a canonical two-period
+consumption-saving framework.
+Consumption is the largest GDP component (60–70%).
+Two periods suffice to capture dynamics while simplifying analysis.
+We establish the baseline model then consider two applications.
+Building on consumers, we will introduce firms and government
+and work up to aggregation and equilibrium in subsequent lectures.
+2 / 36
+
+===== SLIDE PAGE 4 =====
+Setup of the Baseline Model
+Representative household lives for two periods, t and t + 1.
+Receives exogenous income in both periods, Yt, Yt+1 (future
+income is known with certainty).
+In period t, must decide how much to save/borrow and how much
+to consume.
+Savings (or borrowings), St, face a real interest rate rt, which the
+household takes as given.
+Do not model a financial intermediary (e.g., a bank), but assume
+existence of option to borrow/save through this intermediary.
+3 / 36
+
+===== SLIDE PAGE 5 =====
+Flow Budget Constraints
+Household is subject to two flow budget constraints, one for
+each period:
+Ct + St
+=
+Yt
+Ct+1
+=
+Yt+1 + (1 + rt)St
+In period t, income is split between consumption and savings.
+In period t + 1, consumes all available resources, which consist of
+flow income, interest, and principal repayments.
+4 / 36
+
+===== SLIDE PAGE 6 =====
+Intertemporal Budget Constraint (IBC)
+Eliminating St from the flow constraints yields the intertemporal
+budget constraint (IBC):
+Ct + Ct+1
+1 + rt
+= Yt + Yt+1
+1 + rt
+.
+Says present discounted value (PDV) of lifetime consumption is
+equal to PDV of lifetime income.
+5 / 36
+
+===== SLIDE PAGE 7 =====
+Household Preferences
+Lifetime utility is given by:
+U = u(Ct) + βu(Ct+1).
+0 < β < 1 is the discount factor.
+Smaller β means less patience, i.e., discounting the future heavily.
+u(·) maps consumption into utilities.
+Utility is completely ordinal – no meaning to magnitude and can
+be negative. Only useful for comparing alternatives.
+Assume u′(·) > 0 and u′′(·) < 0.
+More is better, but at a decreasing rate.
+6 / 36
+
+===== SLIDE PAGE 8 =====
+Examples of Utility Functions
+[1] Log utility function:
+u(C) = ln(C)
+u′(·) = 1/C > 0
+u′′(·) = −1/C 2 < 0
+[2] Power utility function:
+u(C) = C 1−σ −1
+1 −σ
+,
+σ > 0
+u′(·) = 1/C σ > 0
+u′′(·) = −σ/C σ+1 < 0
+Becomes log utility when σ →1 in the limit
+7 / 36
+
+===== SLIDE PAGE 9 =====
+Household Problem
+Technically, household chooses Ct and St in first period subject to
+first-period flow constraint to maximize lifetime utility. This
+effectively determines Ct+1 from the second-period flow constraint.
+Think instead about choosing Ct and Ct+1 in period t subject to
+IBC:
+max
+Ct,Ct+1 U = u(Ct) + βu(Ct+1)
+s.t.
+Ct + Ct+1
+1 + rt
+= Yt + Yt+1
+1 + rt
+8 / 36
+
+===== SLIDE PAGE 10 =====
+Reducing to a Single Choice Variable
+Using IBC, can express Ct+1 as:
+Ct+1 = (1 + rt)(Yt −Ct) + Yt+1
+Can further reduce the number of choice variables by plugging
+above expression into the objective function:
+max
+Ct U = u(Ct) + βu
+
+(1 + rt)(Yt −Ct) + Yt+1
+
+9 / 36
+
+===== SLIDE PAGE 11 =====
+Euler Equation
+To characterize optimal behavior, set ∂U/∂Ct = 0:
+u′(Ct) = β(1 + rt)u′
+(1 + rt)(Yt −Ct) + Yt+1
+
+Yields the consumption Euler equation:
+u′(Ct) = β(1 + rt)u′(Ct+1)
+Interpretation: marginal cost of one unit of savings today (LHS)
+must be equalized with marginal benefit of having more resources
+for consumption tomorrow, viewed from today’s perspective (RHS).
+10 / 36
+
+===== SLIDE PAGE 12 =====
+Euler Equation Rearranged as MRS = Price Ratio
+Note Euler equation can be rearranged as:
+u′(Ct)
+βu′(Ct+1) = 1 + rt
+LHS is the marginal rate of substitution (MRS) between period
+t and t + 1 consumption.
+RHS is the price ratio between period t and t + 1 consumption.
+At optimum, MRS must be equalized with price ratio, which is a
+familiar result from micro.
+11 / 36
+
+===== SLIDE PAGE 13 =====
+Closed-Form Solution
+Euler equation characterizes optimal consumption today in relation
+to consumption tomorrow.
+Doesn’t determine level of consumption.
+To do that need to combine with IBC.
+12 / 36
+
+===== SLIDE PAGE 14 =====
+Algebraic Example
+Suppose flow utility function is u(C) = ln(C).
+Euler equation and IBC give two equations in two unknowns, Ct
+and Ct+1:
+1
+Ct
+=
+β(1 + rt)
+1
+Ct+1
+Ct + Ct+1
+1 + rt
+=
+Yt + Yt+1
+1 + rt
+Solving the system yields:
+C ∗
+t
+=
+1
+1 + β
+
+Yt + Yt+1
+1 + rt
+
+C ∗
+t+1
+=
+β(1 + rt)Ct
+13 / 36
+
+===== SLIDE PAGE 15 =====
+Graphical Representation of Household Problem: Budget
+Line
+Notes: Figure plots the IBC given by Ct + Ct+1
+1+rt = Yt + Yt+1
+1+rt . Point {Yt, Yt+1}
+on the budget line is the endowment point.
+Source: GLS, Ch. 9.
+14 / 36
+
+===== SLIDE PAGE 16 =====
+Indifference Curves
+Notes: Figure plots ICs of U = u(Ct) + βu(Ct+1), assuming u′(·) > 0 and
+u′′(·) < 0.
+Source: GLS, Ch. 9.
+15 / 36
+
+===== SLIDE PAGE 17 =====
+Optimal Consumption Bundle
+Notes: Optimal consumption bundle is {C3,t, C3,t+1}, where IC represented by
+U = U1 is tangent to the budget line. At optimum, household is a borrower
+since C3,t > Yt.
+Source: GLS, Ch. 9.
+16 / 36
+
+===== SLIDE PAGE 18 =====
+Consumption Function
+Often useful to have a decision rule that determines Ct as a
+function of things the household takes as given: Yt, Yt+1, rt.
+Consumption function:
+Ct = C d(Yt, Yt+1, rt).
+Can use diagram to qualitatively figure out how changes in Yt,
+Yt+1, and rt affect Ct, i.e., to sign the partial derivatives.
+17 / 36
+
+===== SLIDE PAGE 19 =====
+Exogenous Increase in Yt
+Source: GLS, Ch. 9.
+18 / 36
+
+===== SLIDE PAGE 20 =====
+Interpreting Responses to ↑Yt
+When Yt goes up, budget line shifts out, but slope remains
+unchanged: −(1 + rt).
+As a result, slope of IC at new optimum stays unchanged.
+Must be that both Ct and Ct+1 go up, otherwise slope of IC at
+new optimum would change.
+For Ct+1 to go up, some of the increase in current income must be
+saved to finance more consumption tomorrow.
+Define ∂Ct
+∂Yt as the marginal propensity to consume (MPC).
+Result means (i) 0 < MPC < 1 and (ii) St must go up.
+19 / 36
+
+===== SLIDE PAGE 21 =====
+Exogenous Increase in Yt+1
+Source: GLS, Ch. 9.
+20 / 36
+
+===== SLIDE PAGE 22 =====
+Interpreting Responses to ↑Yt+1
+As when Yt goes up, both Ct and Ct+1 will go up when Yt+1 goes up.
+For Ct to go up, savings must decrease (or borrowing must increase).
+Results show household wants to increase consumption in both periods
+when income increases in either period.
+That is, wants consumption to be smooth relative to income.
+Due to diminishing marginal utility, it gives the household a higher utility
+boost to increase consumption a bit in both periods than to increase
+consumption by a lot only in one period – known as consumption
+smoothing motive.
+Achieves smoothing by adjusting saving behavior: increase St when Yt
+goes up, reduce St when Yt+1 goes up.
+21 / 36
+
+===== SLIDE PAGE 23 =====
+Exogenous Increase in rt
+A little trickier.
+Increase in rt makes budget line steeper, pivoting through the
+endowment point.
+Two effects:
+Substitution effect: how would consumption bundle change if
+income is adjusted for household to stay on original IC
+Income effect: how would increase in rt make household
+locate on a higher or lower IC
+Substitution effect always reduces Ct, increases St.
+Income effect depends on whether household is initially a borrower
+(Ct > Yt) or saver (Ct < Yt).
+22 / 36
+
+===== SLIDE PAGE 24 =====
+Exogenous Increase in rt: Borrower
+Source: GLS, Ch. 9.
+23 / 36
+
+===== SLIDE PAGE 25 =====
+Borrower: Substitution Effect
+Orange line depicts a hypothetical IBC having the same slope as
+new IBC and is tangent to original IC at {C h
+0,t, C h
+0,t+1}.
+Movement from {C0,t, C0,t+1} to {C h
+0,t, C h
+0,t+1} represents the
+substitution effect.
+Shows how consumption would change when household is
+compensated so as to stay on the original IC.
+Household substitutes away from Ct (which has become relatively
+more expensive) toward Ct+1.
+Substitution effect: ↓Ct, ↑Ct+1.
+24 / 36
+
+===== SLIDE PAGE 26 =====
+Borrower: Income Effect
+Hypothetical IBC lies outside the new IBC, so {C h
+0,t, C h
+0,t+1} is
+unattainable.
+Movement from {C h
+0,t, C h
+0,t+1} to {C1,t, C1,t+1} represents the
+income effect.
+As higher rt increases borrowing cost for any given amount of
+borrowing, lifetime income falls.
+Income effect: ↓Ct, Ct+1.
+Total effect: ↓Ct, ambiguous Ct+1
+(though graph assumes substitution effect dominates so ↑Ct+1).
+25 / 36
+
+===== SLIDE PAGE 27 =====
+Exogenous Increase in rt: Saver
+Substitution effect: ↓Ct, ↑Ct+1;
+Income effect: ↑Ct, Ct+1;
+Total effect: ambiguous Ct, ↑Ct+1.
+Source: GLS, Ch. 9.
+26 / 36
+
+===== SLIDE PAGE 28 =====
+Signing the Consumption Function
+We assume substitution effect dominates the income effect, unless
+otherwise stated.
+This implies: An ↑rt leads to ↓Ct and ↑Ct+1 for both borrowers
+and savers, which seems to be empirically relevant.
+Thus, we determine the signs of the partial derivatives:
+Ct = C d(Yt
++ , Yt+1
++
+, rt
+−),
+27 / 36
+
+===== SLIDE PAGE 29 =====
+Application I: Permanent vs. Transitory Income Changes
+We’ve analyzed how consumption bundle would react to changes in
+either Yt or Yt+1.
+In the data, however, income changes tend to be persistent, i.e.,
+higher current income tends to be positively correlated with higher
+future income.
+For example, while a bonus would be a one-time change in income,
+a pay raise increases current as well as future income.
+Does consumption react the same way to transitory vs. permanent
+income changes?
+28 / 36
+
+===== SLIDE PAGE 30 =====
+An Example: Log Utility
+Recall closed-form solution with log utility:
+Ct =
+1
+1 + β
+
+Yt + Yt+1
+1 + rt
+
+Case A: Transitory Shock
+Yt goes up by $1, Yt+1 unchanged:
+∆Ct =
+1
+1+β = MPC (consumption rises, but less than income)
+Case B: Permanent Shock
+Both Yt and Yt+1 go up by $1:
+∆Ct =
+1
+1+β(1 +
+1
+1+rt ) (consumption rises by more than Case
+A)
+29 / 36
+
+===== SLIDE PAGE 31 =====
+Generalizing the Result
+Totally differentiate the consumption function:
+dCt = ∂C d(·)
+∂Yt
+dYt + ∂C d(·)
+∂Yt+1
+dYt+1 + ∂C d(·)
+∂rt
+drt
+Real interest rate is fixed, so drt = 0.
+Transitory shock: dYt > 0 and dYt+1 = 0
+⇒dCt
+dYt = ∂C d(·)
+∂Yt
+= MPC
+Permanent shock: suppose dYt > 0 and dYt+1 = dYt
+⇒dCt
+dYt = MPC + ∂C d(·)
+∂Yt+1
+30 / 36
+
+===== SLIDE PAGE 32 =====
+Permanent Income Hypothesis (PIH)
+Results arise naturally due to consumption smoothing motive.
+Consistent with Friedman (1957) and the PIH:
+Consumption is forward-looking
+Ought to be a function of “permanent income”
+MPC is less than one
+Consumption would react more to events that change income
+in a more persistent manner
+Regressing Ct on Yt will not identify MPC if changes in Yt in
+historical data are persistent (relevant for fiscal multiplier)
+31 / 36
+
+===== SLIDE PAGE 33 =====
+Application II: Borrowing Constraint
+In our baseline analysis, we’ve assumed household can freely
+borrow or save.
+In reality, many households face imperfect access to credit markets
+and may not be able to borrow at all.
+Suppose we impose St ≥0, which prohibits household borrowing in
+period t.
+When the borrowing constraint is binding, household would like to
+choose Ct > Yt but cannot, so the best it can do is to consume
+Ct = Yt.
+32 / 36
+
+===== SLIDE PAGE 34 =====
+Binding Borrowing Constraint: Graph
+Source: GLS, Ch. 9.
+33 / 36
+
+===== SLIDE PAGE 35 =====
+Effect of ↑Yt with Binding Borrowing Constraint
+Ct increases by full amount of ∆Yt; no change in Ct+1.
+Intuition: Household desires to consume more in t but was previously
+constrained, so spends all income increase in t.
+Source: GLS, Ch. 9.
+34 / 36
+
+===== SLIDE PAGE 36 =====
+Effect of ↑Yt+1 with Binding Borrowing Constraint
+Ct no change; Ct+1 increases by full amount of ∆Yt+1.
+Intuition: Household would like to borrow against future income to increase
+current consumption but cannot.
+Source: GLS, Ch. 9.
+35 / 36
+
+===== SLIDE PAGE 37 =====
+Policy Implications
+With a binding borrowing constraint, MPC out of current income
+becomes one and consumption ceases to be forward-looking.
+Important policy implications regarding the effectiveness of tax
+cuts.
+Earlier, our analysis on transitory vs. permanent income changes
+suggests that temporary tax cuts would have smaller effect than
+permanent tax cuts.
+But if part of the population is borrowing constrained, targeted
+and temporary tax cuts may nonetheless stimulate consumption,
+which is attractive considering that permanent tax cuts are often
+politically unpopular due to their effect on national debt.
+36 / 36

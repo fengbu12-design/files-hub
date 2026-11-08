@@ -1,0 +1,261 @@
+===== SLIDE PAGE 1 =====
+AF5638
+Topic 8: The Neoclassical Model
+(Real Block)
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 2 =====
+Introduction
+The equilibrium model with production and labor supply that we
+have been working with forms the “real block” of the neoclassical
+or real business cycle (RBC) model.
+Model features optimizing agents and frictionless markets.
+It emphasizes supply shocks (changes in At or θt) as the principal
+drivers of fluctuations in endogenous variables.
+The “nominal block” does not drive fluctuations as the
+classical dichotomy holds in this model, which we will discuss next
+time.
+We take the model to be a relevant description of the real world in
+the medium run – between a couple of years and a decade.
+1 / 23
+
+===== SLIDE PAGE 3 =====
+Equilibrium Conditions
+Equilibrium is the collection of {Ct, Nt, It, Yt, wt, rt} such that
+given {At, At+1, Gt, Gt+1, Kt, θt}:
+Ct
+=
+C d(Yt −Gt, Yt+1 −Gt+1, rt)
+Nt
+=
+Ns(wt, θt)
+Nt
+=
+Nd(wt, At, Kt)
+It
+=
+I d(rt, At+1, Kt)
+Yt
+=
+AtF(Kt, Nt)
+Yt
+=
+Ct + It + Gt
+2 / 23
+
+===== SLIDE PAGE 4 =====
+Equilibrium Conditions
+First four are optimal decision rules of household and firm.
+Fifth is a technological constraint captured by production function.
+Sixth is a resource constraint or goods market clearing condition.
+Exogenous variables: {At, At+1, Gt, Gt+1, Kt, θt}.
+Endogenous variables: {Ct, Nt, It, Yt, wt, rt}.
+Take Yt+1 as “pseudo-exogenous” – not affected by It, which
+impacts Kt+1.
+Medium-run assumption: treat capital stock as roughly constant.
+3 / 23
+
+===== SLIDE PAGE 5 =====
+Graphing the Equilibrium
+IS curve: set of (rt, Yt) pairs where household and firm behave
+optimally and aggregate desired expenditure equals income.
+Summarizes consumption function, investment demand
+function, and the resource constraint. [Demand Side]
+Y s curve: set of (rt, Yt) pairs where household and firm behave
+optimally and labor market clears and production function holds.
+Summarizes labor supply, labor demand, and production
+function. [Supply Side]
+General equilibrium: on both IS curve and Y s curve
+simultaneously.
+4 / 23
+
+===== SLIDE PAGE 6 =====
+Demand Side
+Start by writing aggregate desired expenditure as:
+Y d
+t = C d(Yt −Gt, Yt+1 −Gt+1, rt) + I d(rt, At+1, Kt) + Gt.
+Impose Y d
+t = Yt.
+Graph the set of (rt, Yt) pairs where this holds.
+5 / 23
+
+===== SLIDE PAGE 7 =====
+Aggregate Desired Expenditure
+Source: GLS Ch. 18.
+6 / 23
+
+===== SLIDE PAGE 8 =====
+Income Equals Expenditure
+Source: GLS Ch. 18.
+7 / 23
+
+===== SLIDE PAGE 9 =====
+IS Curve
+Source: GLS Ch. 18.
+8 / 23
+
+===== SLIDE PAGE 10 =====
+Shifts in IS Curve
+IS curve will shift if any exogenous variable relevant for desired
+consumption or investment changes, or if there are changes in
+government spending:
+↑At+1: IS shifts right
+↑Gt: IS shifts right
+↑Gt+1: IS shifts left
+↓Kt: IS shifts right
+9 / 23
+
+===== SLIDE PAGE 11 =====
+Supply Side
+Begin by plotting labor demand and labor supply. Find the Nt
+where these intersect.
+Given this Nt, determine Yt from the production function.
+Under GHH preferences, rt is irrelevant for optimal labor decision
+hence production: Y s curve is still vertical as in endowment
+economy.
+Could generate an upward-sloping Y s curve, and some role for
+demand shocks, if we considered effect of rt on labor supply
+(non-GHH preferences).
+10 / 23
+
+===== SLIDE PAGE 12 =====
+Labor Market
+Source: GLS Ch. 18.
+11 / 23
+
+===== SLIDE PAGE 13 =====
+Production Function
+Source: GLS Ch. 18.
+12 / 23
+
+===== SLIDE PAGE 14 =====
+Y s Curve
+Source: GLS Ch. 18.
+13 / 23
+
+===== SLIDE PAGE 15 =====
+Shifts in Y s Curve
+Y s curve will shift if any exogenous variable relevant for labor
+demand, labor supply, or production function changes:
+↑At: Y s shifts right
+↑θt: Y s shifts left
+↓Kt: Y s shifts left
+14 / 23
+
+===== SLIDE PAGE 16 =====
+Bringing It All Together
+In general equilibrium, economy must be on both IS and Y s curves.
+Labor market clearing embedded in Y s curve
+Goods / financial market clearing embedded in IS curve
+Intersection jointly determines Yt, rt, Nt, wt.
+To determine Ct and It, use the consumption and investment
+demand functions.
+15 / 23
+
+===== SLIDE PAGE 17 =====
+General Equilibrium
+Source: GLS Ch. 18.
+16 / 23
+
+===== SLIDE PAGE 18 =====
+Effects of Changes in Exogenous Variables
+At, θt, Kt affect the position of the Y s curve.
+At+1, Gt, Gt+1, Kt affect the position of the IS curve.
+Figure out how Y s and IS curves shift, determine rt. Use this to
+figure out how other endogenous variables react.
+One complication: changes in It affect Kt+1, which affects Yt+1
+and hence Ct.
+We ignore these effects – size of capital stock is large relative to
+investment, and in medium run can treat capital stock as
+approximately fixed.
+Yt+1 will therefore only be affected by changes in exogenous
+variables dated t + 1, i.e., At+1 and Gt+1. “Pseudo-exogenous” in
+the sense we treat it as unaffected by time t exogenous shocks.
+17 / 23
+
+===== SLIDE PAGE 19 =====
+Supply Shock: ↑At
+Y s shifts, rt adjusts
+Source: GLS Ch. 18.
+18 / 23
+
+===== SLIDE PAGE 20 =====
+Supply Shock: ↑At
+New equilibrium
+Source: GLS Ch. 18.
+19 / 23
+
+===== SLIDE PAGE 21 =====
+Demand Shock: ↑Gt
+IS shifts, rt adjusts
+Source: GLS Ch. 18.
+20 / 23
+
+===== SLIDE PAGE 22 =====
+Demand Shock: ↑Gt
+New equilibrium
+Source: GLS Ch. 18.
+21 / 23
+
+===== SLIDE PAGE 23 =====
+Supply vs. Demand
+With a vertical Y s curve, output is completely supply-determined.
+“Demand shocks” (shocks that shift the IS curve) affect
+composition of output and rt, but not the level of output.
+Neoclassical model thus emphasizes supply shocks (productivity
+and labor preferences) as chief source of fluctuations.
+Can get demand shocks to impact output if Y s curve is
+upward-sloping (i.e., interest rate affects labor supply), but doesn’t
+change fact that model still needs to be predominantly driven by
+supply shocks to make predictions more or less consistent with
+data.
+22 / 23
+
+===== SLIDE PAGE 24 =====
+Summary of Qualitative Effects
+Exogenous Shock
+Variable
+↑At
+↑θt
+↑At+1
+↑Gt
+↑Gt+1
+Yt
++
+−
+0
+0
+0
+Ct
++
+−
+?
+−
+−
+It
++
+−
+?
+−
++
+Nt
++
+−
+0
+0
+0
+wt
++
++
+0
+0
+0
+rt
+−
++
++
++
+−
+23 / 23

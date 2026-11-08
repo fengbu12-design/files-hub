@@ -20,6 +20,9 @@ param(
   [string]$Name,
   [string]$Title,
 
+  # 不复制过去的文件名通配符，例如 -Exclude '*.zip','*.bak'
+  [string[]]$Exclude,
+
   [Parameter(ParameterSetName = 'Unpublish', Mandatory = $true)]
   [switch]$Remove,
 
@@ -181,7 +184,7 @@ else {
         if (Test-Path $dest) { Remove-Item $dest -Recurse -Force }
         New-Item -ItemType Directory -Path $dest -Force | Out-Null
         $rc = @($item.FullName, $dest, '/E', '/NFL', '/NDL', '/NJH', '/NJS', '/NP', '/R:1', '/W:1', '/XD') +
-              $ExcludeDirs + @('/XF') + $ExcludeFiles
+              $ExcludeDirs + @('/XF') + $ExcludeFiles + @($Exclude | Where-Object { $_ })
         & robocopy @rc | Out-Null
         if ($LASTEXITCODE -ge 8) { throw "copy failed (robocopy $LASTEXITCODE)" }
     }
@@ -189,6 +192,10 @@ else {
         if (Test-Path $dest) { Remove-Item $dest -Recurse -Force }
         Copy-Item -LiteralPath $item.FullName -Destination $dest -Force
     }
+
+    # 复制进来的 PDF 同样洗掉作者/标题元数据（只改副本，源文件不动）
+    $pdfs = @(Get-ChildItem -LiteralPath $dest -Recurse -File -Filter '*.pdf' -ErrorAction SilentlyContinue)
+    if ($pdfs.Count) { & node (Join-Path $HubRoot 'tools\sanitize-pdf.mjs') @($pdfs.FullName) 2>$null | Out-Null }
 
     if ($Title) { Set-GroupTitle -Key $Name -Value $Title }
     Save-Map -Key $Name -SourcePath $item.FullName -Title $Title

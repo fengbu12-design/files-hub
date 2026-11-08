@@ -1,0 +1,325 @@
+===== SLIDE PAGE 1 =====
+AF5638
+Topic 7: Equilibrium in a Production Economy
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 2 =====
+Introduction
+We previously studied equilibrium in an endowment economy.
+In this lecture, we will extend to a full-fledged general equilibrium
+model.
+Extension involves two dimensions:
+Endogenous production and firm problem
+Endogenous labor supply of the household
+The production side is similar to the Solow model.
+1 / 23
+
+===== SLIDE PAGE 3 =====
+Firm Production
+Representative firm produces according to:
+Yt = AtF(Kt, Nt)
+Kt: capital input
+Nt: labor input
+At: exogenous productivity
+F(·) satisfies the usual set of assumptions:
+F(0, N) = 0, F(K, 0) = 0
+F(γK, γN) = γF(K, N)
+FK > 0, FN > 0
+FKK < 0, FNN < 0
+FKN > 0
+2 / 23
+
+===== SLIDE PAGE 4 =====
+Firm Investment
+Slightly differently than the Solow model, we assume the firm owns
+capital stock Kt and makes investment decision.
+In period t, Kt is predetermined.
+Firm accumulates Kt+1 according to:
+Kt+1 = It + (1 −δ)Kt.
+Investment It is financed by borrowing from a financial
+intermediary at real interest rate rt (repaid next period):
+It = BI
+t .
+3 / 23
+
+===== SLIDE PAGE 5 =====
+Firm Ownership
+Firm is owned by the household, so profit is returned to household
+as dividend.
+Time t dividend is given by:
+Dt = Yt −wtNt
+Time t + 1 dividend is:
+Dt+1 = Yt+1 −wt+1Nt+1 + (1 −δ)Kt+1
+|
+{z
+}
+remaining capital
+−(1 + rt)BI
+t
+|
+{z
+}
+loan repayment
+Firm value is the PDV of dividend flows:
+Vt = Dt +
+1
+1 + rt
+Dt+1
+4 / 23
+
+===== SLIDE PAGE 6 =====
+Firm Problem
+Chooses Nt, Nt+1, and It (or equivalently Kt+1) to maximize firm
+value, taking rt, wt, and Kt as given:
+max
+Nt,Nt+1,Kt+1 Vt = Dt +
+1
+1 + rt
+Dt+1
+s.t.
+Kt+1 = It + (1 −δ)Kt
+Dt = AtF(Kt, Nt) −wtNt
+Dt+1 = At+1F(Kt+1, Nt+1) −wt+1Nt+1 + (1 −δ)Kt+1 −(1 + rt)It
+5 / 23
+
+===== SLIDE PAGE 7 =====
+Firm Optimality Conditions
+Nt
+:
+wt = AtFN(Kt, Nt)
+Nt+1
+:
+wt+1 = At+1FN(Kt+1, Nt+1)
+Kt+1
+:
+1 + rt = At+1FK(Kt+1, Nt+1) + 1 −δ
+Intuition: MC = MB.
+Wage conditions exactly the same as Solow model.
+Investment condition can be rewritten as rt = MPKt+1 −δ.
+6 / 23
+
+===== SLIDE PAGE 8 =====
+Labor Demand Function
+wt = AtFN(Kt, Nt) implicitly defines optimal labor demand as a
+function of wt, At and Kt:
+Nt = Nd(wt
+−, At
++ , Kt
++ )
+When wt ↑, need ↑MPLt to restore optimality, which requires ↓Nt
+since FNN < 0.
+Intuitively, the more expensive labor is, the less demand there is.
+Can you work out the math and intuition for At and Kt?
+7 / 23
+
+===== SLIDE PAGE 9 =====
+Graphing Labor Demand Function
+Source: GLS Ch. 12.
+8 / 23
+
+===== SLIDE PAGE 10 =====
+Investment Demand Function
+rt + δ = At+1FK(Kt+1, Nt+1) implicitly defines demand for future
+capital as a function of rt and At+1:
+Kt+1 = K d(rt
+−, At+1
++
+)
+Since It = Kt+1 −(1 −δ)Kt, investment demand function can be
+characterized as:
+It = I d(rt
+−, At+1
++
+, Kt
+−)
+9 / 23
+
+===== SLIDE PAGE 11 =====
+Graphing Investment Demand Function
+Source: GLS Ch. 12.
+10 / 23
+
+===== SLIDE PAGE 12 =====
+Household
+Representative household gets utility from consumption and
+leisure, where leisure is 1 −N.
+Lifetime utility:
+U = u(Ct, 1 −Nt) + βu(Ct+1, 1 −Nt+1)
+Assume positive and diminishing marginal utilities:
+uC > 0, uL > 0, uCC < 0, uLL < 0.
+11 / 23
+
+===== SLIDE PAGE 13 =====
+GHH Preferences
+We assume flow utility function u(·) takes the following form:
+u(Ct, 1 −Nt) = ln [Ct + θt ln(1 −Nt)]
+Parameter θt represents how much household values leisure relative
+to consumption.
+Known as GHH preferences, credited to Greenwood, Hercowitz,
+and Huffman (1988).
+This functional form will greatly simplify our analysis by
+eliminating wealth effects from the labor supply decision.
+12 / 23
+
+===== SLIDE PAGE 14 =====
+Household Budget Constraints
+Household faces two flow budget constraints, conceptually the
+same as before, except that now income is partly endogenous:
+Ct + St
+=
+wtNt + Dt
+Ct+1
+=
+wt+1Nt+1 + Dt+1 + (1 + rt)St
+Eliminating St yields the IBC:
+Ct + Ct+1
+1 + rt
+= wtNt + Dt + wt+1Nt+1 + Dt+1
+1 + rt
+13 / 23
+
+===== SLIDE PAGE 15 =====
+Household Problem
+Chooses Ct, Nt, Nt+1 (Ct+1 determined from IBC) to maximize
+lifetime utility, taking rt, wt, Dt, Dt+1 as given:
+max
+Ct,Nt,Nt+1 U = u(Ct, 1 −Nt) + βu(Ct+1, 1 −Nt+1)
+s.t.
+Ct + Ct+1
+1 + rt
+= wtNt + Dt + wt+1Nt+1 + Dt+1
+1 + rt
+14 / 23
+
+===== SLIDE PAGE 16 =====
+Household Optimality Conditions
+Ct
+:
+uC(Ct, 1 −Nt) = β(1 + rt)uC(Ct+1, 1 −Nt+1)
+Nt
+:
+wtuC(Ct, 1 −Nt) = uL(Ct, 1 −Nt)
+Nt+1
+:
+wt+1uC(Ct+1, 1 −Nt+1) = uL(Ct+1, 1 −Nt+1)
+15 / 23
+
+===== SLIDE PAGE 17 =====
+Household Optimality Conditions: Interpretation
+Ct condition is the usual consumption Euler equation, only looks
+different to accommodate utility from leisure.
+Nt condition says: marginal benefit of taking one more unit of
+leisure (RHS) is equal to marginal cost, captured by foregone wage
+income and evaluated in units of marginal utility of consumption
+(LHS).
+Nt+1 condition looks exactly the same as Nt, only dated t + 1.
+16 / 23
+
+===== SLIDE PAGE 18 =====
+Consumption Function
+Can go from first-order conditions to optimal decision rules.
+Cutting a few corners, we get the same consumption function as
+before:
+Ct = C d(Yt
++ , Yt+1
++
+, rt
+−)
+Or, if there were government spending, with Ricardian equivalence
+we’d have:
+Ct = C d(Yt −Gt
++
+, Yt+1 −Gt+1
++
+, rt
+−)
+17 / 23
+
+===== SLIDE PAGE 19 =====
+Labor Supply
+Things are complicated for a few reasons:
+Competing income and substitution effects of wt
+Non-wage income and expectations about future income
+(including through an interest rate channel) can affect current
+labor supply
+We will sweep most of the details under the rug. Under GHH
+preferences, FOC becomes:
+θt
+1 −Nt
+= wt
+Labor supply function becomes:
+Nt = Ns(wt
++ , θt
+−)
+18 / 23
+
+===== SLIDE PAGE 20 =====
+Graphing Labor Supply Function
+Source: GLS Ch. 12.
+19 / 23
+
+===== SLIDE PAGE 21 =====
+Financial Intermediary
+Bank takes household savings, St, and lends them to firm, BI
+t .
+It charges the same real interest rate rt on borrowing and saving.
+Bank does not have any active decisions. It passively earns a
+dividend that we will see is zero anyway:
+rtBI
+t −rtSt = 0
+Thus, bank ownership is irrelevant.
+20 / 23
+
+===== SLIDE PAGE 22 =====
+Market Clearing Conditions
+Labor market:
+Nd(wt, At, Kt) = Ns(wt, θt)
+Market for savings/investment:
+St = BI
+t = It
+Goods market:
+Yt = Ct + It
+(or Yt = Ct + It + Gt if there were a government)
+21 / 23
+
+===== SLIDE PAGE 23 =====
+Equilibrium Definition
+Given existing capital stock Kt, exogenous productivity At and
+At+1, and exogenous preference shifter for leisure θt, equilibrium is
+a collection of allocations and prices {Ct, It, Nt, Yt, wt, rt}
+characterized by the following equations:
+Ct
+=
+C d(Yt, Yt+1, rt)
+Nt
+=
+Ns(wt, θt)
+Nt
+=
+Nd(wt, At, Kt)
+It
+=
+I d(rt, At+1, Kt)
+Yt
+=
+AtF(Kt, Nt)
+Yt
+=
+Ct + It
+Yt+1 is a future endogenous variable, and we’ll talk about it later.
+22 / 23
+
+===== SLIDE PAGE 24 =====
+Summary
+Endogenous: Ct, Nt, It, Yt, wt, rt.
+Exogenous: At, At+1, Kt, θt.
+Three markets: labor, loanable funds, goods.
+Two prices: wt, rt (relative to final good).
+Endowment economy special case with Nt and It fixed.
+Will be possible to do some consumption smoothing in equilibrium
+here. Suppose household wants to increase St. Can do so if rt falls
+to incentivize more It (whereas in endowment economy It = 0 so
+St must remain fixed at 0).
+23 / 23

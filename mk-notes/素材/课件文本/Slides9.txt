@@ -1,0 +1,498 @@
+===== SLIDE PAGE 1 =====
+AF5638
+Topic 9: The Neoclassical Model
+(Nominal Block and Critiques)
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 2 =====
+What is Money?
+Three primary functions:
+Medium of exchange: rather than engaging in barter, can
+trade money for goods and services.
+Store of value: a way to shift resources across time.
+Unit of account: makes it easier to compare value across
+different goods.
+1 / 33
+
+===== SLIDE PAGE 3 =====
+How to Incorporate Money in Neoclassical Model?
+It is not easy.
+Model has only one good, rendering the medium of exchange
+function of money less interesting.
+Household can store value via interest-bearing savings and firm via
+physical capital.
+Since money does not pay interest, how do we get people to want
+to hold money in the model?
+We’ll take a shortcut by assuming that household receives utility
+from holding money.
+2 / 33
+
+===== SLIDE PAGE 4 =====
+Model Modifications
+All constraints are now nominal—denominated in dollars, Pt.
+Households derive utility from holding real money balances,
+Mt/Pt, accrued in period t.
+Savings pay nominal interest rate, it, distinct from the real rate, rt.
+Government sets the money supply exogenously at Ms
+t = Mt.
+Key Takeaway: These modifications introduce two new
+endogenous variables (Pt, it) requiring two new equilibrium
+conditions, while leaving the original six real equations entirely
+unchanged.
+3 / 33
+
+===== SLIDE PAGE 5 =====
+Households
+Choose Ct, Nt, Nt+1, Mt (which together determine Ct+1) to
+maximize lifetime utility, taking prices, taxes, and dividends as
+given:
+max
+Ct,Nt,Nt+1,Mt U = u(Ct, 1 −Nt) + ν
+Mt
+Pt
+
++ βu(Ct+1, 1 −Nt+1)
+s.t.
+PtCt + PtSt + Mt = PtwtNt −PtTt + PtDt
+Pt+1Ct+1 = Pt+1wt+1Nt+1 −Pt+1Tt+1 + (1 + it)PtSt + Pt+1Dt+1 + Mt
+4 / 33
+
+===== SLIDE PAGE 6 =====
+Nominal vs. Real Return
+One dollar of nominal savings returns (1 + it) dollars next period.
+To buy goods in each period, we divide by price levels.
+Real return on savings satisfies:
+1
+Pt
+(1 + rt) = (1 + it)
+1
+Pt+1
+Equivalently:
+1 + rt = (1 + it) Pt
+Pt+1
+5 / 33
+
+===== SLIDE PAGE 7 =====
+Fisher Equation
+Define gross expected inflation rate between period t and t + 1 as:
+1 + πe
+t+1 = Pt+1
+Pt
+Substitute this into the real return expression:
+1 + rt =
+1 + it
+1 + πe
+t+1
+,
+which can be approximated as:
+rt = it −πe
+t+1
+Known as the Fisher equation.
+We will treat πe
+t+1 as exogenous in model.
+6 / 33
+
+===== SLIDE PAGE 8 =====
+Household Optimality Conditions
+Ct :
+uC(Ct, 1 −Nt) = β(1 + rt)uC(Ct+1, 1 −Nt+1)
+Nt :
+uL(Ct, 1 −Nt) = wtuC(Ct, 1 −Nt)
+Nt+1 :
+uL(Ct+1, 1 −Nt+1) = wt+1uC(Ct+1, 1 −Nt+1)
+Mt :
+ν′
+Mt
+Pt
+
+=
+it
+1 + it
+uC(Ct, 1 −Nt)
+7 / 33
+
+===== SLIDE PAGE 9 =====
+Interpretation
+First three conditions are exactly the same as before.
+Last condition is new, but also has a “MB = MC” interpretation.
+LHS is the marginal benefit of holding an additional unit of real
+money balances.
+RHS is the opportunity cost from foregone return on
+interest-bearing savings, evaluated in units of marginal utility of
+consumption (i.e., itPt
+Pt+1 βuc,t+1 converted to units of uc,t).
+8 / 33
+
+===== SLIDE PAGE 10 =====
+Optimal Decision Rules
+Presence of money does not impact optimal decision rules for
+consumption and labor supply.
+Model optimal money demand as:
+Mt = Pt
++ Md(it
+−, Yt
++ ),
+Intuition:
+Higher prices require more cash to purchase the same real
+goods;
+Higher it increases the opportunity cost of holding money;
+Higher income increases transaction demand
+9 / 33
+
+===== SLIDE PAGE 11 =====
+Government
+Nominal flow budget constraints:
+PtGt
+=
+PtTt + PtBG
+t + Mt
+Pt+1Gt+1 + (1 + it)PtBG
+t + Mt
+=
+Pt+1Tt+1
+At t, government spends and finances its expenditure by collecting
+taxes, issuing debt, and printing money—a form of revenue,
+referred to as seigniorage.
+At t + 1, government makes purchases, pays off its debt
+obligations, and “buys back” the money it printed, all of which is
+financed by tax revenue.
+10 / 33
+
+===== SLIDE PAGE 12 =====
+Firms
+Since firm does not hold money, whether we write firm’s problem
+in nominal or real terms does not affect the optimality conditions
+and decision rules previously derived.
+Firm borrowing, investment, and dividends are all expressed in
+nominal terms.
+In market clearing conditions, nominal prices appear on both sides
+of each equation and therefore cancel out.
+The equilibrium conditions for the real block of the model remain
+identical to those derived previously.
+11 / 33
+
+===== SLIDE PAGE 13 =====
+Equilibrium Definition
+Equilibrium is the collection of {Ct, Nt, It, Yt, wt, rt, Pt, it} such
+that given {At, At+1, Gt, Gt+1, Kt, Mt, πe
+t+1, θt}:
+Ct
+=
+C d(Yt −Gt, Yt+1 −Gt+1, rt)
+Nt
+=
+Ns(wt, θt)
+Nt
+=
+Nd(wt, At, Kt)
+It
+=
+I d(rt, At+1, Kt)
+Yt
+=
+AtF(Kt, Nt)
+Yt
+=
+Ct + It + Gt
+Mt
+=
+PtMd(it, Yt)
+rt
+=
+it −πe
+t+1
+12 / 33
+
+===== SLIDE PAGE 14 =====
+Classical Dichotomy
+The first six equilibrium equations form the real block of the
+model: hold independently of any reference to nominal variables.
+Last two equations form the nominal block—a system of two
+equations in two unknown endogenous variables {Pt, it}.
+Do not need to know nominal variables to determine real
+variables—known as the classical dichotomy.
+Converse not true: nominal variables will be affected by real
+variables.
+13 / 33
+
+===== SLIDE PAGE 15 =====
+Determining Money Market Equilibrium
+Can use the same five-part graph as before to determine
+equilibrium of the real block.
+Real interest rate rt and output Yt are relevant for money demand.
+Once we know rt, Yt along with exogenous Mt, can determine Pt.
+Given exogenous πe
+t+1 and equilibrium rt, can determine it.
+14 / 33
+
+===== SLIDE PAGE 16 =====
+Money Market Equilibrium: Graph
+Notes: Interesting to have demand curve upward-sloping, but Pt is price of
+goods in terms of money, so
+1
+Pt is price of money in terms of goods. Money
+demand decreasing in
+1
+Pt .
+Source: GLS Ch. 18.
+15 / 33
+
+===== SLIDE PAGE 17 =====
+Monetary Neutrality
+Changes in Mt do not affect equations in the real block—no effect
+on any real endogenous variable.
+Money is said to be neutral in the neoclassical model.
+Useful medium-run benchmark, but in the short run nominal
+rigidities may break monetary neutrality.
+In this model, only effect of ↑Mt is to raise Pt (inflation).
+What is the effect of ↑πe
+t+1?
+16 / 33
+
+===== SLIDE PAGE 18 =====
+Real Shocks Affect Nominal Variables
+Positive supply shocks (↑At or ↓θt): lower rt and raise Yt, both
+of which pivot money demand to the right, lowering Pt.
+Positive demand shocks (↑At+1, ↑Gt, or ↓Gt+1): raise rt without
+changing Yt. Hence, money demand pivots to the left, raising Pt.
+17 / 33
+
+===== SLIDE PAGE 19 =====
+Supply Shock: ↑At
+Real Block
+Source: GLS Ch. 19.
+18 / 33
+
+===== SLIDE PAGE 20 =====
+Supply Shock: ↑At
+Nominal Block
+Source: GLS Ch. 19.
+19 / 33
+
+===== SLIDE PAGE 21 =====
+Demand Shock: ↑Gt
+Real Block
+Source: GLS Ch. 19.
+20 / 33
+
+===== SLIDE PAGE 22 =====
+Demand Shock: ↑Gt
+Nominal Block
+Source: GLS Ch. 19.
+21 / 33
+
+===== SLIDE PAGE 23 =====
+Qualitative Effects
+Exogenous Shock
+Variable
+↑At
+↑θt
+↑At+1
+↑Gt
+↑Gt+1
+↑Mt
+↑πe
+t+1
+Yt
++
+−
+0
+0
+0
+0
+0
+Ct
++
+−
+?
+−
+−
+0
+0
+It
++
+−
+?
+−
++
+0
+0
+Nt
++
+−
+0
+0
+0
+0
+0
+wt
++
++
+0
+0
+0
+0
+0
+rt
+−
++
++
++
+−
+0
+0
+it
+−
++
++
++
+−
+0
++
+Pt
+−
++
++
++
+−
++
++
+22 / 33
+
+===== SLIDE PAGE 24 =====
+Neoclassical Model and RBC Theory
+Real business cycle (RBC) theory takes the neoclassical model not
+just as an adequate description of an economy over the medium
+run but as a good description of the economy in the short run.
+Implications of RBC theory:
+Money is neutral
+Supply shocks (in particular, productivity shocks) drive
+fluctuations
+No role for active stabilization policies—equilibrium is efficient
+Do we want to take these implications seriously?
+Need to know whether model can fit the data.
+23 / 33
+
+===== SLIDE PAGE 25 =====
+Measuring Business Cycle
+Business cycle refers to fluctuations in log real GDP and other
+aggregate variables about some measure of trend.
+A defining characteristic of long-run real GDP is that it trends up.
+When moving away from long run, we’d like to remove the trend.
+Formally,
+ln Yt = ln Y τ
+t + ln Y c
+t
+Yt: aggregate variable of interest
+Y τ
+t : trend component
+Y c
+t : residual / cyclical component
+24 / 33
+
+===== SLIDE PAGE 26 =====
+Detrending
+In principle, many ways to remove trend from the series.
+One could fit a straight line through the actual series and take that
+to be the trend.
+Could also define trend as the average value of the actual series
+over a specified time window.
+In academic work, it is common to detrend using the
+Hodrick-Prescott (HP) Filter.
+It picks out the trend to minimize volatility of the cyclical
+component, subject to a penalty for the trend itself moving around
+too much.
+25 / 33
+
+===== SLIDE PAGE 27 =====
+Taking Model to the Data
+In the neoclassical model, output only reacts to supply shocks
+(changes in At, θt).
+Demand shocks don’t do anything to output; even in version of
+model where Y s is non-vertical, they won’t do much.
+1. In the data, cyclical components of Ct, Nt, etc. co-move with
+Yt over the business cycle. Can model relying on exogenous
+changes in At, θt reproduce these co-movements?
+2. Is there any good evidence of changes in At or θt
+corresponding to observed changes in Yt in the data?
+26 / 33
+
+===== SLIDE PAGE 28 =====
+Co-movements in Data vs. Model
+Notes: In data, Ct, It, Nt are very procyclical; wt is mildly procyclical or
+acyclical, rt is acyclical or countercyclical.
+θt generates conditionally countercyclical wt—inconsistent with data.
+At roughly gets all correlations right.
+Source: GLS Ch. 20.
+27 / 33
+
+===== SLIDE PAGE 29 =====
+Is There Evidence At Moves in Data in Same Way as Yt?
+Figure: Cyclical Components of TFP and GDP
+Notes: As in Solow model, measure ln TFP = ln Yt −α ln Kt −(1 −α) ln Nt.
+Source: GLS Ch. 20.
+28 / 33
+
+===== SLIDE PAGE 30 =====
+Policy Implications
+Conditional on movements in At, model can produce movements
+in endogenous variables which look like observed patterns of
+aggregate series in data.
+There is some evidence that At moves strongly with output,
+lending empirical credence to the theory.
+If it roughly fits the data, one is tempted to conclude that the
+theory is good.
+Policy implications: Recessions are efficient responses to
+exogenously lower productivity; No justification for activist policies,
+monetary or fiscal, to try to combat recessions.
+29 / 33
+
+===== SLIDE PAGE 31 =====
+Do We Really Buy This?
+Potential criticisms of RBC theory:
+What exactly are these productivity shocks? Why don’t we
+read about them in the newspaper?
+To generate realistic movements in Yt, model needs to rely on
+very elastic labor supply (i.e. labor supply curve very flat),
+which seems at odds with micro data
+Demand shocks don’t matter, money is neutral, markets are
+frictionless. Do these seem right?
+Is what we’re measuring as TFP really capturing exogenous
+productivity in the model or something else?
+30 / 33
+
+===== SLIDE PAGE 32 =====
+Is TFP Appropriately Measured?
+Suppose the true production function is:
+Yt = At(utKt)αN1−α
+t
+ut: capital utilization. Can’t adjust Kt in short run, but can adjust
+utilization.
+But TFP as typically measured isn’t accounting for ut, so it’s
+measuring not just At.
+Demand shocks could be causing ut to move, making it look like
+At is moving with Yt even if it isn’t.
+Basu, Fernald, and Kimball (2006) construct a
+“utilization-adjusted” measure of TFP and it is acyclical or even
+countercyclical.
+31 / 33
+
+===== SLIDE PAGE 33 =====
+Utilization-Adjusted TFP Is Acyclical
+Source: GLS Ch. 22.
+32 / 33
+
+===== SLIDE PAGE 34 =====
+Concluding Thoughts
+Each of these criticisms (and others) has merit.
+Today, few economists really believe that short-run fluctuations are
+efficient responses to changes in productivity.
+Neoclassical model is a useful benchmark, particularly for the
+medium run.
+But to think about short run business cycles and policy, need to
+modify the framework to allow for demand shocks to matter,
+money to be non-neutral, and equilibrium to be inefficient.
+We do so next time by introducing the New Keynesian Model.
+33 / 33

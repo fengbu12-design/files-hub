@@ -1,0 +1,235 @@
+===== SLIDE PAGE 1 =====
+AF5638
+Topic 5: Equilibrium in an Endowment Economy
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 2 =====
+Recap
+Last time, we studied optimal decision problem for a household.
+Outcome was an optimal decision rule, the consumption function.
+The decision rule takes prices as given.
+In the two-period consumption-saving model, the only price is rt,
+the real interest rate.
+1 / 20
+
+===== SLIDE PAGE 3 =====
+Modes of Economic Analysis
+1. Decision Theory: derivation of optimal decision rules, taking
+prices as given
+e.g., consumption function, labor demand function, etc.
+2. Partial Equilibrium: determine price that clears one market,
+taking prices in all other markets as given
+e.g., wages and the labor market, interest rates and the
+loanable funds market
+3. General Equilibrium: simultaneously determine all prices to
+simultaneously clear all markets
+e.g., simultaneously determine wage and interest rate to clear
+the labor and loanable funds markets
+Macro is really about general equilibrium.
+2 / 20
+
+===== SLIDE PAGE 4 =====
+Competitive Equilibrium
+A competitive equilibrium of an economy is a set of prices and
+allocations where (i) all agents behave according to decision rules
+taking prices as given, and (ii) all markets simultaneously clear.
+In this lecture, we consider equilibrium in an endowment economy
+with no endogenous production, i.e., with exogenous income.
+With fixed quantities, it becomes particularly clear how price
+adjustment results in equilibrium.
+3 / 20
+
+===== SLIDE PAGE 5 =====
+Competitive Equilibrium: Endowment Economy
+Equilibrium in an endowment economy entails:
+Optimal decision rule: consumption function
+Market: loanable funds/savings, St
+Price: real interest rate rt
+Market clearing: in aggregate, saving is zero, or equivalently,
+Yt = Ct
+Allocations: Ct, Ct+1
+4 / 20
+
+===== SLIDE PAGE 6 =====
+Setup
+There are L total households, each indexed by j = 1, 2, . . . , L.
+Assume households have identical preferences, but potentially
+different levels of income.
+Each household can borrow/save at the same real interest rate, rt,
+and solves:
+max
+Ct(j),Ct+1(j) U(j) = u(Ct(j)) + βu(Ct+1(j))
+s.t.
+Ct(j) + Ct+1(j)
+1 + rt
+= Yt(j) + Yt+1(j)
+1 + rt
+Optimal decision rule:
+Ct(j) = C d(Yt(j), Yt+1(j), rt)
+5 / 20
+
+===== SLIDE PAGE 7 =====
+Market Clearing
+What does it mean for markets to clear?
+Aggregate net saving must be equal to zero:
+St =
+L
+X
+j=1
+St(j) = 0
+Why? An individual cannot borrow unless someone else in the
+economy is saving, and vice versa.
+This implies:
+L
+X
+j=1
+(Yt(j) −Ct(j)) = 0 ⇒
+L
+X
+j=1
+Yt(j) =
+L
+X
+j=1
+Ct(j)
+In other words, aggregate income must equal aggregate
+consumption:
+Yt = Ct
+6 / 20
+
+===== SLIDE PAGE 8 =====
+Everyone the Same
+Suppose all households in the economy have identical endowment
+levels in both period t and t + 1.
+Convenient to just normalize total number of agents to one, i.e., a
+representative household.
+Can drop j index.
+Simple environment, but basic insight carries over more generally.
+7 / 20
+
+===== SLIDE PAGE 9 =====
+Defining Equilibrium
+Given Yt and Yt+1, equilibrium consists of price (real interest rate
+rt) and allocations (Ct, Ct+1) such that:
+Ct
+=
+C d(Yt, Yt+1, rt)
+St
+=
+0,
+or equivalently, Yt = Ct
+This is a system of two equations in two unknowns: Ct and rt.
+Together, can determine both rt and Ct (hence Ct+1 from
+second-period constraint).
+8 / 20
+
+===== SLIDE PAGE 10 =====
+Graphical Analysis
+Define total desired expenditure as:
+Y d
+t = C d(Yt, Yt+1, rt)
+Total desired expenditure is a function of income Yt.
+Income must equal expenditure in any equilibrium.
+Graph desired expenditure against income.
+Assume total desired expenditure with zero current income is
+positive: C d(0, Yt+1, rt) > 0.
+This is called autonomous expenditure.
+Since MPC < 1, there will exist one point where income equals
+expenditure.
+9 / 20
+
+===== SLIDE PAGE 11 =====
+Keynesian Cross
+Source: GLS Ch. 11.
+10 / 20
+
+===== SLIDE PAGE 12 =====
+IS Curve
+IS curve: the set of (rt, Yt) pairs where income equals expenditure
+and is consistent with optimal behavior by households.
+IS stands for “Investment equals Saving.”
+Summarizes demand side of the economy.
+Negative relationship between rt and Yt.
+11 / 20
+
+===== SLIDE PAGE 13 =====
+Derivation of the IS Curve
+Source: GLS Ch. 11.
+12 / 20
+
+===== SLIDE PAGE 14 =====
+Y s Curve
+Y s curve summarizes supply or production side of the economy.
+In an endowment economy, there is no endogenous production. So
+Y s curve is a vertical line at the exogenously given level of Yt.
+Source: GLS Ch. 11.
+13 / 20
+
+===== SLIDE PAGE 15 =====
+Graphing Equilibrium
+Must have income = expenditure (demand side) = production
+(supply side). Find rt where the IS and Y s curves cross.
+Source: GLS Ch. 11.
+14 / 20
+
+===== SLIDE PAGE 16 =====
+Supply Shock: Yt ↑
+Source: GLS Ch. 11.
+15 / 20
+
+===== SLIDE PAGE 17 =====
+Interpreting Supply Shock Effect
+When Yt goes up, equilibrium rt falls.
+Lower interest rate shifts the expenditure line up in a way that
+income equals expenditure at the new level of Yt.
+Intuitively, when current income goes up, household would like to
+increase consumption in both periods (due to consumption
+smoothing).
+For that, household would like to save more. But, in equilibrium
+this is impossible since no one else wants to borrow.
+As a result, interest rate must fall to dissuade households from
+increasing savings.
+16 / 20
+
+===== SLIDE PAGE 18 =====
+Demand Shock: Yt+1 ↑
+Source: GLS Ch. 11.
+17 / 20
+
+===== SLIDE PAGE 19 =====
+Interpreting Demand Shock Effect
+When Yt+1 goes up, expenditure line shifts up on impact, and IS
+curve shifts out.
+Since Y s curve is unchanged, equilibrium interest rate rises.
+Expenditure line shifts back down to where it began.
+Intuitively, when future income is expected to increase, households
+would like to increase current consumption by borrowing
+(consumption smoothing).
+But in equilibrium, households cannot increase borrowing.
+Hence, rt must rise to dissuade additional borrowing.
+18 / 20
+
+===== SLIDE PAGE 20 =====
+Discussion
+Market clearing requires Ct = Yt.
+For a given rt, household does not want Ct = Yt. Wants to
+smooth consumption relative to income.
+But in equilibrium cannot smooth without aggregate saving.
+rt adjusts so that household is content to have Ct = Yt.
+rt ends up being a measure of how plentiful the future is expected
+to be relative to the present.
+19 / 20
+
+===== SLIDE PAGE 21 =====
+Example with Log Utility
+With log utility, equilibrium real interest rate comes out to be:
+1 + rt = 1
+β
+Yt+1
+Yt
+rt proportional to expected income growth.
+Potentially useful for thinking about the issue of low real interest
+rates in US over last few decades.
+20 / 20

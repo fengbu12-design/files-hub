@@ -1,0 +1,288 @@
+===== SLIDE PAGE 1 =====
+AF5638
+Topic 1: Introduction and Facts About Economic
+Growth
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 2 =====
+Course in a Nutshell
+Macroeconomics asks how the aggregate economy functions as a
+whole.
+Modern macroeconomics is not just observation; it is grounded in
+models of dynamic and intertemporal decisions by individuals.
+The central puzzle:
+1. Long-run: Why are some nations rich and others poor?
+2. Short-run: Why do booms turn to busts, and can policy fix
+it?
+1 / 26
+
+===== SLIDE PAGE 3 =====
+Plan for Today
+Part 1: Measurement
+We will review macro data and discuss basic measures of economic
+activity, including GDP and the crucial distinction between nominal
+and real variables.
+Part 2: Stylized Facts
+We will then examine empirical regularities of economic growth,
+which will motivate the Solow model we introduce next time.
+2 / 26
+
+===== SLIDE PAGE 4 =====
+Gross Domestic Product
+GDP (nominal): current value of all final goods and services produced
+within a country in a given time period.
+Intermediate goods and services are excluded from the calculation.
+E.g., the economy produced $240 worth of bread this year using $150
+worth of flour as input, which was in turn produced by using $80 worth of
+wheat as input. What is the GDP of the economy this year?
+3 / 26
+
+===== SLIDE PAGE 5 =====
+Measuring GDP I
+GDP is a flow concept, and we just saw the production approach
+to measuring it (as total production value).
+Production = Income = Expenditure.
+Intuitively, the sale price of a good must be distributed as income
+to different factors of production—specifically, labor and
+capital—in the form of labor income and capital income.
+Income approach:
+GDPt =
+Wagest
+| {z }
+labor income
++ Interestt + Rentt + Profitt
+|
+{z
+}
+capital income
+4 / 26
+
+===== SLIDE PAGE 6 =====
+Measuring GDP II
+Not only must GDP equal total income, but total income must
+also equal total expenditures by economic agents.
+Four types of economic agents: (i) households, (ii) firms, (iii)
+government, (iv) rest of the world.
+Expenditure approach:
+GDPt
+=
+Consumptiont + Investmentt + Government Spendingt
++ Net Exportst
+5 / 26
+
+===== SLIDE PAGE 7 =====
+Nominal vs. Real GDP
+Nominal GDPt = p1ty1t + p2ty2t + · · · + pntynt.
+yit: quantity produced of good i;
+pit: value of good i at current period market prices.
+Real GDPt = p1,t−sy1t + p2,t−sy2t + · · · + pn,t−synt.
+pi,t−s: base-year price level.
+GDP Deflatort = Nominal GDPt
+Real GDPt
+× 100.
+Inflationt = GDP Deflatort−GDP Deflatort−1
+GDP Deflatort−1
+× 100.
+6 / 26
+
+===== SLIDE PAGE 8 =====
+Calculating GDP: An Example
+Suppose there are two goods in the economy, apples and oranges,
+whose quantities and prices are given below.
+Suppose year 1 is the base year.
+What are the nominal GDP, real GDP, and GDP deflator for each
+year?
+7 / 26
+
+===== SLIDE PAGE 9 =====
+Aside: Consumer Price Index
+CPI is another popular measure of aggregate price levels.
+It measures the price of a consumption basket a typical household
+consumes, e.g., 12 gallons of milk, 40 gallons of gasoline...
+I.e., we fix the quantities of the basket and look at how expensive
+the basket becomes over time:
+CPIt+s
+=
+Cost of baskett+s
+Cost of baskett
+× 100
+=
+p1,t+sx1 + p2,t+sx2 + · · · + pm,t+sxm
+p1tx1 + p2tx2 + · · · + pmtxm
+8 / 26
+
+===== SLIDE PAGE 10 =====
+Real GDP in the Data
+Source: GLS Ch. 1.
+9 / 26
+
+===== SLIDE PAGE 11 =====
+Remark I
+Left panel plots the natural log of real GDP for the US over
+1947–2016.
+Why natural logs? For small changes in x:
+ln xt+1 −ln xt ≈(xt+1 −xt)/xt.
+Strikingly, we can approximate log real GDP quite well with a
+straight line, which we call a trend line.
+As a first-order approximation, the US has grown at a constant
+annual rate of roughly 3%, which is captured by the slope of the
+trend line.
+10 / 26
+
+===== SLIDE PAGE 12 =====
+Remark II
+Right panel plots the detrended series, showing deviations of log
+real GDP from the trend line.
+Shaded areas indicate recession episodes, which are determined by
+the National Bureau of Economic Research (NBER) as periods of
+significant decline in economic activity that spread across the
+economy and last for more than a few months.
+The sharp decline in real GDP during recession periods is quite
+visible.
+11 / 26
+
+===== SLIDE PAGE 13 =====
+Economic Growth
+When economists talk about “growth,” they typically mean the
+average rate of growth in real GDP per capita over the long run.
+Long run: frequencies of time measured in decades;
+Not period-to-period fluctuation in the growth rate.
+“Once you start to think about growth, it is difficult to think about
+anything else.” —Robert Lucas, 1995 Nobel Prize winner.
+12 / 26
+
+===== SLIDE PAGE 14 =====
+U.S. Real GDP per Capita
+Click HERE to visit the FRED Database.
+13 / 26
+
+===== SLIDE PAGE 15 =====
+Power of Compounding Growth
+Annual average growth rate of U.S. real GDP per capita is about 1.8%.
+⇒Implies the level doubles roughly once every 40 years.
+Rule of 70: number of years it takes a variable to double is
+approximately 70 divided by the growth rate.
+2Y
+=
+(1 + g)tY
+2
+=
+(1 + g)t
+ln 2
+=
+t ln(1 + g)
+0.7
+≈
+tg
+Small differences in growth rates matter over long horizons.
+Consider two countries that start with the same per capita GDP, but
+country A grows 2% per year and country B grows 1% per year. After 50
+years (roughly one generation), A will be 1.64 times richer than B!
+14 / 26
+
+===== SLIDE PAGE 16 =====
+Growth Facts: Time Series
+1. Output per worker grows at an approximately constant rate
+over long periods of time.
+Graph
+2. Capital per worker grows at an approximately constant rate
+over long periods of time.
+Graph
+3. Capital to output ratio is roughly constant over long periods
+of time.
+Graph
+4. Labor’s share of income is roughly constant over long periods
+of time.
+Graph
+5. Return to capital is roughly constant over long periods of
+time.
+Graph
+6. Real wage grows at approximately the same rate as output per
+worker over long periods of time.
+Graph
+15 / 26
+
+===== SLIDE PAGE 17 =====
+Output Per Worker over Time
+Source: GLS Ch. 4.
+Go back
+16 / 26
+
+===== SLIDE PAGE 18 =====
+Capital Per Worker over Time
+Source: GLS Ch. 4.
+Go back
+17 / 26
+
+===== SLIDE PAGE 19 =====
+Capital to Output Ratio over Time
+Source: GLS Ch. 4.
+Go back
+18 / 26
+
+===== SLIDE PAGE 20 =====
+Labor Share over Time
+Source: GLS Ch. 4.
+Go back
+19 / 26
+
+===== SLIDE PAGE 21 =====
+Return on Capital over Time
+Source: GLS Ch. 4.
+Go back
+20 / 26
+
+===== SLIDE PAGE 22 =====
+Real Wage over Time
+Source: GLS Ch. 4.
+Go back
+21 / 26
+
+===== SLIDE PAGE 23 =====
+Growth Facts: Cross-Section
+1. There are large differences in income per capita across
+countries.
+Table
+2. There are some examples where poor countries catch up
+(growth miracles), and others where they do not (growth
+disasters).
+Table
+3. Human capital (e.g. education) is strongly positively
+correlated with income per capita.
+Graph
+22 / 26
+
+===== SLIDE PAGE 24 =====
+Income Differences across Selected Countries
+Notes: Real GDP is expressed in international dollars using chain-weighted PPPs to
+account for cross-country price differences.
+Source: GLS Ch. 4.
+Go back
+23 / 26
+
+===== SLIDE PAGE 25 =====
+Growth Miracles and Disasters
+Notes: Real GDP is terms of chain-weighted PPPs.
+Source: GLS Ch. 4.
+Go back
+24 / 26
+
+===== SLIDE PAGE 26 =====
+Education and Income Per Capita
+Source: GLS Ch. 4.
+Go back
+25 / 26
+
+===== SLIDE PAGE 27 =====
+Why These Facts Matter
+We have established the stylized facts of economic growth. Now,
+we must build a theory that explains them.
+Understanding these patterns is the key to designing policies that
+foster faster growth.
+A good model must first match the data before we can trust its
+predictions.
+Next time, we will construct the Solow Model, our primary tool for
+analyzing these dynamics.
+26 / 26

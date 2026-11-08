@@ -1,0 +1,365 @@
+===== SLIDE PAGE 1 =====
+AF5638
+Topic 10: The New Keynesian Model
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 2 =====
+Introduction
+New Keynesian models are the leading alternative to the
+neoclassical / RBC model.
+Demand side of NK models is identical to the neoclassical model.
+“New” on the supply side: NK models assume nominal rigidities in
+the short run, i.e., prices and nominal wages cannot respond to
+shocks instantaneously.
+1 / 42
+
+===== SLIDE PAGE 3 =====
+New Keynesian Implications
+1. Money is non-neutral.
+2. Demand shocks matter for output.
+3. Equilibrium of the model is inefficient.
+4. There is scope for policy to improve outcomes in the short run.
+2 / 42
+
+===== SLIDE PAGE 4 =====
+Nominal Rigidities
+Two basic variants of NK framework:
+price stickiness
+nominal wage stickiness
+Each will require some change in the labor market – either the firm
+(price stickiness) or the household (wage stickiness) operates off its
+demand or supply schedule.
+We focus on price stickiness as a motivating assumption.
+3 / 42
+
+===== SLIDE PAGE 5 =====
+Demand Side
+In the neoclassical model, classical dichotomy held: could
+separately think about real and nominal demand.
+Will no longer be true in NK models.
+Instead use the aggregate demand (AD) curve to jointly summarize
+real and nominal demand.
+IS + LM = AD:
+IS curve: same as before
+LM curve: summarizes market for money
+4 / 42
+
+===== SLIDE PAGE 6 =====
+Demand Equations
+Equations characterizing NK demand are identical to the
+neoclassical model:
+Ct
+=
+C d(Yt −Gt, Yt+1 −Gt+1, rt)
+It
+=
+I d(rt, At+1, Kt)
+Yt
+=
+Ct + It + Gt
+Mt
+=
+PtMd(rt + πe
+t+1, Yt)
+rt
+=
+it −πe
+t+1
+First three equations give rise to IS curve, depicting {rt, Yt} pairs
+satisfying these equations.
+Last two equations represent money demand and the Fisher
+equation. Together, they yield the LM curve.
+5 / 42
+
+===== SLIDE PAGE 7 =====
+LM Curve
+LM stands for “liquidity = money.”
+Curve plots {rt, Yt} pairs for which money demand and Fisher
+equation hold, taking Pt, πe
+t+1, and Mt as given.
+To derive the LM curve, convenient to draw money demand as a
+function of rt instead of Pt, so the demand curve is
+downward-sloping.
+6 / 42
+
+===== SLIDE PAGE 8 =====
+Deriving the LM Curve
+Source: GLS Ch. 24.
+7 / 42
+
+===== SLIDE PAGE 9 =====
+Shift of LM Curve: ↑Mt
+Source: GLS Ch. 24.
+8 / 42
+
+===== SLIDE PAGE 10 =====
+Shift of LM Curve: ↑πe
+t+1
+Source: GLS Ch. 24.
+9 / 42
+
+===== SLIDE PAGE 11 =====
+Shift of LM Curve: ↑Pt
+Source: GLS Ch. 24.
+10 / 42
+
+===== SLIDE PAGE 12 =====
+AD Curve
+Stands for aggregate demand.
+AD curve plots (Pt, Yt) combinations for which all five equations
+summarizing the demand side hold simultaneously.
+Graphically, this means the economy is both on the IS and the LM
+curves.
+11 / 42
+
+===== SLIDE PAGE 13 =====
+Deriving the AD Curve
+Source: GLS Ch. 24.
+12 / 42
+
+===== SLIDE PAGE 14 =====
+Shift of AD Curve
+LM shifts
+Source: GLS Ch. 24.
+13 / 42
+
+===== SLIDE PAGE 15 =====
+Shift of AD Curve
+IS shifts
+Source: GLS Ch. 24.
+14 / 42
+
+===== SLIDE PAGE 16 =====
+Supply Side
+Summarized by the AS curve, which stands for aggregate supply.
+In general, AS curve plots combinations of (Pt, Yt) consistent with
+(i) the production function, (ii) some notion of labor market
+equilibrium, and (iii) any exogenous restriction on nominal prices or
+wage adjustment.
+We first look at AS curve in the neoclassical model, then show how
+it can be derived in NK models.
+Since Pt does not appear in neoclassical supply side, AS curve is
+identical to Y s curve, except vertical axis is Pt instead of rt.
+15 / 42
+
+===== SLIDE PAGE 17 =====
+Neoclassical AS Curve
+Source: GLS Ch. 25.
+16 / 42
+
+===== SLIDE PAGE 18 =====
+Neoclassical IS-LM-AD-AS Equilibrium
+Source: GLS Ch. 26.
+17 / 42
+
+===== SLIDE PAGE 19 =====
+New Keynesian Supply Side
+NK supply side assumes nominal rigidities – prices or nominal
+wages are completely or partially fixed in the short run.
+Results in a non-vertical AS curve, thus allowing demand shocks
+to have real effects on the economy.
+We focus on price stickiness and consider two forms:
+Simple sticky price model: price level is completely fixed
+Partial sticky price model: price level is partially fixed
+18 / 42
+
+===== SLIDE PAGE 20 =====
+Simple Sticky Price Model
+Pt = ¯Pt is now exogenous, rather than endogenous.
+Replace labor demand curve with Pt = ¯Pt.
+Firm has to hire labor to meet demand at ¯Pt rather than to
+maximize its value.
+Supply side conditions:
+Nt
+=
+Ns(wt, θt)
+Pt
+=
+¯Pt
+Yt
+=
+AtF(Kt, Nt)
+AS curve will just be horizontal at ¯Pt. Can only shift if ¯Pt changes
+exogenously.
+19 / 42
+
+===== SLIDE PAGE 21 =====
+Simple Sticky Price AS Curve
+Source: GLS Ch. 25.
+20 / 42
+
+===== SLIDE PAGE 22 =====
+Simple Sticky Price IS-LM-AD-AS Equilibrium
+Source: GLS Ch. 26.
+21 / 42
+
+===== SLIDE PAGE 23 =====
+Simple Sticky Price Model: Remarks
+In this model, output is solely demand-determined:
+Position of AD determines Yt
+Given Yt, determine the required Nt
+Given Nt, determine wt from labor supply curve
+In a sense, this is opposite of neoclassical model:
+Labor demand and supply jointly determine wt and Nt
+Nt determines Yt
+Position of AD determines Pt
+22 / 42
+
+===== SLIDE PAGE 24 =====
+↑Mt: Simple Sticky Price Model
+Monetary non-neutrality
+23 / 42
+
+===== SLIDE PAGE 25 =====
+↑Mt: Neoclassical Case
+Source: GLS Ch. 26.
+24 / 42
+
+===== SLIDE PAGE 26 =====
+Monetary Non-Neutrality: Intuition
+When Mt goes up, real interest rate falls, holding Pt fixed.
+Sticky prices: households and firms increase spending in response
+to lower real interest rate.
+Flexible prices: Pt rises with Mt, leaving real interest rate
+unchanged and no real effect.
+Nominal rigidities are key: they prevent prices from fully absorbing
+the money shock.
+The stickier prices are, the bigger the real effect.
+25 / 42
+
+===== SLIDE PAGE 27 =====
+Positive IS Shock: Simple Sticky Price Model
+Source: GLS Ch. 26.
+26 / 42
+
+===== SLIDE PAGE 28 =====
+Positive IS Shock: Neoclassical Case
+Source: GLS Ch. 26.
+27 / 42
+
+===== SLIDE PAGE 29 =====
+↑At: Simple Sticky Price Model
+“Contractionary” effect on Nt
+Source: GLS Ch. 26.
+28 / 42
+
+===== SLIDE PAGE 30 =====
+↑At: Neoclassical Case
+Source: GLS Ch. 26.
+29 / 42
+
+===== SLIDE PAGE 31 =====
+Effects of Shocks: Simple Sticky Price vs. Neoclassical
+Relative to neoclassical model, in the simple sticky price model:
+Output over-reacts to demand shocks (nominal or real)
+Output under-reacts to supply shocks
+Basic intuition:
+When demand goes up, if prices can’t rise, firms
+accommodate demand by producing more
+When productivity improves, if prices can’t fall, output is fixed
+by demand, so firms need less labor
+30 / 42
+
+===== SLIDE PAGE 32 =====
+Partial Sticky Price Model
+Assume:
+Pt = ¯Pt + γ(Yt −Y f
+t )
+Y f
+t : equilibrium output that would obtain if prices were flexible
+γ ≥0: parameter governing degree of price stickiness
+Smaller γ, stickier prices (flatter AS)
+γ = 0: simple sticky price model (horizontal AS)
+γ →∞: neoclassical model (vertical AS, Yt = Y f
+t )
+31 / 42
+
+===== SLIDE PAGE 33 =====
+Deriving Partial Sticky Price AS Curve
+Notes: ASf is hypothetical neoclassical AS curve, where Y f
+t can be graphically found
+where labor supply intersects hypothetical labor demand. Cross point: Pt = ¯Pt at
+Yt = Y f
+t . Source: GLS Ch. 25.
+32 / 42
+
+===== SLIDE PAGE 34 =====
+Partial Sticky Price IS-LM-AD-AS Equilibrium
+Notes: For simplicity, we assume that the initial equilibrium of partial sticky price
+model coincides with the hypothetical neoclassical equilibrium.
+Source: GLS Ch. 26.
+33 / 42
+
+===== SLIDE PAGE 35 =====
+↑Mt: Partial Sticky Price Model
+Source: GLS Ch. 26.
+34 / 42
+
+===== SLIDE PAGE 36 =====
+Positive IS Shock: Partial Sticky Price Model
+Source: GLS Ch. 26.
+35 / 42
+
+===== SLIDE PAGE 37 =====
+↑At: Partial Sticky Price Model
+Notes: Effect on Nt and wt is ambiguous, although graph is drawn where both Nt and
+wt decrease. Source: GLS Ch. 26.
+36 / 42
+
+===== SLIDE PAGE 38 =====
+Simple vs. Partial Sticky Price vs. Neoclassical
+How the economy behaves in the partial sticky price model depends
+on γ (the slope of AS curve, how sticky/flexible prices are).
+Results from the partial sticky price model are in between the
+extremes of the simple sticky price model (γ = 0) and the
+neoclassical model (γ →∞).
+37 / 42
+
+===== SLIDE PAGE 39 =====
+Optimal Monetary Policy
+We have looked at exogenous changes in monetary policy and
+studied their real effects.
+But optimal policy isn’t about randomly changing policy.
+It is about endogenously reacting to other shocks.
+38 / 42
+
+===== SLIDE PAGE 40 =====
+Dual Mandate and the Case for Price Stability
+In the US, the Fed has a dual mandate: price stability and full
+employment.
+In model, think of dual mandate as:
+Pt close to constant
+Yt = Y f
+t
+In NK models, the “Divine Coincidence” (Blanchard and Gali,
+2007) holds: stabilizing prices stabilizes output gap, and vice versa.
+39 / 42
+
+===== SLIDE PAGE 41 =====
+Optimal Policy in a Nutshell
+Assume economy initially in neoclassical, no output gap equilibrium.
+Then some exogenous changes cause either the AD or AS curve to shift.
+Will in general result in a non-zero output gap in the short run, which
+will put pressure on ¯Pt to adjust in the medium run to shift the AS curve
+to close the gap.
+No need to wait for internal model dynamics to take over. Instead, adjust
+policy (i.e., Mt) so that Yt = Y f
+t .
+Results in no change in price level. Both parts of the dual mandate are
+satisfied.
+Optimal policy involves:
+Counteract demand shocks
+Accommodate supply shocks
+40 / 42
+
+===== SLIDE PAGE 42 =====
+Optimal Policy Response to IS Shock
+Source: GLS Ch. 28.
+41 / 42
+
+===== SLIDE PAGE 43 =====
+Optimal Policy Response to Supply Shock (At)
+Source: GLS Ch. 28.
+42 / 42

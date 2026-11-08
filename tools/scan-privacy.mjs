@@ -156,6 +156,8 @@ function add(f, kind, label, sev, line, snippet) {
 
 function scanText(file, text) {
   if (!text) return;
+  // 页面里内嵌的图片/字体是 base64，扫它只会制造误报（数字串、字母串）
+  text = text.replace(/data:[^"')\s]{40,}/g, ' ').replace(/[A-Za-z0-9+/]{200,}={0,2}/g, ' ');
   for (const p of PATTERNS) {
     p.re.lastIndex = 0;
     let m;
@@ -225,20 +227,28 @@ function scanName(p) {
   }
 }
 
+const ARCHIVE = new Set(['zip', 'rar', '7z', 'tar', 'gz', 'bz2', 'xz']);
+
+function scanOne(p) {
+  scanText(p, textOf(p));
+  scanMeta(p);
+  scanName(p);
+  const ext = path.extname(p).slice(1).toLowerCase();
+  if (ARCHIVE.has(ext)) {
+    const mb = (fs.statSync(p).size / 1048576).toFixed(1);
+    add(p, 'archive', `压缩包 ${mb} MB，内部内容无法扫描`, 'warn', 0, path.basename(p));
+  }
+}
+
 function walk(p) {
   let st;
   try { st = fs.statSync(p); } catch { return; }
-  if (st.isFile()) {
-    scanText(p, textOf(p));
-    scanMeta(p);
-    scanName(p);
-    return;
-  }
+  if (st.isFile()) { scanOne(p); return; }
   for (const e of fs.readdirSync(p, { withFileTypes: true })) {
     if (IGNORE.has(e.name)) continue;
     const full = path.join(p, e.name);
     if (e.isDirectory()) walk(full);
-    else if (e.isFile()) { scanText(full, textOf(full)); scanMeta(full); scanName(full); }
+    else if (e.isFile()) scanOne(full);
   }
 }
 

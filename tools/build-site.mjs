@@ -87,19 +87,24 @@ function fileRow(f) {
   const t = TYPES[f.ext] || { l: (f.ext || 'FILE').slice(0, 4).toUpperCase(), c: 'gray' };
   const name = f.path.split('/').pop();
   const sub = f.path.includes('/') ? f.path.slice(f.path.indexOf('/') + 1, f.path.length - name.length) : '';
-  const acts = [`<a class="act" href="${blobUrl(f.path)}" target="_blank" rel="noopener">预览</a>`,
-                `<a class="act" href="${rawUrl(f.path)}" target="_blank" rel="noopener" download>下载</a>`];
+  const isHtml = f.ext === 'html' || f.ext === 'htm';
+  const acts = isHtml
+    ? [`<a class="act act-main" href="${SITE}${enc(f.path)}" target="_blank" rel="noopener">打开</a>`,
+       `<a class="act" href="${rawUrl(f.path)}" target="_blank" rel="noopener" download>下载</a>`]
+    : [`<a class="act" href="${blobUrl(f.path)}" target="_blank" rel="noopener">预览</a>`,
+       `<a class="act" href="${rawUrl(f.path)}" target="_blank" rel="noopener" download>下载</a>`];
   if (OFFICE.has(f.ext) && hasPdf(f.path)) {
     acts.push(`<a class="act act-main" href="${SITE}${enc(pdfPath(f.path))}" target="_blank" rel="noopener">在线阅读</a>`);
   }
   const thumb = IMG.has(f.ext)
     ? `<a class="thumb" href="${rawUrl(f.path)}" target="_blank" rel="noopener"><img loading="lazy" src="${rawUrl(f.path)}" alt=""></a>`
     : '';
+  const nameHref = isHtml ? `${SITE}${enc(f.path)}` : blobUrl(f.path);
   return `        <li class="file" data-name="${esc(f.path.toLowerCase())}">
           <span class="ext ext-${t.c}">${t.l}</span>
           ${thumb}
           <div class="meta">
-            <a class="fname" href="${blobUrl(f.path)}" target="_blank" rel="noopener">${esc(name)}</a>
+            <a class="fname" href="${nameHref}" target="_blank" rel="noopener">${esc(name)}</a>
             <span class="sub">${sub ? esc(sub) : ''}<span class="size">${human(f.size)}</span><span class="date">${f.mtime.toLocaleDateString('zh-CN')}</span></span>
           </div>
           <div class="acts">${acts.join('')}</div>
@@ -112,8 +117,13 @@ for (const key of keys) {
   if (!list || !list.length) continue;
   list.sort((a, b) => a.path.localeCompare(b.path, 'zh'));
   const title = key === '' ? '根目录文件' : (TITLES[key] || key);
+  // 该目录里有 index.html 就给一个整页入口
+  const entry = key ? list.find((f) => f.path.toLowerCase() === (key + '/index.html').toLowerCase()) : null;
+  const openAll = entry
+    ? ` <a href="${SITE}${enc(entry.path)}" target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:#2f6feb;text-decoration:none;margin-left:10px">打开 ↗</a>`
+    : '';
   sections.push(`    <section class="group">
-      <h2>${esc(title)} <span class="count">${list.length}</span></h2>
+      <h2>${esc(title)} <span class="count">${list.length}</span>${openAll}</h2>
       <ul class="files">
 ${list.map(fileRow).join('\n')}
       </ul>

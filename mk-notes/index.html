@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AF5638 宏观经济学 · 期末复习总台</title>
+<style>
+:root{
+ --bg:#f6f8fc; --card:#fff; --card2:#f1f5f9; --card3:#e8eef7;
+ --ink:#0f172a; --ink2:#334155; --muted:#64748b; --line:#dbe3ee;
+ --accent:#2563eb; --accent-soft:#eff6ff; --accent-ink:#1d4ed8;
+ --green:#047857; --green-soft:#ecfdf5;
+ --orange:#b45309; --orange-soft:#fffbeb;
+ --red:#b91c1c; --red-soft:#fef2f2;
+ --purple:#6d28d9; --purple-soft:#f5f3ff;
+}
+[data-theme="dark"]{
+ --bg:#0f172a; --card:#1b2437; --card2:#243146; --card3:#2d3b53;
+ --ink:#f8fafc; --ink2:#d4dded; --muted:#94a3b8; --line:#3b4a63;
+ --accent:#7db4ff; --accent-soft:#152f52; --accent-ink:#8cc0ff;
+ --green:#4ade80; --green-soft:#08301f;
+ --orange:#fbbf24; --orange-soft:#3a2708;
+ --red:#fb8a8a; --red-soft:#3d1414;
+ --purple:#b9a2ff; --purple-soft:#251a45;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:"Segoe UI","Microsoft YaHei",-apple-system,sans-serif;line-height:1.75;font-size:16px;}
+.wrap{max-width:1180px;margin:0 auto;padding:26px 24px 70px;}
+a{color:var(--accent-ink);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* 顶栏 */
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+.top .brand{font-weight:800;font-size:15px;color:var(--ink2);letter-spacing:.3px;}
+.theme-toggle{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px;}
+.theme-toggle button{border:none;background:transparent;color:var(--ink2);font-size:13px;font-weight:600;
+ padding:4px 12px;border-radius:999px;cursor:pointer;font-family:inherit;}
+.theme-toggle button.active{background:var(--accent);color:#fff;}
+
+/* hero */
+.hero{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0ea5e9);color:#fff;
+ border-radius:20px;padding:34px 38px 30px;position:relative;overflow:hidden;}
+.hero:after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;
+ background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%);}
+.hero h1{margin:0 0 8px;font-size:30px;letter-spacing:.5px;}
+.hero p{margin:0;opacity:.94;font-size:14.5px;}
+.hero .examline{margin-top:12px;display:inline-block;background:rgba(255,255,255,.16);
+ border-radius:999px;padding:4px 14px;font-size:13px;}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px;position:relative;z-index:1;}
+.stat{background:rgba(255,255,255,.13);border-radius:12px;padding:12px 14px;}
+.stat b{display:block;font-size:26px;line-height:1.2;}
+.stat span{font-size:12.5px;opacity:.9;}
+
+/* 三块主体 */
+.mains{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 6px;}
+.main{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;
+ box-shadow:0 1px 3px rgba(15,23,42,.05);transition:.18s;display:flex;flex-direction:column;}
+.main:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,23,42,.10);border-color:var(--accent);}
+.main .tagline{font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--accent);text-transform:uppercase;}
+.main h2{margin:6px 0 6px;font-size:20px;}
+.main p{margin:0 0 10px;color:var(--ink2);font-size:13.8px;}
+.main ul{margin:0 0 14px;padding-left:18px;color:var(--muted);font-size:13px;}
+.main ul li{margin:3px 0;}
+.main .go-btn{margin-top:auto;display:inline-block;background:#2563eb;color:#fff;
+ border-radius:10px;padding:9px 16px;font-size:14px;font-weight:700;text-align:center;}
+.main .go-btn:hover{text-decoration:none;filter:brightness(1.06);}
+.main.rev .go-btn{background:#6d28d9;}
+.main.pra .go-btn{background:#047857;}
+
+/* 通用节标题 */
+.sec{margin:34px 0 12px;display:flex;align-items:baseline;gap:10px;}
+.sec h2{margin:0;font-size:19px;padding-left:11px;border-left:5px solid var(--accent);}
+.sec .hint{font-size:13px;color:var(--muted);}
+
+/* 十讲 */
+.block{margin-bottom:16px;}
+.bhead{display:flex;align-items:center;gap:10px;margin:0 0 8px;}
+.bhead b{font-size:14.5px;}
+.brange{font-size:12px;color:#fff;background:#475569;border-radius:6px;padding:1px 8px;font-weight:700;}
+.bsub{font-size:12.5px;color:var(--muted);}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:10px;}
+.tcard{display:flex;align-items:center;gap:11px;background:var(--card);border:1px solid var(--line);
+ border-radius:12px;padding:11px 14px;color:var(--ink);transition:.15s;}
+.tcard:hover{border-color:var(--accent);background:var(--accent-soft);text-decoration:none;transform:translateX(2px);}
+.tnum{font-weight:800;font-size:13px;color:#fff;background:#2563eb;border-radius:8px;padding:3px 9px;min-width:34px;text-align:center;}
+.tbody{flex:1;min-width:0;}
+.tname{font-size:14px;font-weight:700;}
+.tmeta{font-size:11.8px;color:var(--muted);}
+.tdots{display:flex;gap:4px;}
+.dot{font-size:11px;font-weight:800;color:#fff;border-radius:999px;min-width:19px;text-align:center;padding:1px 5px;}
+.dot.f{background:#b91c1c;} .dot.m{background:#b45309;} .dot.u{background:#6d28d9;}
+
+/* 路线 */
+.routes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 14px;position:relative;}
+.rnum{position:absolute;right:14px;top:10px;font-size:30px;font-weight:900;color:var(--card3);line-height:1;}
+.rh b{display:block;font-size:15.5px;}
+.rh span{font-size:12.3px;color:var(--muted);}
+.rcard ol{margin:8px 0 0;padding-left:20px;font-size:13.2px;color:var(--ink2);}
+.rcard li{margin:6px 0;}
+
+/* 考点表 */
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink2);border-radius:999px;
+ padding:4px 13px;font-size:13px;cursor:pointer;font-family:inherit;font-weight:600;}
+.chip.on{background:#2563eb;border-color:#2563eb;color:#fff;}
+.chip .c{opacity:.75;font-weight:700;margin-left:3px;}
+.search{flex:1;min-width:200px;border:1px solid var(--line);background:var(--card);color:var(--ink);
+ border-radius:999px;padding:6px 15px;font-size:13.5px;font-family:inherit;outline:none;}
+.search:focus{border-color:var(--accent);}
+.count{font-size:12.5px;color:var(--muted);margin-left:auto;}
+.tblwrap{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+table{width:100%;border-collapse:collapse;font-size:13.6px;}
+thead th{background:var(--card2);color:var(--ink2);font-size:12.5px;text-align:left;
+ padding:9px 12px;border-bottom:1px solid var(--line);font-weight:700;position:sticky;top:0;}
+tbody td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:middle;}
+tbody tr:hover{background:var(--accent-soft);}
+tbody tr:last-child td{border-bottom:none;}
+.c1{white-space:nowrap;}
+.tt{font-weight:800;color:var(--accent-ink);}
+.pp{color:var(--muted);margin-left:5px;font-size:12.5px;}
+.kind{font-size:11.5px;font-weight:800;color:#fff;border-radius:999px;padding:1px 8px;white-space:nowrap;}
+.k-final{background:#b91c1c;} .k-mid{background:#b45309;} .k-must{background:#6d28d9;}
+.c3{color:var(--ink);}
+.c4{white-space:nowrap;text-align:right;}
+.go{font-size:12.5px;border-bottom:1px dashed var(--accent);}
+.q{font-size:11.8px;color:#fff;background:#2563eb;border-radius:6px;padding:1px 7px;font-weight:700;}
+.q.off{background:transparent;color:var(--muted);}
+.q:hover{text-decoration:none;filter:brightness(1.1);}
+tr.hide{display:none;}
+.tnote{font-size:12.5px;color:var(--muted);margin-top:8px;}
+
+/* 材料表 */
+.mf{font-family:Consolas,monospace;font-size:12.8px;color:var(--accent-ink);}
+.ms{color:var(--muted);text-align:right;}
+footer{margin-top:44px;color:var(--muted);font-size:12.8px;text-align:center;line-height:1.9;}
+@media(max-width:900px){
+ .mains,.routes{grid-template-columns:1fr;}
+ .stats{grid-template-columns:repeat(2,1fr);}
+}
+
+/* ============ 共用外壳（ui_shell.py） ============ */
+.rprog{position:fixed;left:0;top:0;height:3px;width:100%;z-index:1300;pointer-events:none;}
+.rprog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent,#2563eb),var(--accent2,#7c3aed));
+ border-radius:0 3px 3px 0;transition:width .1s linear;}
+
+.rail{position:fixed;left:max(14px,calc(50% - 620px));top:50%;transform:translateY(-50%);z-index:1100;
+ display:flex;flex-direction:column;gap:6px;width:78px;}
+.rail.bare{left:max(14px,calc(50% - 678px));width:78px;}
+.tocbtn{display:none;}
+/* 窄屏目录抽屉：1366/1440 这类笔记本以前根本看不到目录，现在点了就有 */
+#toc.show{display:block!important;z-index:1250;right:12px;top:64px;width:min(280px,calc(100vw - 24px));
+ max-height:min(72vh,560px);overflow:auto;box-shadow:0 12px 40px rgba(15,23,42,.25);}
+.rbtn{display:flex;align-items:center;justify-content:center;gap:5px;height:34px;padding:0 6px;
+ border-radius:10px;background:var(--card);border:1px solid var(--line);color:var(--ink2);
+ font-size:12px;font-weight:700;text-decoration:none;cursor:pointer;font-family:inherit;
+ box-shadow:0 1px 3px rgba(15,23,42,.07);transition:background .14s,color .14s,border-color .14s;}
+.rbtn i{font-style:normal;font-size:14px;line-height:1;}
+.rbtn:hover{background:#2563eb;border-color:#2563eb;color:#fff;text-decoration:none;}
+.rsep{height:1px;background:var(--line);margin:1px 8px;}
+.rjump input{width:100%;height:30px;text-align:center;border-radius:9px;border:1px dashed var(--line);
+ background:var(--card2);color:var(--ink);font-size:12px;font-family:inherit;font-weight:700;
+ box-shadow:0 1px 3px rgba(15,23,42,.07);}
+.rjump input::placeholder{color:var(--muted);font-weight:600;}
+.rjump input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 2px rgba(37,99,235,.18);}
+.rlast{display:block;text-align:center;font-size:11.5px;font-weight:800;color:var(--orange-ink,#b45309);
+ background:var(--card);border:1px dashed var(--orange,#b45309);border-radius:9px;padding:5px 2px;
+ text-decoration:none;letter-spacing:.2px;}
+.rlast:hover{background:#b45309;color:#fff;border-style:solid;text-decoration:none;}
+[hidden]{display:none!important;}
+
+@media (max-width:1419px){
+ .rail{left:auto;right:14px;bottom:16px;top:auto;transform:none;width:auto;align-items:flex-end;}
+ .rail .rbtn{width:40px;height:40px;border-radius:999px;padding:0;opacity:.94;
+   background:var(--card);box-shadow:0 3px 12px rgba(15,23,42,.18);}
+ .rail .rbtn span{display:none;}
+ .rail .rsep,.rail .rjump,.rail .rprev,.rail .rnext,.rail .rlast{display:none!important;}
+}
+/* 1420–1519 这一段最尴尬：右侧目录被收起了，所以侧栏要给个目录按钮 */
+@media (max-width:1519px){ .rail .tocbtn{display:flex;} }
+@media (min-width:1520px){ .rail .tocbtn{display:none!important;} }
+/* 页底「上一份 / 下一份」：读到最底下的人下一步一定是这个 */
+.nextnav{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:40px 0 6px;}
+.nextnav a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
+ padding:14px 18px;text-decoration:none;color:var(--ink);transition:.15s;box-shadow:0 1px 3px rgba(15,23,42,.06);}
+.nextnav a:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(37,99,235,.15);text-decoration:none;}
+.nextnav .nl{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:4px;letter-spacing:.3px;}
+.nextnav .nt{display:block;font-size:14.5px;font-weight:800;line-height:1.5;}
+.nextnav a.nx{text-align:right;background:var(--card);}
+.nextnav a.nx .nl{color:var(--accent-ink,#1d4ed8);}
+.nextnav a.nx .nt{color:var(--accent-ink,#1d4ed8);}
+.nextnav a.pv .nt{color:var(--ink2);}
+.nextnav a.solo{grid-column:1 / -1;text-align:left;}
+@media (max-width:720px){ .nextnav{grid-template-columns:1fr;} .nextnav a.nx{text-align:left;} }
+@media print{
+ .rail,.rprog,.nextnav{display:none!important;}
+}
+</style>
+</head>
+<body>
+<div class="rprog"><i id="rprogbar"></i></div>
+<nav class="rail bare" aria-label="页面导航">
+<a class="rbtn" href="#tagtable" title="跳到 99 条考点总表"><i>⌕</i><span>考点表</span></a>
+<button class="rbtn" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到页面顶部"><i>↑</i><span>顶部</span></button>
+</nav>
+<div class="wrap">
+
+<div class="top">
+ <div class="brand">AF5638 宏观经济学 · 期末复习总台</div>
+ <div class="theme-toggle">
+  <button id="btn-light" onclick="setTheme('light')">☀ 浅色</button>
+  <button id="btn-dark" onclick="setTheme('dark')">🌙 深色</button>
+ </div>
+</div>
+
+<header class="hero">
+ <h1>AF5638 · 期末复习总台</h1>
+ <p>十讲逐页笔记 ＋ 横向总复习 ＋ 老师那份练习 —— 三样东西从这一页进，考点从这一页查。</p>
+ <div class="examline">期末 50% · 考试期 12 月 3–18 日（Syllabus 原文：examination period of December 3–18）</div>
+ <div class="stats">
+  <div class="stat"><b>10</b><span>讲 · 300 页课件</span></div>
+  <div class="stat"><b>99</b><span>条考点标注 · 其中老师划的 34 条</span></div>
+  <div class="stat"><b>16</b><span>道练习小问 · 答案折叠</span></div>
+  <div class="stat"><b>9</b><span>节总复习 · 4 张必背表</span></div>
+ </div>
+</header>
+
+<div class="mains">
+ <div class="main">
+  <div class="tagline">读教材那一层</div>
+  <h2>十讲逐页笔记</h2>
+  <p>课件每一页都拆成：核心 · 白话 · 讲解 · 图的读法 · 等式两边 · 易错。</p>
+  <ul>
+   <li>300 页逐页精讲，每页都有中文</li>
+   <li>每讲末尾：公式速查 / 概念表 / 易错 / 自测</li>
+   <li>页首红色徽标＝考点，本讲开头有「考点一览」</li>
+  </ul>
+  <a class="go-btn" href="网页/Topic 1 笔记.html"">从 Topic 1 开始 →</a>
+ </div>
+ <div class="main rev">
+  <div class="tagline">横向拉通那一层</div>
+  <h2>期末总复习</h2>
+  <p>不按讲次，按「模型 / 方程 / 图 / 模板」重排一遍，专门治「学过但串不起来」。</p>
+  <ul>
+   <li>§2 八个模型对照表：每列只改一处</li>
+   <li>§7 四张必背表 + §8 三套答题模板</li>
+   <li>§9 二十四问自测，答不上来说明回哪节</li>
+  </ul>
+  <a class="go-btn" href="网页/%E6%9C%9F%E6%9C%AB%E6%80%BB%E5%A4%8D%E4%B9%A0.html"">打开总复习 →</a>
+ </div>
+ <div class="main pra">
+  <div class="tagline">动手那一层</div>
+  <h2>期末练习精做</h2>
+  <p>老师发的 Final Practice 原题 16 小问，一题一卡：先自己写，再点开答案。</p>
+  <ul>
+   <li>每题四层：考什么 → 怎么写 → 判分点 → 扣分在哪</li>
+   <li>答案给英文原句，可直接抄进卷子</li>
+   <li>进度可勾选，关掉再开还在</li>
+  </ul>
+  <a class="go-btn" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"">开始做题 →</a>
+ </div>
+</div>
+
+<div class="sec"><h2>十讲地图</h2><span class="hint">按三块大陆分组；右边的小圆点是该讲的考点条数（红＝老师划的，橙＝期中，紫＝必背）</span></div>
+<div class="block"><div class="bhead"><b>长期：几十年</b><span class="brange">T1–T3</span><span class="bsub">增长从哪来、为什么有的国家富</span></div><div class="tgrid"><a class="tcard" href="网页/Topic%201%20%E7%AC%94%E8%AE%B0.html""><div class="tnum">T1</div><div class="tbody"><div class="tname">增长事实与宏观核算</div><div class="tmeta">27 页 · 1845 KB</div></div><div class="tdots"><span class="dot m" title="期中考点 4 条">4</span><span class="dot u" title="必背 1 条">1</span></div></a><a class="tcard" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html""><div class="tnum">T2</div><div class="tbody"><div class="tname">索洛模型（资本积累与增长）</div><div class="tmeta">55 页 · 7146 KB</div></div><div class="tdots"><span class="dot m" title="期中考点 13 条">13</span><span class="dot u" title="必背 4 条">4</span></div></a><a class="tcard" href="网页/Topic%203%20%E7%AC%94%E8%AE%B0.html""><div class="tnum">T3</div><div class="tbody"><div class="tname">跨国收入差异</div><div class="tmeta">15 页 · 2003 KB</div></div><div class="tdots"><span class="dot m" title="期中考点 6 条">6</span><span class="dot u" title="必背 1 条">1</span></div></a></div></div><div class="block"><div class="bhead"><b>跨期与一般均衡：几年</b><span class="brange">T4–T7</span><span class="bsub">消费怎么决策、价格怎么被解出来</span></div><div class="tgrid"><a class="tcard" href="网页/Topic%204%20%E7%AC%94%E8%AE%B0.html""><div class="tnum">T4</div><div class="tbody"><div class="tname">两期消费-储蓄模型</div><div class="tmeta">37 页 · 5627 KB</div></div><div class="tdots"><span class="dot u" title="必背 9 条">9</span></div></a><a class="tcard" href="网页/Topic%205%20%E7%AC%94%E8%AE%B0.html""><div class="tnum">T5</div><div class="tbody"><div class="tname">禀赋经济中的均衡</div><div class="tmeta">21 页 · 1347 KB</div></div><div class="tdots"><span class="dot u" title="必背 7 条">7</span></div></a><a class="tcard" href="网页/Topic%206%20%E7%AC%94%E8%AE%B0.html""><div class="tnum">T6</div><div class="tbody"><div class="tname">财政政策与李嘉图等价</div><div class="tmeta">20 页 · 1465 KB</div></div><div class="tdots"><span class="dot f" title="老师划的期末考点 8 条">8</span></div></a><a class="tcard" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html""><div class="tnum">T7</div><div class="tbody"><div class="tname">生产经济中的均衡</div><div class="tmeta">24 页 · 2982 KB</div></div><div class="tdots"><span class="dot f" title="老师划的期末考点 14 条">14</span></div></a></div></div><div class="block"><div class="bhead"><b>短期：几个月</b><span class="brange">T8–T10</span><span class="bsub">波动、货币、粘性价格</span></div><div class="tgrid"><a class="tcard" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html""><div class="tnum">T8</div><div class="tbody"><div class="tname">新古典模型（实物侧）</div><div class="tmeta">24 页 · 3099 KB</div></div><div class="tdots"><span class="dot f" title="老师划的期末考点 12 条">12</span></div></a><a class="tcard" href="网页/Topic%209%20%E7%AC%94%E8%AE%B0.html""><div class="tnum">T9</div><div class="tbody"><div class="tname">新古典模型的货币侧与批判</div><div class="tmeta">34 页 · 2353 KB</div></div><div class="tdots"><span class="dot u" title="必背 9 条">9</span></div></a><a class="tcard" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html""><div class="tnum">T10</div><div class="tbody"><div class="tname">新凯恩斯模型</div><div class="tmeta">43 页 · 2650 KB</div></div><div class="tdots"><span class="dot u" title="必背 11 条">11</span></div></a></div></div>
+
+<div class="sec"><h2>按剩余时间选路线</h2><span class="hint">同一个材料库，三种走法；不知道从哪开始就先看 A</span></div>
+<div class="routes"><div class="rcard"><div class="rnum">A</div><div class="rh"><b>只剩两天：先做真题</b><span>最省时间的顺序</span></div><ol><li>先把 <a href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"">16 道练习</a>自己写一遍，写完再点开答案对判分点</li><li>背 <a href="网页/%E6%9C%9F%E6%9C%AB%E6%80%BB%E5%A4%8D%E4%B9%A0.html"#s7">总复习 §7 的四张表</a>（T8 6×5 / T9 8×7 / T10 九情形 / 三种粘性）</li><li>把笔记里 <b>34 条红色徽标</b>（老师亲手划的）逐页过一遍：从 <a href="网页/Topic 6 笔记.html"#examidx">T6</a>、<a href="网页/Topic 7 笔记.html"#examidx">T7</a>、<a href="网页/Topic 8 笔记.html"#examidx">T8</a> 的一览卡进</li><li>最后看 <a href="网页/%E6%9C%9F%E6%9C%AB%E6%80%BB%E5%A4%8D%E4%B9%A0.html"#s8">总复习 §8 三套答题模板</a>，背句型而不是背答案</li></ol></div><div class="rcard"><div class="rnum">B</div><div class="rh"><b>还有五到七天：按讲补</b><span>每天两讲，配总复习兜底</span></div><ol><li>第一天只做两件事：<a href="网页/%E6%9C%9F%E6%9C%AB%E6%80%BB%E5%A4%8D%E4%B9%A0.html"">总复习</a>的 §1 三块大陆 + §2 八模型对照表</li><li>之后每天两讲：先看该讲「速览 + 图」，再逐页看，最后做讲末自测（答案折叠）</li><li>补完 <a href="网页/Topic 4 笔记.html"">T4</a>–<a href="网页/Topic 7 笔记.html"">T7</a> 那天，回头读 <a href="网页/%E6%9C%9F%E6%9C%AB%E6%80%BB%E5%A4%8D%E4%B9%A0.html"#s5">§5「消费函数被装配七次」</a>——这四讲其实只改了它一次</li><li>考前两天切到路线 A 的第 1、2 步（练习 + 四张表）</li></ol></div><div class="rcard"><div class="rnum">C</div><div class="rh"><b>从头补：十天以上</b><span>按大陆推进，别按页码</span></div><ol><li>第一块 <a href="网页/Topic 1 笔记.html"">T1</a>→<a href="网页/Topic 3 笔记.html"">T3</a>：增长事实、索洛、跨国差异（一条资本积累式串完）</li><li>第二块 <a href="网页/Topic 4 笔记.html"">T4</a>→<a href="网页/Topic 7 笔记.html"">T7</a>：两期消费、禀赋经济、财政、生产经济（都在装配同一条消费函数）</li><li>第三块 <a href="网页/Topic 8 笔记.html"">T8</a>→<a href="网页/Topic 10 笔记.html"">T10</a>：两条曲线、货币进来、价格粘住（同一个需求侧，三个供给侧）</li><li>每讲收尾都用 <a href="网页/%E6%9C%9F%E6%9C%AB%E6%80%BB%E5%A4%8D%E4%B9%A0.html"#s9">§9 的 24 问自测</a>验一遍，答不上来说明该回哪一节</li></ol></div></div>
+
+<div class="sec"><h2>考点总表</h2><span class="hint">99 条，可筛可搜；点「笔记 pXX」跳到那一页，点 Q 号跳到练习题</span></div>
+<div class="tools">
+ <button class="chip on" data-k="all">全部<span class="c">99</span></button>
+ <button class="chip" data-k="final">老师划的<span class="c">34</span></button>
+ <button class="chip" data-k="mid">期中<span class="c">23</span></button>
+ <button class="chip" data-k="must">必背<span class="c">42</span></button>
+ <input class="search" id="q" type="search" placeholder="搜考点：挤出 / 稳态 / 李嘉图 / T8 / Q2g …"/>
+ <span class="count" id="cnt"></span>
+</div>
+<div class="tblwrap">
+<table id="tagtable">
+ <thead><tr><th style="width:88px">讲 · 页</th><th style="width:104px">类型</th><th>考点</th><th style="width:150px;text-align:right">去哪看</th></tr></thead>
+ <tbody><tr data-k="mid" data-t="1" data-s="生产＝收入＝支出（三面等价），考试第一句话就要说清 t1 p5 "><td class="c1"><span class="tt">T1</span><span class="pp">p5</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">生产＝收入＝支出（三面等价），考试第一句话就要说清</td><td class="c4"><a class="go" href="网页/Topic%201%20%E7%AC%94%E8%AE%B0.html"#p5">笔记 p5</a></td></tr><tr data-k="mid" data-t="1" data-s="支出法 y=c+i+g+nx ，四类主体各买什么 t1 p6 "><td class="c1"><span class="tt">T1</span><span class="pp">p6</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">支出法 \(Y=C+I+G+NX\)，四类主体各买什么</td><td class="c4"><a class="go" href="网页/Topic%201%20%E7%AC%94%E8%AE%B0.html"#p6">笔记 p6</a></td></tr><tr data-k="mid" data-t="1" data-s="名义 vs 实际 gdp；平减指数 = 名义／实际×100 t1 p7 "><td class="c1"><span class="tt">T1</span><span class="pp">p7</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">名义 vs 实际 GDP；平减指数 = 名义／实际×100</td><td class="c4"><a class="go" href="网页/Topic%201%20%E7%AC%94%E8%AE%B0.html"#p7">笔记 p7</a></td></tr><tr data-k="mid" data-t="1" data-s="用基期价格重算数量 ⇒ 实际 gdp，再倒推平减指数 t1 p8 "><td class="c1"><span class="tt">T1</span><span class="pp">p8</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">用基期价格重算数量 ⇒ 实际 GDP，再倒推平减指数</td><td class="c4"><a class="go" href="网页/Topic%201%20%E7%AC%94%E8%AE%B0.html"#p8">笔记 p8</a></td></tr><tr data-k="must" data-t="1" data-s="cpi 与平减指数的差别（固定篮子 vs 当期产量权数） t1 p9 "><td class="c1"><span class="tt">T1</span><span class="pp">p9</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">CPI 与平减指数的差别（固定篮子 vs 当期产量权数）</td><td class="c4"><a class="go" href="网页/Topic%201%20%E7%AC%94%E8%AE%B0.html"#p9">笔记 p9</a></td></tr><tr data-k="mid" data-t="2" data-s="代表性个体／代表性家庭：五个建模约定的第一条 t2 p4 "><td class="c1"><span class="tt">T2</span><span class="pp">p4</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">代表性个体／代表性家庭：五个建模约定的第一条</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p4">笔记 p4</a></td></tr><tr data-k="mid" data-t="2" data-s="前四条假设：缺一不可、规模报酬不变、边际产出为正、递减 t2 p7 "><td class="c1"><span class="tt">T2</span><span class="pp">p7</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">前四条假设：缺一不可、规模报酬不变、边际产出为正、递减</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p7">笔记 p7</a></td></tr><tr data-k="mid" data-t="2" data-s="inada 条件：零投入边际产出无穷、无穷投入边际产出为零 t2 p8 "><td class="c1"><span class="tt">T2</span><span class="pp">p8</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">Inada 条件：零投入边际产出无穷、无穷投入边际产出为零</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p8">笔记 p8</a></td></tr><tr data-k="mid" data-t="2" data-s="要素价格＝边际产品（ w=af_{n} 、 r=af_{k} ） t2 p10 "><td class="c1"><span class="tt">T2</span><span class="pp">p10</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">要素价格＝边际产品（\(w=AF_{N}\)、\(r=AF_{K}\)）</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p10">笔记 p10</a></td></tr><tr data-k="mid" data-t="2" data-s="规模报酬不变 ⇒ 欧拉定理 ⇒ 产出被分光、利润为零 t2 p11 "><td class="c1"><span class="tt">T2</span><span class="pp">p11</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">规模报酬不变 ⇒ 欧拉定理 ⇒ 产出被分光、利润为零</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p11">笔记 p11</a></td></tr><tr data-k="must" data-t="2" data-s="要素价格： r=af&#x27;(k) 与 w=a[f(k)-kf&#x27;(k)] t2 p20 "><td class="c1"><span class="tt">T2</span><span class="pp">p20</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">要素价格：\(r=Af'(k)\) 与 \(w=A[f(k)-kf'(k)]\)</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p20">笔记 p20</a></td></tr><tr data-k="mid" data-t="2" data-s="稳态的定义： k_{t}=k^{*} 对所有 t 成立 t2 p21 "><td class="c1"><span class="tt">T2</span><span class="pp">p21</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">稳态的定义：\(k_{t}=k^{*}\) 对所有 t 成立</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p21">笔记 p21</a></td></tr><tr data-k="mid" data-t="2" data-s="稳态的图形：储蓄曲线与 45° 线的交点 t2 p22 "><td class="c1"><span class="tt">T2</span><span class="pp">p22</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">稳态的图形：储蓄曲线与 45° 线的交点</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p22">笔记 p22</a></td></tr><tr data-k="mid" data-t="2" data-s="收敛：落在 k^{*} 左边就一定往上走 t2 p23 "><td class="c1"><span class="tt">T2</span><span class="pp">p23</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">收敛：落在 \(k^{*}\) 左边就一定往上走</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p23">笔记 p23</a></td></tr><tr data-k="must" data-t="2" data-s="cobb-douglas 的闭式稳态 k^{*}=(sa/\delta)^{1/(1-\alpha)} t2 p25 "><td class="c1"><span class="tt">T2</span><span class="pp">p25</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">Cobb-Douglas 的闭式稳态 \(k^{*}=(sA/\delta)^{1/(1-\alpha)}\)</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p25">笔记 p25</a></td></tr><tr data-k="must" data-t="2" data-s="↑a 与 ↑s 都只有水平效应，长期增长率仍为零 t2 p34 "><td class="c1"><span class="tt">T2</span><span class="pp">p34</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">↑A 与 ↑s 都只有水平效应，长期增长率仍为零</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p34">笔记 p34</a></td></tr><tr data-k="must" data-t="2" data-s="全讲最重要一句：持续增长只能来自生产率 t2 p35 "><td class="c1"><span class="tt">T2</span><span class="pp">p35</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">全讲最重要一句：持续增长只能来自生产率</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p35">笔记 p35</a></td></tr><tr data-k="mid" data-t="2" data-s="黄金律的特征条件 af&#x27;(k^{*}_{gr})=\delta t2 p39 "><td class="c1"><span class="tt">T2</span><span class="pp">p39</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">黄金律的特征条件 \(Af'(k^{*}_{GR})=\delta\)</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p39">笔记 p39</a></td></tr><tr data-k="mid" data-t="2" data-s="黄金律的图：切线与折旧线平行 t2 p40 "><td class="c1"><span class="tt">T2</span><span class="pp">p40</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">黄金律的图：切线与折旧线平行</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p40">笔记 p40</a></td></tr><tr data-k="mid" data-t="2" data-s="动态无效：黄金律右边减少储蓄能同时增加两期消费 t2 p41 "><td class="c1"><span class="tt">T2</span><span class="pp">p41</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">动态无效：黄金律右边减少储蓄能同时增加两期消费</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p41">笔记 p41</a></td></tr><tr data-k="mid" data-t="2" data-s="劳动增强型技术 y=af(k,zl) ， z_{t}=(1+z)^{t} t2 p49 "><td class="c1"><span class="tt">T2</span><span class="pp">p49</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">劳动增强型技术 \(Y=AF(K,ZL)\)，\(Z_{t}=(1+z)^{t}\)</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p49">笔记 p49</a></td></tr><tr data-k="mid" data-t="2" data-s="稳态时人均量以 z 增长（模型的增长率为 z，不是零） t2 p53 "><td class="c1"><span class="tt">T2</span><span class="pp">p53</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">稳态时人均量以 z 增长（模型的增长率为 z，不是零）</td><td class="c4"><a class="go" href="网页/Topic%202%20%E7%AC%94%E8%AE%B0.html"#p53">笔记 p53</a></td></tr><tr data-k="mid" data-t="3" data-s="收敛的机制与速度：越靠近稳态越慢 t3 p5 "><td class="c1"><span class="tt">T3</span><span class="pp">p5</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">收敛的机制与速度：越靠近稳态越慢</td><td class="c4"><a class="go" href="网页/Topic%203%20%E7%AC%94%E8%AE%B0.html"#p5">笔记 p5</a></td></tr><tr data-k="mid" data-t="3" data-s="全样本相关只有 -0.18 ⇒ 绝对收敛不成立 t3 p6 "><td class="c1"><span class="tt">T3</span><span class="pp">p6</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">全样本相关只有 \(-0.18\) ⇒ 绝对收敛不成立</td><td class="c4"><a class="go" href="网页/Topic%203%20%E7%AC%94%E8%AE%B0.html"#p6">笔记 p6</a></td></tr><tr data-k="mid" data-t="3" data-s="oecd 样本 -0.71 ⇒ 条件收敛（同一稳态的才收敛） t3 p7 "><td class="c1"><span class="tt">T3</span><span class="pp">p7</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">OECD 样本 \(-0.71\) ⇒ 条件收敛（同一稳态的才收敛）</td><td class="c4"><a class="go" href="网页/Topic%203%20%E7%AC%94%E8%AE%B0.html"#p7">笔记 p7</a></td></tr><tr data-k="mid" data-t="3" data-s="二战准自然实验：k 被炸掉、a 与 s 没被炸掉 ⇒ 快速追赶 t3 p8 "><td class="c1"><span class="tt">T3</span><span class="pp">p8</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">二战准自然实验：k 被炸掉、A 与 s 没被炸掉 ⇒ 快速追赶</td><td class="c4"><a class="go" href="网页/Topic%203%20%E7%AC%94%E8%AE%B0.html"#p8">笔记 p8</a></td></tr><tr data-k="must" data-t="3" data-s="储蓄率要解释 4 倍差距需差 8–16 倍 ⇒ 排除储蓄率 t3 p10 "><td class="c1"><span class="tt">T3</span><span class="pp">p10</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">储蓄率要解释 4 倍差距需差 8–16 倍 ⇒ 排除储蓄率</td><td class="c4"><a class="go" href="网页/Topic%203%20%E7%AC%94%E8%AE%B0.html"#p10">笔记 p10</a></td></tr><tr data-k="mid" data-t="3" data-s="只剩生产率：tfp 与人均产出相关 0.82 t3 p11 "><td class="c1"><span class="tt">T3</span><span class="pp">p11</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">只剩生产率：TFP 与人均产出相关 0.82</td><td class="c4"><a class="go" href="网页/Topic%203%20%E7%AC%94%E8%AE%B0.html"#p11">笔记 p11</a></td></tr><tr data-k="mid" data-t="3" data-s="tfp 的水平式 \ln a=\ln y-\alpha\ln k-(1-\alpha)\ln l t3 p12 "><td class="c1"><span class="tt">T3</span><span class="pp">p12</span></td><td class="c2"><span class="kind k-mid">期中考点</span></td><td class="c3">TFP 的水平式 \(\ln A=\ln Y-\alpha\ln K-(1-\alpha)\ln L\)</td><td class="c4"><a class="go" href="网页/Topic%203%20%E7%AC%94%E8%AE%B0.html"#p12">笔记 p12</a></td></tr><tr data-k="must" data-t="4" data-s="消费欧拉方程 u&#x27;(c_{t})=\beta(1+r_{t})u&#x27;(c_{t+1}) t4 p11 "><td class="c1"><span class="tt">T4</span><span class="pp">p11</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">消费欧拉方程 \(u'(C_{t})=\beta(1+r_{t})u'(C_{t+1})\)</td><td class="c4"><a class="go" href="网页/Topic%204%20%E7%AC%94%E8%AE%B0.html"#p11">笔记 p11</a></td></tr><tr data-k="must" data-t="4" data-s="欧拉方程只定「比例」，水平必须靠 ibc 定 t4 p13 "><td class="c1"><span class="tt">T4</span><span class="pp">p13</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">欧拉方程只定「比例」，水平必须靠 IBC 定</td><td class="c4"><a class="go" href="网页/Topic%204%20%E7%AC%94%E8%AE%B0.html"#p13">笔记 p13</a></td></tr><tr data-k="must" data-t="4" data-s="最优点的图：无差异曲线与预算线相切， mrs=1+r t4 p17 "><td class="c1"><span class="tt">T4</span><span class="pp">p17</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">最优点的图：无差异曲线与预算线相切，\(MRS=1+r\)</td><td class="c4"><a class="go" href="网页/Topic%204%20%E7%AC%94%E8%AE%B0.html"#p17">笔记 p17</a></td></tr><tr data-k="must" data-t="4" data-s="↑ y_{t} ：预算线平行外移，两期消费都升 t4 p19 "><td class="c1"><span class="tt">T4</span><span class="pp">p19</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">↑\(Y_{t}\)：预算线平行外移，两期消费都升</td><td class="c4"><a class="go" href="网页/Topic%204%20%E7%AC%94%E8%AE%B0.html"#p19">笔记 p19</a></td></tr><tr data-k="must" data-t="4" data-s="↑ r 必须拆成替代效应与收入效应（借款人／储蓄者方向不同） t4 p23 "><td class="c1"><span class="tt">T4</span><span class="pp">p23</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">↑\(r\) 必须拆成替代效应与收入效应（借款人／储蓄者方向不同）</td><td class="c4"><a class="go" href="网页/Topic%204%20%E7%AC%94%E8%AE%B0.html"#p23">笔记 p23</a></td></tr><tr data-k="must" data-t="4" data-s="假设替代效应占优 ⇒ c^{d} 对 r 为负 t4 p28 "><td class="c1"><span class="tt">T4</span><span class="pp">p28</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">假设替代效应占优 ⇒ \(C^{d}\) 对 r 为负</td><td class="c4"><a class="go" href="网页/Topic%204%20%E7%AC%94%E8%AE%B0.html"#p28">笔记 p28</a></td></tr><tr data-k="must" data-t="4" data-s="暂时冲击 vs 永久冲击：mpc 完全不同 t4 p30 "><td class="c1"><span class="tt">T4</span><span class="pp">p30</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">暂时冲击 vs 永久冲击：MPC 完全不同</td><td class="c4"><a class="go" href="网页/Topic%204%20%E7%AC%94%E8%AE%B0.html"#p30">笔记 p30</a></td></tr><tr data-k="must" data-t="4" data-s="永久收入假说：消费是前瞻的、mpc 小于 1 t4 p32 "><td class="c1"><span class="tt">T4</span><span class="pp">p32</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">永久收入假说：消费是前瞻的、MPC 小于 1</td><td class="c4"><a class="go" href="网页/Topic%204%20%E7%AC%94%E8%AE%B0.html"#p32">笔记 p32</a></td></tr><tr data-k="must" data-t="4" data-s="借贷约束生效时 mpc＝1，消费不再前瞻 t4 p37 "><td class="c1"><span class="tt">T4</span><span class="pp">p37</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">借贷约束生效时 MPC＝1，消费不再前瞻</td><td class="c4"><a class="go" href="网页/Topic%204%20%E7%AC%94%E8%AE%B0.html"#p37">笔记 p37</a></td></tr><tr data-k="must" data-t="5" data-s="市场出清＝加总净储蓄为零 \sum s=0 （有人借必有人贷） t5 p7 "><td class="c1"><span class="tt">T5</span><span class="pp">p7</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">市场出清＝加总净储蓄为零 \(\sum S=0\)（有人借必有人贷）</td><td class="c4"><a class="go" href="网页/Topic%205%20%E7%AC%94%E8%AE%B0.html"#p7">笔记 p7</a></td></tr><tr data-k="must" data-t="5" data-s="均衡的定义：两条条件（个体最优 ＋ 市场出清） t5 p9 "><td class="c1"><span class="tt">T5</span><span class="pp">p9</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">均衡的定义：两条条件（个体最优 ＋ 市场出清）</td><td class="c4"><a class="go" href="网页/Topic%205%20%E7%AC%94%E8%AE%B0.html"#p9">笔记 p9</a></td></tr><tr data-k="must" data-t="5" data-s="is 的定义：让商品市场出清、且符合家庭最优的 (r,y) 组合 t5 p12 "><td class="c1"><span class="tt">T5</span><span class="pp">p12</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">IS 的定义：让商品市场出清、且符合家庭最优的 (r,Y) 组合</td><td class="c4"><a class="go" href="网页/Topic%205%20%E7%AC%94%E8%AE%B0.html"#p12">笔记 p12</a></td></tr><tr data-k="must" data-t="5" data-s="禀赋经济里 y^{s} 是竖线——产出外生给定 t5 p14 "><td class="c1"><span class="tt">T5</span><span class="pp">p14</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">禀赋经济里 \(Y^{s}\) 是竖线——产出外生给定</td><td class="c4"><a class="go" href="网页/Topic%205%20%E7%AC%94%E8%AE%B0.html"#p14">笔记 p14</a></td></tr><tr data-k="must" data-t="5" data-s="供给冲击 y_{t} ↑：竖线右移、is 不动、r 下降 t5 p16 "><td class="c1"><span class="tt">T5</span><span class="pp">p16</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">供给冲击 \(Y_{t}\)↑：竖线右移、IS 不动、r 下降</td><td class="c4"><a class="go" href="网页/Topic%205%20%E7%AC%94%E8%AE%B0.html"#p16">笔记 p16</a></td></tr><tr data-k="must" data-t="5" data-s="需求冲击 y_{t+1} ↑：is 右移、竖线不动、r 上升 t5 p18 "><td class="c1"><span class="tt">T5</span><span class="pp">p18</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">需求冲击 \(Y_{t+1}\)↑：IS 右移、竖线不动、r 上升</td><td class="c4"><a class="go" href="网页/Topic%205%20%E7%AC%94%E8%AE%B0.html"#p18">笔记 p18</a></td></tr><tr data-k="must" data-t="5" data-s="对数效用下的均衡利率 1+r=\frac{1}{\beta}\frac{y_{t+1}}{y_{t}} t5 p21 "><td class="c1"><span class="tt">T5</span><span class="pp">p21</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">对数效用下的均衡利率 \(1+r=\frac{1}{\beta}\frac{Y_{t+1}}{Y_{t}}\)</td><td class="c4"><a class="go" href="网页/Topic%205%20%E7%AC%94%E8%AE%B0.html"#p21">笔记 p21</a></td></tr><tr data-k="final" data-t="6" data-s="政府两期流量预算约束（含 b_{t} ） t6 p3 q2b"><td class="c1"><span class="tt">T6</span><span class="pp">p3</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">政府两期流量预算约束（含 \(B_{t}\)）</td><td class="c4"><a class="go" href="网页/Topic%206%20%E7%AC%94%E8%AE%B0.html"#p3">笔记 p3</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2b">Q2(b)</a></td></tr><tr data-k="final" data-t="6" data-s="政府跨期预算约束 ibc：支出与税收的现值相等 t6 p4 q2b"><td class="c1"><span class="tt">T6</span><span class="pp">p4</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">政府跨期预算约束 IBC：支出与税收的现值相等</td><td class="c4"><a class="go" href="网页/Topic%206%20%E7%AC%94%E8%AE%B0.html"#p4">笔记 p4</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2b">Q2(b)</a></td></tr><tr data-k="final" data-t="6" data-s="李嘉图等价的定义：融资方式不影响均衡 t6 p11 q2a"><td class="c1"><span class="tt">T6</span><span class="pp">p11</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">李嘉图等价的定义：融资方式不影响均衡</td><td class="c4"><a class="go" href="网页/Topic%206%20%E7%AC%94%E8%AE%B0.html"#p11">笔记 p11</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2a">Q2(a)</a></td></tr><tr data-k="final" data-t="6" data-s="李嘉图等价依赖的四个假设（破一个就失效） t6 p12 q2a"><td class="c1"><span class="tt">T6</span><span class="pp">p12</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">李嘉图等价依赖的四个假设（破一个就失效）</td><td class="c4"><a class="go" href="网页/Topic%206%20%E7%AC%94%E8%AE%B0.html"#p12">笔记 p12</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2a">Q2(a)</a></td></tr><tr data-k="final" data-t="6" data-s="总意愿支出包含 g_{t} ： y^{d}=c^{d}+g t6 p15 q2h"><td class="c1"><span class="tt">T6</span><span class="pp">p15</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">总意愿支出包含 \(G_{t}\)：\(Y^{d}=C^{d}+G\)</td><td class="c4"><a class="go" href="网页/Topic%206%20%E7%AC%94%E8%AE%B0.html"#p15">笔记 p15</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2h">Q2(h)</a></td></tr><tr data-k="final" data-t="6" data-s="无李嘉图等价时乘数 1/(1-\mathrm{mpc}) 从哪来 t6 p16 q2h"><td class="c1"><span class="tt">T6</span><span class="pp">p16</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">无李嘉图等价时乘数 \(1/(1-\mathrm{MPC})\) 从哪来</td><td class="c4"><a class="go" href="网页/Topic%206%20%E7%AC%94%E8%AE%B0.html"#p16">笔记 p16</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2h">Q2(h)</a></td></tr><tr data-k="final" data-t="6" data-s="↑ g_{t} 的图：支出线只上移 (1-\mathrm{mpc})dg t6 p18 q2g"><td class="c1"><span class="tt">T6</span><span class="pp">p18</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">↑\(G_{t}\) 的图：支出线只上移 \((1-\mathrm{MPC})dG\)</td><td class="c4"><a class="go" href="网页/Topic%206%20%E7%AC%94%E8%AE%B0.html"#p18">笔记 p18</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2g">Q2(g)</a></td></tr><tr data-k="final" data-t="6" data-s="完全挤出 dc=-dg ⇒ 乘数为零 t6 p20 q2g"><td class="c1"><span class="tt">T6</span><span class="pp">p20</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">完全挤出 \(dC=-dG\) ⇒ 乘数为零</td><td class="c4"><a class="go" href="网页/Topic%206%20%E7%AC%94%E8%AE%B0.html"#p20">笔记 p20</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2g">Q2(g)</a></td></tr><tr data-k="final" data-t="7" data-s="企业的目标／选择／给定（对照家庭那张表背） t7 p3 q3b"><td class="c1"><span class="tt">T7</span><span class="pp">p3</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">企业的目标／选择／给定（对照家庭那张表背）</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p3">笔记 p3</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3b">Q3(b)</a></td></tr><tr data-k="final" data-t="7" data-s="企业最大化现值 v_{t} ：三个决策变量 t7 p6 q3b"><td class="c1"><span class="tt">T7</span><span class="pp">p6</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">企业最大化现值 \(V_{t}\)：三个决策变量</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p6">笔记 p6</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3b">Q3(b)</a></td></tr><tr data-k="final" data-t="7" data-s="三个一阶条件：两个劳动需求 ＋ 一个投资需求 t7 p7 q2d"><td class="c1"><span class="tt">T7</span><span class="pp">p7</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">三个一阶条件：两个劳动需求 ＋ 一个投资需求</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p7">笔记 p7</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2d">Q2(d)</a></td></tr><tr data-k="final" data-t="7" data-s="劳动需求 n^{d} 的三个偏导符号 t7 p8 q2c"><td class="c1"><span class="tt">T7</span><span class="pp">p8</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">劳动需求 \(N^{d}\) 的三个偏导符号</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p8">笔记 p8</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2c">Q2(c)</a></td></tr><tr data-k="final" data-t="7" data-s="投资需求 i^{d} ： k_{t} 带负号（重置效应） t7 p10 q2c"><td class="c1"><span class="tt">T7</span><span class="pp">p10</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">投资需求 \(I^{d}\)：\(K_{t}\) 带负号（重置效应）</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p10">笔记 p10</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2c">Q2(c)</a></td></tr><tr data-k="final" data-t="7" data-s="家庭的目标／选择／给定（与企业的三行对照） t7 p15 q3b"><td class="c1"><span class="tt">T7</span><span class="pp">p15</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">家庭的目标／选择／给定（与企业的三行对照）</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p15">笔记 p15</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3b">Q3(b)</a></td></tr><tr data-k="final" data-t="7" data-s="家庭三个一阶条件：欧拉 ＋ 两个劳动条件 t7 p16 q3d"><td class="c1"><span class="tt">T7</span><span class="pp">p16</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">家庭三个一阶条件：欧拉 ＋ 两个劳动条件</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p16">笔记 p16</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3d">Q3(d)</a></td></tr><tr data-k="final" data-t="7" data-s="三个一阶条件怎么读：左边＝右边各是什么 t7 p17 q3d"><td class="c1"><span class="tt">T7</span><span class="pp">p17</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">三个一阶条件怎么读：左边＝右边各是什么</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p17">笔记 p17</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3d">Q3(d)</a></td></tr><tr data-k="final" data-t="7" data-s="消费函数 c^{d} 的三个偏导符号 t7 p18 q3c"><td class="c1"><span class="tt">T7</span><span class="pp">p18</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">消费函数 \(C^{d}\) 的三个偏导符号</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p18">笔记 p18</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3c">Q3(c)</a></td></tr><tr data-k="final" data-t="7" data-s="ghh 让劳动供给只看工资、不看收入 t7 p19 q3c"><td class="c1"><span class="tt">T7</span><span class="pp">p19</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">GHH 让劳动供给只看工资、不看收入</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p19">笔记 p19</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3c">Q3(c)</a></td></tr><tr data-k="final" data-t="7" data-s="银行只做一件事：s 借给企业，利差为零 t7 p21 q3b"><td class="c1"><span class="tt">T7</span><span class="pp">p21</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">银行只做一件事：S 借给企业，利差为零</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p21">笔记 p21</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3b">Q3(b)</a></td></tr><tr data-k="final" data-t="7" data-s="三个市场出清 ⇒ 两个就够（walras 定律） t7 p22 q3b"><td class="c1"><span class="tt">T7</span><span class="pp">p22</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">三个市场出清 ⇒ 两个就够（Walras 定律）</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p22">笔记 p22</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3b">Q3(b)</a></td></tr><tr data-k="final" data-t="7" data-s="均衡定义：六个内生量的联立 t7 p23 q3a"><td class="c1"><span class="tt">T7</span><span class="pp">p23</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">均衡定义：六个内生量的联立</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p23">笔记 p23</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3a">Q3(a)</a></td></tr><tr data-k="final" data-t="7" data-s="六个内生／六个外生， y_{t+1} 是伪外生 t7 p24 q3a"><td class="c1"><span class="tt">T7</span><span class="pp">p24</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">六个内生／六个外生，\(Y_{t+1}\) 是伪外生</td><td class="c4"><a class="go" href="网页/Topic%207%20%E7%AC%94%E8%AE%B0.html"#p24">笔记 p24</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3a">Q3(a)</a></td></tr><tr data-k="final" data-t="8" data-s="六个方程怎么压成 is 与 y^{s} 两条线 t8 p5 q2e"><td class="c1"><span class="tt">T8</span><span class="pp">p5</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">六个方程怎么压成 IS 与 \(Y^{s}\) 两条线</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p5">笔记 p5</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2e">Q2(e)</a></td></tr><tr data-k="final" data-t="8" data-s="支出线的斜率＝mpc＜1（为什么不是 45°） t8 p7 q2f"><td class="c1"><span class="tt">T8</span><span class="pp">p7</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">支出线的斜率＝MPC＜1（为什么不是 45°）</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p7">笔记 p7</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2f">Q2(f)</a></td></tr><tr data-k="final" data-t="8" data-s="is 下斜的推导：让 r 变三次，把交点连起来 t8 p9 q2e"><td class="c1"><span class="tt">T8</span><span class="pp">p9</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">IS 下斜的推导：让 r 变三次，把交点连起来</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p9">笔记 p9</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2e">Q2(e)</a></td></tr><tr data-k="final" data-t="8" data-s="劳动市场：供给上斜、需求下斜，交点定 n 与 w t8 p12 q3e"><td class="c1"><span class="tt">T8</span><span class="pp">p12</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">劳动市场：供给上斜、需求下斜，交点定 N 与 w</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p12">笔记 p12</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3e">Q3(e)</a></td></tr><tr data-k="final" data-t="8" data-s="y^{s} 是竖线：产出与 r 无关 t8 p14 q2e"><td class="c1"><span class="tt">T8</span><span class="pp">p14</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">\(Y^{s}\) 是竖线：产出与 r 无关</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p14">笔记 p14</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2e">Q2(e)</a></td></tr><tr data-k="final" data-t="8" data-s="一般均衡：交点同时定出 y、r、n、w t8 p16 q3e"><td class="c1"><span class="tt">T8</span><span class="pp">p16</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">一般均衡：交点同时定出 Y、r、N、w</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p16">笔记 p16</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3e">Q3(e)</a></td></tr><tr data-k="final" data-t="8" data-s="冲击分析五步法：找线 → 定 r → 反解 n → 读 w → 查构成 t8 p18 q3f"><td class="c1"><span class="tt">T8</span><span class="pp">p18</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">冲击分析五步法：找线 → 定 r → 反解 N → 读 w → 查构成</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p18">笔记 p18</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3f">Q3(f)</a></td></tr><tr data-k="final" data-t="8" data-s="↑ a_{t} ：竖线右移 ⇒ y↑、r↓（六符号全确定） t8 p19 q3f"><td class="c1"><span class="tt">T8</span><span class="pp">p19</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">↑\(A_{t}\)：竖线右移 ⇒ Y↑、r↓（六符号全确定）</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p19">笔记 p19</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3f">Q3(f)</a></td></tr><tr data-k="final" data-t="8" data-s="↑ g_{t} ：is 右移、竖线不动 ⇒ r↑、y 不变 t8 p21 q2g"><td class="c1"><span class="tt">T8</span><span class="pp">p21</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">↑\(G_{t}\)：IS 右移、竖线不动 ⇒ r↑、Y 不变</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p21">笔记 p21</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2g">Q2(g)</a></td></tr><tr data-k="final" data-t="8" data-s="↑ g_{t} 的第二步：支出线被 r 压回 ⇒ 完全挤出 t8 p22 q2g"><td class="c1"><span class="tt">T8</span><span class="pp">p22</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">↑\(G_{t}\) 的第二步：支出线被 r 压回 ⇒ 完全挤出</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p22">笔记 p22</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2g">Q2(g)</a></td></tr><tr data-k="final" data-t="8" data-s="供给 vs 需求：竖直的 y^{s} 决定一切 t8 p23 q2h"><td class="c1"><span class="tt">T8</span><span class="pp">p23</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">供给 vs 需求：竖直的 \(Y^{s}\) 决定一切</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p23">笔记 p23</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q2h">Q2(h)</a></td></tr><tr data-k="final" data-t="8" data-s="8×7 定性效应总表：考场默写用 t8 p24 q3h"><td class="c1"><span class="tt">T8</span><span class="pp">p24</span></td><td class="c2"><span class="kind k-final">期末考点</span></td><td class="c3">8×7 定性效应总表：考场默写用</td><td class="c4"><a class="go" href="网页/Topic%208%20%E7%AC%94%E8%AE%B0.html"#p24">笔记 p24</a> <a class="q" href="网页/%E6%9C%9F%E6%9C%AB%E7%BB%83%E4%B9%A0.html"#q3h">Q3(h)</a></td></tr><tr data-k="must" data-t="9" data-s="四条改造：新增 p 、 i 两个未知数 t9 p4 "><td class="c1"><span class="tt">T9</span><span class="pp">p4</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">四条改造：新增 \(P\)、\(i\) 两个未知数</td><td class="c4"><a class="go" href="网页/Topic%209%20%E7%AC%94%E8%AE%B0.html"#p4">笔记 p4</a></td></tr><tr data-k="must" data-t="9" data-s="fisher 方程 1+r=\frac{1+i}{1+\pi^{e}} t9 p7 "><td class="c1"><span class="tt">T9</span><span class="pp">p7</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">Fisher 方程 \(1+r=\frac{1+i}{1+\pi^{e}}\)</td><td class="c4"><a class="go" href="网页/Topic%209%20%E7%AC%94%E8%AE%B0.html"#p7">笔记 p7</a></td></tr><tr data-k="must" data-t="9" data-s="货币需求 m^{d}(i^{-},y^{+}) 的两个符号 t9 p10 "><td class="c1"><span class="tt">T9</span><span class="pp">p10</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">货币需求 \(M^{d}(i^{-},Y^{+})\) 的两个符号</td><td class="c4"><a class="go" href="网页/Topic%209%20%E7%AC%94%E8%AE%B0.html"#p10">笔记 p10</a></td></tr><tr data-k="must" data-t="9" data-s="古典二分：前六个方程不含名义变量 t9 p14 "><td class="c1"><span class="tt">T9</span><span class="pp">p14</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">古典二分：前六个方程不含名义变量</td><td class="c4"><a class="go" href="网页/Topic%209%20%E7%AC%94%E8%AE%B0.html"#p14">笔记 p14</a></td></tr><tr data-k="must" data-t="9" data-s="求解顺序：五宫格定 (r,y) → 货币市场定 p → fisher 定 i t9 p15 "><td class="c1"><span class="tt">T9</span><span class="pp">p15</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">求解顺序：五宫格定 (r,Y) → 货币市场定 P → Fisher 定 i</td><td class="c4"><a class="go" href="网页/Topic%209%20%E7%AC%94%E8%AE%B0.html"#p15">笔记 p15</a></td></tr><tr data-k="must" data-t="9" data-s="货币中性：↑m 只推高 p t9 p17 "><td class="c1"><span class="tt">T9</span><span class="pp">p17</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">货币中性：↑M 只推高 P</td><td class="c4"><a class="go" href="网页/Topic%209%20%E7%AC%94%E8%AE%B0.html"#p17">笔记 p17</a></td></tr><tr data-k="must" data-t="9" data-s="8×7 定性效应总表（＝topic 8 那张表加两行两列） t9 p23 "><td class="c1"><span class="tt">T9</span><span class="pp">p23</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">8×7 定性效应总表（＝Topic 8 那张表加两行两列）</td><td class="c4"><a class="go" href="网页/Topic%209%20%E7%AC%94%E8%AE%B0.html"#p23">笔记 p23</a></td></tr><tr data-k="must" data-t="9" data-s="共动性检验：θ 冲击给逆周期工资，与数据矛盾 t9 p28 "><td class="c1"><span class="tt">T9</span><span class="pp">p28</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">共动性检验：θ 冲击给逆周期工资，与数据矛盾</td><td class="c4"><a class="go" href="网页/Topic%209%20%E7%AC%94%E8%AE%B0.html"#p28">笔记 p28</a></td></tr><tr data-k="must" data-t="9" data-s="结论：要解释短期波动，必须离开新古典 t9 p34 "><td class="c1"><span class="tt">T9</span><span class="pp">p34</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">结论：要解释短期波动，必须离开新古典</td><td class="c4"><a class="go" href="网页/Topic%209%20%E7%AC%94%E8%AE%B0.html"#p34">笔记 p34</a></td></tr><tr data-k="must" data-t="10" data-s="lm 的定义：货币市场 ＋ fisher 同时成立的 (r,y) t10 p7 "><td class="c1"><span class="tt">T10</span><span class="pp">p7</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">LM 的定义：货币市场 ＋ Fisher 同时成立的 (r,Y)</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p7">笔记 p7</a></td></tr><tr data-k="must" data-t="10" data-s="↑p 使 lm 上移 —— 这才是 ad 向下倾斜的原因 t10 p11 "><td class="c1"><span class="tt">T10</span><span class="pp">p11</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">↑P 使 LM 上移 —— 这才是 AD 向下倾斜的原因</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p11">笔记 p11</a></td></tr><tr data-k="must" data-t="10" data-s="ad 的定义：五条需求式同时成立的 (p,y) t10 p12 "><td class="c1"><span class="tt">T10</span><span class="pp">p12</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">AD 的定义：五条需求式同时成立的 (P,Y)</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p12">笔记 p12</a></td></tr><tr data-k="must" data-t="10" data-s="新古典的 as 是竖直的（与 p 无关） t10 p17 "><td class="c1"><span class="tt">T10</span><span class="pp">p17</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">新古典的 AS 是竖直的（与 P 无关）</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p17">笔记 p17</a></td></tr><tr data-k="must" data-t="10" data-s="简单粘性：as 水平，产量由需求决定 t10 p21 "><td class="c1"><span class="tt">T10</span><span class="pp">p21</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">简单粘性：AS 水平，产量由需求决定</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p21">笔记 p21</a></td></tr><tr data-k="must" data-t="10" data-s="简单粘性下 ↑m：p 不动、y↑、r↓ ⇒ 货币非中性 t10 p24 "><td class="c1"><span class="tt">T10</span><span class="pp">p24</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">简单粘性下 ↑M：P 不动、Y↑、r↓ ⇒ 货币非中性</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p24">笔记 p24</a></td></tr><tr data-k="must" data-t="10" data-s="反直觉考点：↑a 在简单粘性下 n 与 w 都下降 t10 p29 "><td class="c1"><span class="tt">T10</span><span class="pp">p29</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">反直觉考点：↑A 在简单粘性下 N 与 w 都下降</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p29">笔记 p29</a></td></tr><tr data-k="must" data-t="10" data-s="部分粘性 as： p=\bar p+\gamma(y-y^{f}) t10 p32 "><td class="c1"><span class="tt">T10</span><span class="pp">p32</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">部分粘性 AS：\(P=\bar P+\gamma(Y-Y^{f})\)</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p32">笔记 p32</a></td></tr><tr data-k="must" data-t="10" data-s="三档模型＝同一条 as 上的三个 γ，结果永远夹在中间 t10 p38 "><td class="c1"><span class="tt">T10</span><span class="pp">p38</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">三档模型＝同一条 AS 上的三个 γ，结果永远夹在中间</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p38">笔记 p38</a></td></tr><tr data-k="must" data-t="10" data-s="divine coincidence：稳物价与稳产出不冲突 t10 p40 "><td class="c1"><span class="tt">T10</span><span class="pp">p40</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">divine coincidence：稳物价与稳产出不冲突</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p40">笔记 p40</a></td></tr><tr data-k="must" data-t="10" data-s="最优政策：用 m 把 ad 移到 (y^{f},\bar p) t10 p41 "><td class="c1"><span class="tt">T10</span><span class="pp">p41</span></td><td class="c2"><span class="kind k-must">必背</span></td><td class="c3">最优政策：用 M 把 AD 移到 \((Y^{f},\bar P)\)</td><td class="c4"><a class="go" href="网页/Topic%2010%20%E7%AC%94%E8%AE%B0.html"#p41">笔记 p41</a></td></tr></tbody>
+</table>
+</div>
+<div class="tnote">「老师划的」＝期末练习卷首页 Key Concepts 的原文落点（34 条，只在 Topic 6/7/8）；
+「期中」＝期中练习的 Key Concepts（23 条）；「必背」＝我横向整理判断的高频项（42 条），<b>没有老师名录背书，别当考纲</b>。</div>
+
+<div class="sec"><h2>材料清单</h2><span class="hint">全部单文件离线，双击即可；十讲笔记合计 29.8 MB</span></div>
+<div class="tblwrap">
+<table>
+ <thead><tr><th style="width:240px">文件</th><th>说明</th><th style="width:90px;text-align:right">大小</th></tr></thead>
+ <tbody><tr><td class="mf">index.html</td><td>本页：总入口 + 99 条考点总表</td><td class="ms"></td></tr><tr><td class="mf">Topic 1–10 笔记.html</td><td>十讲逐页精讲，共 300 页</td><td class="ms">29.8 MB</td></tr><tr><td class="mf">期末总复习.html</td><td>九节横向拉通：八模型 / 45 条公式 / 四张必背表 / 三套模板</td><td class="ms">78 KB</td></tr><tr><td class="mf">期末练习.html</td><td>老师给的 Final Practice 逐题精做，16 小问</td><td class="ms">115 KB</td></tr><tr><td class="mf">final_practice.pdf</td><td>练习卷原件（老师在更新，10-27 版）</td><td class="ms">136 KB</td></tr><tr><td class="mf">使用说明.md</td><td>这套材料怎么改、怎么加题、怎么加考点</td><td class="ms">26 KB</td></tr></tbody>
+</table>
+</div>
+
+<footer>
+ AF5638 宏观经济学 · 复习材料库 · 生成于 2026-11-08 01:31<br/>
+ 总复习九节：一、三块大陆 · 二、八个模型 · 三、核心方程 · 四、图形总表 · 五、一条主线 · 六、十六组易混 · 七、四张表 · 八、答题模板 · 九、自测清单<br/>
+ 改完内容（加题 / 加考点 / 加讲）后重跑 <b>python build_index.py</b> 更新本页
+</footer>
+</div>
+
+<script>
+function setTheme(t){
+ document.documentElement.setAttribute('data-theme',t);
+ document.getElementById('btn-light').classList.toggle('active',t==='light');
+ document.getElementById('btn-dark').classList.toggle('active',t==='dark');
+ try{localStorage.setItem('af5638_theme',t);}catch(e){}
+}
+(function(){
+ var t=null;
+ try{t=localStorage.getItem('af5638_theme');}catch(e){}
+ // 没有保存过偏好时，尊重 <html data-theme>（否则深色会被强行改回浅色）
+ setTheme(t||document.documentElement.getAttribute('data-theme')||'light');
+})();
+
+/* 考点筛选 + 搜索：用 data-s（纯文本，事先去标签去公式）匹配，
+   不依赖 MathJax 渲染后的 DOM，因此公式里的中文也能搜到 */
+(function(){
+ var rows=[].slice.call(document.querySelectorAll('#tagtable tbody tr'));
+ var chips=[].slice.call(document.querySelectorAll('.chip'));
+ var q=document.getElementById('q'), cnt=document.getElementById('cnt');
+ var kind='all';
+ function apply(){
+   var kw=(q.value||'').trim().toLowerCase();
+   var n=0;
+   rows.forEach(function(r){
+     var ok=(kind==='all'||r.dataset.k===kind)&&(!kw||r.dataset.s.indexOf(kw)>=0);
+     r.classList.toggle('hide',!ok);
+     if(ok)n++;
+   });
+   cnt.textContent='显示 '+n+' / '+rows.length+' 条';
+ }
+ chips.forEach(function(c){
+   c.addEventListener('click',function(){
+     chips.forEach(function(x){x.classList.remove('on');});
+     c.classList.add('on'); kind=c.dataset.k; apply();
+   });
+ });
+ q.addEventListener('input',apply);
+ document.addEventListener('keydown',function(e){
+   if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}
+ });
+ apply();
+})();
+
+// ===== 外壳脚本（ui_shell.py）=====
+(function(){
+  // 1) 阅读进度条
+  var bar=document.getElementById('rprogbar');
+  function prog(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    var y=window.pageYOffset||document.documentElement.scrollTop;
+    if(bar) bar.style.width=(h>0?Math.min(100,y/h*100):0)+'%';
+  }
+  // 2) 页码跳转：输入 37 → 跳到 #p37
+  window.__jumpPage=function(f){
+    var v=(f.querySelector('#pgjump')||{}).value||'';
+    var n=parseInt(String(v).replace(/[^0-9]/g,''),10);
+    if(!n) return false;
+    var el=document.getElementById('p'+n);
+    if(el){el.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'','#p'+n);}
+    else{alert('本讲只有 1 到 '+window.__PGMAX+' 页');}
+    f.querySelector('#pgjump').value='';
+    f.querySelector('#pgjump').blur();
+    return false;
+  };
+  // 3) 记住读到哪一页（只对逐页笔记启用）
+  var KEY='af5638_pos_'+encodeURIComponent(location.pathname.split('/').pop());
+  var last=document.getElementById('rlast');
+  function pageIds(){
+    var a=[],i=1,el;
+    while((el=document.getElementById('p'+i))){a.push(el);i++;}
+    return a;
+  }
+  function savePos(){
+    if(!window.__PAGED) return;
+    var ps=pageIds(),cur=0;
+    // 用 offsetTop（文档坐标）而不是 getBoundingClientRect：
+    // 后者在滚动后可能读到旧布局，导致记错页码
+    var y=(window.pageYOffset||document.documentElement.scrollTop)+160;
+    for(var i=0;i<ps.length;i++){if(ps[i].offsetTop<=y)cur=i+1;}
+    if(cur>1){try{localStorage.setItem(KEY,cur);}catch(e){}}
+  }
+  if(window.__PAGED){
+    try{
+      var saved=parseInt(localStorage.getItem(KEY)||'0',10);
+      if(last&&saved>1&&document.getElementById('p'+saved)){
+        last.textContent='上次 p'+saved;
+        last.href='#p'+saved;
+        last.hidden=false;
+      }
+    }catch(e){}
+  }
+  // 4) 窄屏目录抽屉：点条目后自动收起，点空白处也收起
+  var tocEl=document.getElementById('toc');
+  if(tocEl){
+    tocEl.addEventListener('click',function(e){
+      var a=e.target.closest?e.target.closest('a'):null;
+      if(a) tocEl.classList.remove('show');
+    });
+    document.addEventListener('click',function(e){
+      if(!tocEl.classList.contains('show')) return;
+      if(tocEl.contains(e.target)) return;
+      var b=e.target.closest?e.target.closest('.tocbtn'):null;
+      if(b) return;
+      tocEl.classList.remove('show');
+    });
+  }
+  var t=null;
+  window.addEventListener('scroll',function(){
+    if(t) return;
+    t=setTimeout(function(){prog();savePos();t=null;},90);
+  },{passive:true});
+  prog();
+})();
+
+</script>
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)']]},svg:{fontCache:'global'},startup:{typeset:true}};</script>
+<script src="./网页/_mathjax_tex_svg.js" defer></script>
+</body>
+</html>

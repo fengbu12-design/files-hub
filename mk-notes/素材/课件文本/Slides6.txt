@@ -1,0 +1,284 @@
+===== SLIDE PAGE 1 =====
+AF5638
+Topic 6: Fiscal Policy and Ricardian Equivalence
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 2 =====
+Introduction
+The term fiscal policy refers to government spending and
+taxes/transfers.
+We will study fiscal policy in a particularly simple environment –
+endowment economy.
+Basic conclusions carry over to a model with production.
+Key result: Ricardian equivalence, which says how a government
+finances its spending (debt or taxes) is irrelevant for understanding
+the equilibrium effect of a change in spending.
+Not a general result; only holds under special circumstances.
+But useful benchmark for intuition.
+We will also discuss the “government spending multiplier.”
+1 / 19
+
+===== SLIDE PAGE 3 =====
+Setup
+Exogenous government expenditure, Gt and Gt+1.
+Like the household, the government faces two flow budget
+constraints:
+Gt
+=
+Tt + Bt
+Gt+1 + (1 + rt)Bt
+=
+Tt+1
+In period t, government spending can be financed by collecting
+taxes (Tt) or issuing debt (Bt).
+Bt > 0: government debt; Bt < 0: government saving.
+Tt > 0: taxes; Tt < 0: transfers.
+In period t + 1, government spends and incurs payment on debt,
+which can be financed by taxes Tt+1 (but not Bt+1, why?).
+2 / 19
+
+===== SLIDE PAGE 4 =====
+Government IBC
+Eliminating Bt from the flow constraints yields the IBC for the
+government:
+Gt + Gt+1
+1 + rt
+= Tt + Tt+1
+1 + rt
+.
+Conceptually the same as the household.
+3 / 19
+
+===== SLIDE PAGE 5 =====
+Household Preferences
+Representative household. Everyone the same.
+Lifetime utility:
+U = u(Ct) + βu(Ct+1) + h(Gt) + βh(Gt+1)
+|
+{z
+}
+can ignore
+Cheap way to model usefulness of government spending:
+household gets utility from it via h(·).
+But as long as preferences are “additively separable,” the way in
+which household receives utility from G is irrelevant for
+understanding equilibrium dynamics.
+Hence we will ignore h(·) terms.
+4 / 19
+
+===== SLIDE PAGE 6 =====
+Household Budget Constraint
+With taxes/transfers, household flow budget constraints become:
+Ct + St
+=
+Yt −Tt
+Ct+1
+=
+Yt+1 −Tt+1 + (1 + rt)St
+Household takes Tt, Tt+1, rt, Yt, and Yt+1 all as given.
+Household IBC becomes:
+Ct + Ct+1
+1 + rt
+= Yt −Tt + Yt+1 −Tt+1
+1 + rt
+5 / 19
+
+===== SLIDE PAGE 7 =====
+Household Optimization
+Standard Euler equation:
+u′(Ct) = β(1 + rt)u′(Ct+1).
+Consumption function:
+Ct = C d(Yt −Tt, Yt+1 −Tt+1, rt).
+Conceptually the same as before, except with disposable income.
+6 / 19
+
+===== SLIDE PAGE 8 =====
+Rearranging Household IBC
+Can rewrite household IBC as:
+Ct + Ct+1
+1 + rt
+= Yt + Yt+1
+1 + rt
+−
+
+Tt + Tt+1
+1 + rt
+
+Since PDV of tax stream must equal PDV of government
+spending, we have:
+Ct + Ct+1
+1 + rt
+= Yt + Yt+1
+1 + rt
+−
+
+Gt + Gt+1
+1 + rt
+
+From the household’s perspective, knowing that the government’s
+IBC must hold, household IBC becomes:
+Ct + Ct+1
+1 + rt
+= Yt −Gt + Yt+1 −Gt+1
+1 + rt
+7 / 19
+
+===== SLIDE PAGE 9 =====
+Taxes Drop Out
+Both Tt and Tt+1 drop out.
+From household’s perspective, it is as though Tt = Gt and
+Tt+1 = Gt+1.
+This means the consumption function can be rewritten as:
+Ct = C d(Yt −Gt, Yt+1 −Gt+1, rt),
+which does not depend on Tt or Tt+1!
+8 / 19
+
+===== SLIDE PAGE 10 =====
+Intuition
+All the household cares about when making consumption/saving
+decision is the present discounted value of stream of net income.
+A tax cut, not met by a cut in government spending, means future
+taxes must go up by an equal amount in present value, which is
+internalized by the household.
+Example:
+Cut Tt by 1
+Holding Gt and Gt+1 fixed, government IBC requires Tt+1 to
+go up by (1 + rt)
+Present value of future tax increase is 1, the same as the
+present value of current tax cut – it’s a wash from the
+household’s perspective
+9 / 19
+
+===== SLIDE PAGE 11 =====
+Ricardian Equivalence
+Conceived by David Ricardo and formalized by Barro (1974).
+Basic insight: the manner of government finance is irrelevant for
+how a change in government spending impacts the economy.
+Increasing Gt by increasing Tt (“tax finance”) will have equivalent
+effects to increasing Gt by increasing Bt (“deficit finance”).
+Why? Current debt is equivalent to future taxes, and household is
+forward-looking.
+10 / 19
+
+===== SLIDE PAGE 12 =====
+Ricardian Equivalence in the Real World
+Ricardian equivalence rests on several dubious assumptions:
+Taxes must be lump sum (non-distortionary)
+No borrowing constraint
+Household forward-looking
+Government does not “outlive” households (so timing of tax
+collection does not matter)
+Nevertheless, basic intuition of Ricardian equivalence is potentially
+powerful when thinking about the real world.
+11 / 19
+
+===== SLIDE PAGE 13 =====
+Fiscal Policy in an Endowment Equilibrium Model
+Market clearing requires “aggregate saving” to be zero:
+St −Bt = 0
+Equivalently:
+Yt −Tt −Ct −(Gt −Tt) = 0,
+which implies:
+Yt = Ct + Gt
+12 / 19
+
+===== SLIDE PAGE 14 =====
+Equilibrium Conditions
+Household optimization:
+Ct = C d(Yt −Gt, Yt+1 −Gt+1, rt)
+Market clearing:
+Yt = Ct + Gt
+Exogenous variables: Yt, Yt+1, Gt, Gt+1 (do not need to know
+debt or taxes – this is the implication of Ricardian Equivalence).
+System of equations will determine endogenous Ct and rt (and
+hence Ct+1 from household IBC).
+IS and Y s curves are conceptually the same as before, but now Gt
+and Gt+1 will shift the IS curve.
+13 / 19
+
+===== SLIDE PAGE 15 =====
+Government Spending Multiplier
+Total desired expenditure is:
+Y d
+t = C d(Yt −Gt, Yt+1 −Gt+1, rt) + Gt
+Impose that income equals expenditure:
+Yt = C d(Yt −Gt, Yt+1 −Gt+1, rt) + Gt
+Totally differentiate, holding rt, Yt+1, and Gt+1 fixed:
+dYt = ∂C d
+∂Yt
+(dYt −dGt) + dGt
+So dYt = dGt. Holding rt fixed, output would change one-for-one
+with government spending – the multiplier would be 1. This is a
+partial equilibrium concept. This gives horizontal shift of the IS
+curve to a change in Gt.
+14 / 19
+
+===== SLIDE PAGE 16 =====
+The Multiplier without Ricardian Equivalence
+Suppose household is not forward-looking, so desired expenditure,
+which equals total income, is:
+Yt = C d(Yt −Tt, rt) + Gt
+Suppose there is a deficit-financed increase in expenditure, so that
+Tt does not change. Holding rt fixed, totally differentiate to get:
+dYt = ∂C d
+∂Yt
+dYt + dGt
+One gets a multiplier of:
+dYt
+dGt
+=
+1
+1 −MPC > 1
+Note result assumes (i) no Ricardian equivalence and (ii) fixed real
+interest rate.
+15 / 19
+
+===== SLIDE PAGE 17 =====
+“Rounds of Spending” Intuition
+One can think of multiplier as resulting from several rounds of
+spending happening within a period.
+In round 1, government spending goes up by 1.
+Without Ricardian equivalence, this generates 1 extra income,
+which generates MPC of extra consumption in round 2. This extra
+MPC of consumption in round 2 generates MPC extra income,
+which generates MPC 2 extra consumption in round 3, and so on:
+dYt
+dGt
+= 1 + MPC + MPC 2 + MPC 3 + · · · =
+1
+1 −MPC
+With Ricardian equivalence, process is similar, but initially only
+1 −MPC infusion of spending (because household reacts to
+increase in Gt as though taxes have increased):
+dYt
+dGt
+= (1−MPC)+MPC(1−MPC)+MPC 2(1−MPC)+· · · = 1 −MPC
+1 −MPC = 1
+16 / 19
+
+===== SLIDE PAGE 18 =====
+Graphical Effects: Gt ↑
+Source: GLS Ch. 13.
+17 / 19
+
+===== SLIDE PAGE 19 =====
+Graphical Effects: Gt+1 ↑
+Source: GLS Ch. 13.
+18 / 19
+
+===== SLIDE PAGE 20 =====
+Crowding Out
+An increase in Gt has no effect on Yt in equilibrium.
+Hence, private consumption is completely “crowded out,” i.e.,
+dCt = −dGt.
+To make this compatible with market clearing, rt must rise.
+Increase in Gt+1 has opposite effect: rt falls to keep Ct from
+declining.
+Again, rt adjusts so as to undo any desired smoothing behavior by
+household.
+Multiplier is zero in equilibrium. Not a consequence of Ricardian
+equivalence, but rather due to assumption of endowment economy
+where output cannot respond.
+19 / 19

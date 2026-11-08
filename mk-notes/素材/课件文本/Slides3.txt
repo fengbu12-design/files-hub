@@ -1,0 +1,161 @@
+===== SLIDE PAGE 1 =====
+AF5638
+Topic 3: Understanding Cross-Country Income
+Differences
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 2 =====
+Introduction
+Solow model can reproduce time series stylized facts if it is
+assumed that productivity grows over time.
+Let’s now use the model to think about cross-country income
+differences.
+What explains these differences?
+1 / 14
+
+===== SLIDE PAGE 3 =====
+Hypotheses
+Three hypotheses for why cross-country income differences exist:
+1. Countries are initially endowed with different levels of capital.
+2. Countries have different savings rates.
+3. Countries have different productivity levels.
+2 / 14
+
+===== SLIDE PAGE 4 =====
+Convergence
+Suppose two countries are otherwise identical, hence have the
+same steady state.
+Suppose country 2 is initially endowed with less capital: k2,t < k1,t,
+and suppose country 1 is initially in steady state: k1,t = k∗.
+Source: GLS Ch. 7.
+3 / 14
+
+===== SLIDE PAGE 5 =====
+Catch-Up
+If country 2 is initially endowed with less capital, it should grow
+faster than country 1, eventually catching up with country 1, since
+they have the same steady state.
+Source: GLS Ch. 7.
+4 / 14
+
+===== SLIDE PAGE 6 =====
+Is Convergence in the Data?
+Correlation between initial GDP per capita in 1950 and cumulative
+growth from 1950-2010 is weakly negative when focusing on all
+countries. Too weak to support absolute convergence.
+Source: GLS Ch. 7.
+5 / 14
+
+===== SLIDE PAGE 7 =====
+Focusing on a More Selective Group of Countries
+Focusing only on OECD countries (more similar), story looks more
+promising for convergence.
+Source: GLS Ch. 7.
+6 / 14
+
+===== SLIDE PAGE 8 =====
+Pseudo Natural Experiment: WWII
+WWII losers, Germany and Japan, grew faster for 20-30 years than
+the winners, US and UK.
+But don’t seem to catch up all the way to the US.
+Conditional convergence: countries converge to different steady
+states.
+Figure: Real GDP Per Capita Relative to the US
+Source: GLS Ch. 7.
+7 / 14
+
+===== SLIDE PAGE 9 =====
+Differences in s and A
+Most countries seem to have different steady states.
+For simple model with Cobb-Douglas production function, relative
+output is:
+y∗
+1
+y∗
+2
+=
+A1
+A2
+
+1
+1−α s1
+s2
+
+α
+1−α
+Can differences in s plausibly account for large income differences?
+No, not for plausible values of α.
+8 / 14
+
+===== SLIDE PAGE 10 =====
+Differences in s
+Suppose A is the same in both countries. Suppose country 1 is US
+and country 2 is Mexico.
+Roughly y∗
+1 /y∗
+2 = 4, which implies:
+s2 = 4
+α−1
+α s1
+A plausible value of α = 1/3.
+Mexican savings rate would have to be 0.0625 times the US
+savings rate, which is too small! Not plausible.
+9 / 14
+
+===== SLIDE PAGE 11 =====
+What Could It Be?
+If countries have different steady states and differences in s cannot
+plausibly account for this, must be differences in productivity.
+Seems to be backed up in data: rich countries are highly
+productive.
+Figure: TFP and GDP Per Worker
+Source: GLS Ch. 7.
+10 / 14
+
+===== SLIDE PAGE 12 =====
+What is TFP?
+Suppose production function is Cobb-Douglas: Yt = AtK α
+t L1−α
+t
+.
+Take natural logs:
+ln At = ln Yt −α ln Kt −(1 −α) ln Lt
+We can measure Yt, Kt, Lt empirically, and if we are willing to
+assume a value of α, we can recover ln At, which is called the
+Solow residual, or (log) total factor productivity (TFP).
+It is the part of output that cannot be explained by observable
+capital and labor inputs.
+11 / 14
+
+===== SLIDE PAGE 13 =====
+Productivity is King
+Productivity is what drives everything in the Solow model.
+Sustained growth must come from productivity.
+Large income differences must come from productivity.
+But what is productivity? Solow model doesn’t say.
+12 / 14
+
+===== SLIDE PAGE 14 =====
+Factors Influencing Productivity
+Including but not limited to:
+1. Knowledge and education
+2. Climate
+3. Geography
+4. Institutions
+5. Finance
+6. Free trade
+7. Infrastructure
+13 / 14
+
+===== SLIDE PAGE 15 =====
+Policy Implications
+If a country wants to become richer, needs to focus on policies
+that promote productivity.
+Example: Would giving computers (capital) to people in
+sub-Saharan Africa help them get rich?
+Not without the infrastructure to connect to the Internet, the
+knowledge of how to use the computer, and the institutions to
+protect property rights, etc.
+14 / 14

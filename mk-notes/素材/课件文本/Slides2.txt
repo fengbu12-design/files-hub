@@ -1,0 +1,800 @@
+===== SLIDE PAGE 1 =====
+AF5638
+Topic 2: The Solow Model (Part I)
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 2 =====
+Recap: From Facts to Model
+Vast disparities exist in per capita income across nations.
+Two types of factors of production: capital and labor.
+Hours worked per capita is roughly trendless, so increased labor
+effort cannot explain long-run growth.
+What drives growth then: capital accumulation or productivity
+improvements?
+Relatedly, are rich countries rich because they have more capital
+than poorer countries, or because they are more productive?
+1 / 44
+
+===== SLIDE PAGE 3 =====
+Solow Model
+Solow model (Solow, 1953): used to study long-run growth and
+cross-country income differences.
+It does a nice job with stylized facts.
+Main implications of model: productivity is key
+Productivity key to sustained growth (not factor
+accumulation)
+Productivity key to understanding cross-country income
+differences (not level of capital)
+Model takes productivity to be exogenous. What is it? How to
+increase it?
+2 / 44
+
+===== SLIDE PAGE 4 =====
+Model Basics
+Closed economy, with a unique final good.
+Discrete time, indexed by t = 0, 1, 2, · · · .
+Economy is inhabited by a large number of identical households,
+whom we model as a single representative household.
+Similarly, there are many firms, all using the same production
+technology, so economy admits a representative firm.
+Everything is denominated in units of the final good, which serves
+as the numeraire (i.e., price normalized to 1 in each period).
+3 / 44
+
+===== SLIDE PAGE 5 =====
+Households
+Households will not be optimizing in the Solow model.
+Each period, they simply save a constant, exogenous fraction
+0 ≤s ≤1 of their disposable income, while consuming the
+remaining 1 −s fraction.
+Current saving becomes productive capital in the next period.
+Households own the capital stock of the economy and rent it to
+firms at rental price rt.
+Households also own all the labor, which they supply inelastically
+to firms, irrespective of market wage rate wt.
+4 / 44
+
+===== SLIDE PAGE 6 =====
+Firms
+Representative firm produces the final good according to:
+Yt = AtF(Kt, Lt)
+Yt: output
+Kt: capital input
+Lt: labor input
+F(·): production function
+At: productivity
+An example of F(·) is Cobb-Douglas production function:
+F(Kt, Lt) = K α
+t L1−α
+t
+,
+with 0 < α < 1
+5 / 44
+
+===== SLIDE PAGE 7 =====
+Key Assumptions on Production Function I
+1. Both inputs are essential:
+F(0, L) = 0,
+F(K, 0) = 0
+2. Constant returns to scale:
+F(γK, γL) = γF(K, L)
+for any γ > 0
+3. Positive marginal products:
+FK(K, L) = ∂F(·)
+∂K
+> 0,
+FL(K, L) = ∂F(·)
+∂L
+> 0
+4. Diminishing marginal products:
+FKK(K, L) = ∂2F(·)
+∂K 2
+< 0,
+FLL(K, L) = ∂2F(·)
+∂L2
+< 0
+6 / 44
+
+===== SLIDE PAGE 8 =====
+Key Assumptions on Production Function II
+5. Capital and labor are complementary:
+FKL(K, L) = ∂2F(·)
+∂K∂L = ∂2F(·)
+∂L∂K > 0
+6. Infinite marginal products at zero:
+lim
+K→0 FK(K, L) = ∞,
+lim
+L→0 FL(K, L) = ∞
+7. Zero marginal products at infinity:
+lim
+K→∞FK(K, L) = 0,
+lim
+L→∞FL(K, L) = 0
+Together, 6 and 7 are referred to as the Inada Conditions.
+7 / 44
+
+===== SLIDE PAGE 9 =====
+Inada Conditions
+Notes: Figure plots two examples of production functions, holding labor fixed.
+The slope depicts MPK. Panel A satisfies the Inada conditions while Panel B
+does not.
+Exercise: Verify that the Cobb-Douglas production function satisfies
+assumptions 1-7.
+8 / 44
+
+===== SLIDE PAGE 10 =====
+Firm Optimization: Factor Demand
+Firm chooses Kt and Lt to maximize profit, taking prices rt and wt
+as given:
+max
+K d
+t ,Ld
+t
+Πt = AtF(K d
+t , Ld
+t ) −wtLd
+t −rtK d
+t
+K d
+t : demand for capital
+Ld
+t : demand for labor
+Πt: profits
+First order conditions:
+wt
+=
+AtFL(K d
+t , Ld
+t )
+rt
+=
+AtFK(K d
+t , Ld
+t )
+“Marginal cost = marginal benefit”
+9 / 44
+
+===== SLIDE PAGE 11 =====
+Zero Profits
+Under constant returns to scale technology, firms make no profits::
+AtF(K d
+t , Ld
+t )
+|
+{z
+}
+Total Output
+=
+wtLd
+t + rtK d
+t .
+|
+{z
+}
+Total Factor Payments
+That is, total output is entirely paid out as factor payments.
+Since households own all factors of production and there are no
+profits to distribute, their total disposable income equals the value
+of total output, Yt.
+Proof
+10 / 44
+
+===== SLIDE PAGE 12 =====
+Labor Market Clearing
+Let ¯Lt denote endowment of labor/number of workers in the
+economy.
+Labor market clearing condition requires household labor supply to
+equal firm labor demand:
+¯Lt = Ld
+t
+at wt > 0.
+11 / 44
+
+===== SLIDE PAGE 13 =====
+Goods Market Clearing
+Recall that household income is Yt.
+They save a constant fraction s of income for investment:
+It = sYt,
+and consume the rest:
+Ct = (1 −s)Yt
+Naturally, what is produced is either consumed or invested:
+Yt = Ct + It.
+12 / 44
+
+===== SLIDE PAGE 14 =====
+Capital Market Clearing
+Assume initial capital stock, K0, is given.
+In each subsequent period, capital supply is equal to undepreciated
+capital plus new investment made in the previous period:
+K s
+t+1
+=
+(1 −δ)K s
+t + It
+=
+(1 −δ)K s
+t + sYt
+where 0 < δ < 1: depreciation rate.
+Capital market clearing condition thus is:
+K s
+t = K d
+t
+at rt > 0.
+13 / 44
+
+===== SLIDE PAGE 15 =====
+Defining Equilibrium
+Given (i) a sequence of labor endowment and productivity
+{¯Lt, At}∞
+t=0, (ii) initial capital stock K0, (iii) savings rate s, and
+(iv) depreciation rate δ, an equilibrium path of the economy is a
+sequence of capital stocks, output levels, consumption levels,
+investment levels, wages, and rental rates {Kt, Yt, Ct, It, wt, rt}∞
+t=0
+such that:
+Kt+1
+=
+(1 −δ)Kt + It
+Yt
+=
+AtF(Kt, ¯Lt)
+Ct
+=
+(1 −s)Yt
+It
+=
+sYt
+wt
+=
+AtFL(Kt, ¯Lt)
+rt
+=
+AtFK(Kt, ¯Lt)
+14 / 44
+
+===== SLIDE PAGE 16 =====
+Central Equation
+Rewrite the law of motion for capital stock as:
+Kt+1
+=
+(1 −δ)Kt + It
+=
+(1 −δ)Kt + sYt
+=
+(1 −δ)Kt + sAtF(Kt, ¯Lt)
+Final expression defines the fundamental law of motion for
+capital accumulation in the Solow model.
+15 / 44
+
+===== SLIDE PAGE 17 =====
+Writing Model in Per-Worker Terms I
+To further analyze model dynamics, convenient to rewrite model in
+per-worker terms.
+For simplification, we assume there is no population growth and
+no technological progress over time.
+That is, ¯Lt = L and At = A for all t.
+16 / 44
+
+===== SLIDE PAGE 18 =====
+Writing Model in Per-Worker Terms II
+Define capital-labor ratio as:
+kt = Kt
+¯Lt
+Given CRTS, output per worker is:
+yt
+=
+AF(Kt, ¯Lt)
+¯Lt
+=
+AF(Kt
+¯Lt
+,
+¯Lt
+¯Lt
+)
+=
+AF(kt, 1)
+=
+Af (kt)
+17 / 44
+
+===== SLIDE PAGE 19 =====
+Writing Model in Per-Worker Terms III
+Central equation in per-worker terms:
+Kt+1
+¯Lt
+=
+sAF(Kt, ¯Lt)
+¯Lt
++ (1 −δ)Kt
+¯Lt
+=
+sAf (kt) + (1 −δ)kt,
+where:
+Kt+1
+¯Lt
+= Kt+1
+¯Lt
+·
+¯Lt+1
+¯Lt+1
+= Kt+1
+¯Lt+1
+·
+¯Lt+1
+¯Lt
+= kt+1,
+since ¯Lt+1 = ¯Lt by assumption.
+Thus, per-worker capital evolves as:
+kt+1 = sAf (kt) + (1 −δ)kt
+18 / 44
+
+===== SLIDE PAGE 20 =====
+Equilibrium in Per-Worker Terms
+Equations characterizing the equilibrium in per-worker terms are
+given by:
+kt+1
+=
+sAf (kt) + (1 −δ)kt
+yt
+=
+Af (kt)
+ct
+=
+(1 −s)Af (kt)
+it
+=
+sAf (kt)
+rt
+=
+Af ′(kt)
+wt
+=
+Af (kt) −ktAf ′(kt)
+Deriving rt and wt
+19 / 44
+
+===== SLIDE PAGE 21 =====
+Steady State Equilibrium
+A steady-state equilibrium is an equilibrium in which kt = k∗for
+all t.
+The steady state is stable in the sense that for any initial k0̸ = 0,
+kt will converge to k∗.
+Once the economy arrives at the steady state, it sits there.
+All other endogenous variables can be determined once we know
+k∗.
+20 / 44
+
+===== SLIDE PAGE 22 =====
+Graphical Representation of k∗
+Source: GLS, Ch. 5.
+21 / 44
+
+===== SLIDE PAGE 23 =====
+Convergence to k∗When kt < k∗
+Source: GLS Ch. 5.
+22 / 44
+
+===== SLIDE PAGE 24 =====
+Convergence to k∗When kt > k∗
+Source: GLS Ch. 5.
+23 / 44
+
+===== SLIDE PAGE 25 =====
+Algebraic Example
+Suppose Yt = AK α
+t L1−α
+t
+so that yt = Akα
+t where kt = Kt/Lt.
+Can solve the steady state in closed form:
+k∗
+=
+sA
+δ
+
+1
+1−α
+y∗
+=
+A(k∗)α
+c∗
+=
+(1 −s)A(k∗)α
+i∗
+=
+sA(k∗)α
+r∗
+=
+αA(k∗)α−1
+w∗
+=
+(1 −α)A(k∗)α
+24 / 44
+
+===== SLIDE PAGE 26 =====
+Changes in Exogenous Variables
+Exogenously given in basic Solow model: A, ¯L, K0, s, δ.
+More meaningful to look at how endogenous variables react to
+changes in A and s.
+For these “experiments:”
+Suppose economy starts in a steady state;
+Suppose in period t, there is a permanent change in A or s;
+Graphically see how the steady state changes and how the
+economy transitions from the initial to the new steady state.
+25 / 44
+
+===== SLIDE PAGE 27 =====
+Effect of ↑A on k∗
+Source: GLS Ch. 5.
+26 / 44
+
+===== SLIDE PAGE 28 =====
+Dynamic Responses to ↑A
+Source: GLS Ch. 5.
+27 / 44
+
+===== SLIDE PAGE 29 =====
+Interpreting the Dynamics of ↑A
+When A ↑in period t, kt doesn’t change on impact since it is
+predetermined, but it rises in future periods until reaching a permanently
+higher level.
+yt jumps up on impact as yt = Af (kt), and it further rises in future
+periods both due to a higher A and rising kt.
+ct and it dynamics similar to yt as each is a fraction of yt.
+rt initially jumps up as rt = Af ′(kt), but will eventually fall back to initial
+level at the new steady state (see algebraic example).
+wt jumps up on impact as wt = AFL(Kt, L), and it further rises in future
+periods both due to a higher A and rising Kt.
+28 / 44
+
+===== SLIDE PAGE 30 =====
+Effect of ↑s on k∗
+Source: GLS Ch. 5.
+29 / 44
+
+===== SLIDE PAGE 31 =====
+Dynamic Responses to ↑s
+Source: GLS Ch. 5.
+30 / 44
+
+===== SLIDE PAGE 32 =====
+Interpreting the Dynamics of ↑s
+When s ↑in period t, kt doesn’t change on impact (predetermined), but
+it rises in future periods until reaching a permanently higher level.
+The same applies to yt since yt = Af (kt).
+it jumps up immediately since it = syt, and it further rises in future
+periods both due to a higher s and rising yt.
+Since ct = (1 −s)yt, it must initially decline. Over time, since yt goes
+up, whether ct ends up higher or lower than where it began is ambiguous,
+though graph shows a higher steady state c∗.
+rt gradually falls to a permanently lower level as kt gradually rises, given
+rt = Af ′(kt) and f ′(kt) is decreasing in kt.
+wt gradually rises to a permanently higher level given wt = AFL(Kt, L)
+and Kt increases.
+31 / 44
+
+===== SLIDE PAGE 33 =====
+Quantitative Exercises
+Assume Cobb-Douglas production function.
+Assign parameter and exogenous variable values:
+A = 1, s = 0.2, α = 1/3, δ = 0.1.
+Solve for the numeric steady state.
+Assume economy sits in steady state from t −N to t −1, where
+N = 5.
+At period t, assume A increases to 1.1.
+In Excel, trace out paths of kt+j, yt+j, ct+j, it+j, wt+j, and rt+j.
+32 / 44
+
+===== SLIDE PAGE 34 =====
+Discussion
+Neither changes in A nor s trigger sustained increases in
+growth rates.
+Each triggers faster growth temporarily while the economy
+transitions to a new steady state.
+In the long run, there is zero growth in this model—economy
+converges to a steady state!
+We will address that. However, model implies that sustained
+growth must come from productivity increases:
+A can increase indefinitely, while s is bounded by 1;
+Repeated increases in s trigger continued declines in rt,
+inconsistent with stylized facts.
+33 / 44
+
+===== SLIDE PAGE 35 =====
+Bottom Line
+Sustained growth must come from productivity growth, not capital
+accumulation.
+You cannot save your way to more growth, because of diminishing
+returns to capital.
+34 / 44
+
+===== SLIDE PAGE 36 =====
+Alternative Representation of the Steady State
+Recall central equation in per-worker terms:
+kt+1 = sAf (kt) + (1 −δ)kt
+Subtract kt from both sides, and let ∆kt+1 = kt+1 −kt:
+∆kt+1 =
+sAf (kt)
+| {z }
+total investment
+−
+δkt
+|{z}
+total depreciation
+At the steady state, ∆kt+1 = 0.
+That is, total investment is just enough to replenish total
+depreciation.
+35 / 44
+
+===== SLIDE PAGE 37 =====
+Alternative Representation: Graph
+36 / 44
+
+===== SLIDE PAGE 38 =====
+Optimal Savings Rate
+Household utility comes from consumption, not output.
+Higher s has two opposing effects on consumption:
+(i) More capital →more output →bigger “size of the pie” →
+more consumption;
+(ii) But get to consume a smaller “fraction of the pie” →less
+consumption.
+37 / 44
+
+===== SLIDE PAGE 39 =====
+Golden Rule
+The Golden Rule savings rate is the value of s that maximizes
+steady-state consumption per worker c∗.
+Let sGR denote the Golden Rule savings rate, and let k∗
+GR denote
+the corresponding steady state capital per worker.
+It can be shown that sGR is implicitly characterized by:
+Af ′(k∗
+GR) = δ.
+Proof
+38 / 44
+
+===== SLIDE PAGE 40 =====
+Graphical Intuition of the Golden Rule
+Source: GLS Ch. 5.
+39 / 44
+
+===== SLIDE PAGE 41 =====
+Dynamic Inefficiency
+Being “below” the Golden Rule does not necessarily imply the
+economy is under-saving:
+There is a dynamic tradeoff: ↑s today means less
+consumption today, but more in the future
+Whether this is desirable depends on how the future is valued
+relative to today
+But being “above” the golden rule cannot be optimal. This is
+known as dynamic inefficiency:
+By reducing s, could get more consumption both today and in
+the future
+Little or no evidence any modern economy is dynamically
+inefficient.
+40 / 44
+
+===== SLIDE PAGE 42 =====
+Key Takeaways
+We set out to study economic growth, but why write down a
+model whose steady state has no growth?
+The basic Solow model yields important insights about sources of
+sustained economic growth.
+Sustained growth must ultimately stem from productivity
+improvements (technology), not just capital deepening.
+Next lecture: extend the basic model to allow for sustained growth.
+41 / 44
+
+===== SLIDE PAGE 43 =====
+Appendix Slides
+
+===== SLIDE PAGE 44 =====
+Proof: Zero Firm Profits
+A function is homogeneous of degree ρ if:
+F(γK, γL) = γρF(K, L)
+for any γ̸ = 0 and integer ρ.
+Euler’s Theorem
+For any function that is homogeneous of degree ρ:
+ρF(K, L) = FK(·)K + FL(·)L.
+Proof of the proposition follows from our assumption of constant
+returns to scale technology, i.e., ρ = 1.
+Go back
+42 / 44
+
+===== SLIDE PAGE 45 =====
+Deriving Steady State rt and wt
+Euler’s theorem also states that, if a function is homogeneous of degree
+ρ, then its first derivatives are homogeneous of degree ρ −1:
+FK(γKt, γLt) = γρ−1FK(Kt, Lt)
+For CRTS production function with ρ = 1, this implies (by setting
+γ = 1/Lt):
+FK(Kt, Lt) = FK(Kt
+Lt
+, Lt
+Lt
+) = f ′(k)
+Moreover, dividing Lt through F(Kt, Lt) = Fk(Kt, Lt)Kt + FL(Kt, Lt)Lt
+yields:
+f (kt) = f ′(kt)kt + FL(Kt, Lt)
+Therefore, FL(Kt, Lt) = f (kt) −f ′(kt)kt.
+Go back
+43 / 44
+
+===== SLIDE PAGE 46 =====
+Characterizing Golden Rule Savings Rate
+To start, note:
+c∗(s)
+=
+(1 −s)Af (k∗(s))
+=
+Af (k∗(s)) −sAf (k∗(s))
+=
+Af (k∗(s)) −δk∗(s)
+Differentiate both sides with respect to s:
+∂c∗(s)
+∂s
+= [Af ′(k∗(s)) −δ]∂k∗(s)
+∂s
+.
+sGR is such that ∂c∗(s)/∂s = 0.
+Thus, Af ′(k∗
+GR(sGR)) = δ.
+Go back
+44 / 44
+
+===== SLIDE PAGE 47 =====
+AF5638
+Topic 2: The Solow Model (Part II)
+Elaine Liu
+PolyU
+Fall 2026
+
+===== SLIDE PAGE 48 =====
+Introduction
+Key insight from the Solow model: productivity is key to
+generating long-run growth.
+But basic model converges to a steady state with no growth.
+In this lecture, we extend by introducing labor-augmenting
+technology, which enables sustained per capita growth.
+1 / 8
+
+===== SLIDE PAGE 49 =====
+Modified Production Technology
+We modify the production function by:
+Yt = AF(Kt, ZtLt)
+Zt: labor-augmenting productivity;
+ZtLt: efficiency units of labor.
+Assume Zt and Lt both grow over time, with initial values in
+period t = 0 normalized to 1:
+Zt
+=
+(1 + z)t
+Lt
+=
+(1 + n)t
+When z = n = 0: back to basic Solow model.
+Zt not fundamentally different from A, but convenient to use Zt to
+capture growth, while A captures the level of productivity.
+2 / 8
+
+===== SLIDE PAGE 50 =====
+Per Efficiency Unit Variables
+For any actual variable Xt, denote:
+xt = Xt/Lt: per-worker units;
+ˆxt = Xt/(ZtLt): per efficiency labor units.
+Modified central equation of the model is:
+ˆkt+1 =
+1
+(1 + z)(1 + n)
+h
+sAf (ˆkt) + (1 −δ)ˆkt
+i
+Practically the same as before, though in per efficiency units.
+3 / 8
+
+===== SLIDE PAGE 51 =====
+Equilibrium in Per Efficiency Labor Units
+ˆkt+1
+=
+1
+(1 + z)(1 + n)
+h
+sAf (ˆkt) + (1 −δ)ˆkt
+i
+ˆyt
+=
+Af (ˆkt)
+ˆct
+=
+(1 −s)ˆyt
+ˆit
+=
+s ˆyt
+rt
+=
+Af ′(ˆkt)
+wt
+=
+Zt
+h
+Af (ˆkt) −Af ′(ˆkt)ˆkt
+i
+A steady-state equilibrium satisfies ˆkt = ˆkt+1 = ˆk∗for all t.
+4 / 8
+
+===== SLIDE PAGE 52 =====
+Steady State ˆk∗
+Source: GLS Ch. 6.
+5 / 8
+
+===== SLIDE PAGE 53 =====
+Growth in Per Worker Variables at Steady State
+At the steady state, ˆkt+1 = ˆkt implies:
+Kt+1
+Zt+1Lt+1
+=
+Kt
+ZtLt
+Kt+1
+Lt+1
+=
+Zt+1
+Zt
+Kt
+Lt
+kt+1
+kt
+=
+1 + z
+Similar expressions hold true for per-worker output, consumption,
+and investment.
+Per-worker variables all grow at the same rate as Zt.
+6 / 8
+
+===== SLIDE PAGE 54 =====
+Behavior of Factor Prices at Steady State
+At the steady state, rental price of capital is given by:
+r∗= Af ′(ˆk∗),
+so will be constant over time.
+Steady-state wage is given by:
+w∗= Zt
+h
+Af (ˆk∗) −Af ′(ˆk∗)ˆk∗i
+,
+so will grow at the same rate as Zt.
+7 / 8
+
+===== SLIDE PAGE 55 =====
+How Does Augmented Model Fit the Data?
+Once in steady state, we have:
+yt+1
+yt
+=
+1 + z
+kt+1
+kt
+=
+1 + z
+Kt+1
+Yt+1
+=
+Kt
+Yt
+wt+1Lt+1
+Yt+1
+=
+wtLt
+Yt
+rt+1
+=
+rt
+wt+1
+wt
+=
+1 + z
+These are the six time-series stylized facts!
+8 / 8
